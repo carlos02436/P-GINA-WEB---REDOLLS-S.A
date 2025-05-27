@@ -1,0 +1,84 @@
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso / Registro</title>
+    <link rel="stylesheet" href="css/Login up_Sign in.css">
+</head>
+
+<body>
+
+    <div class="auth-wrapper">
+        <!-- Login Container -->
+        <div class="container login-container active">
+            <div class="icon-container">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#00FFFF" width="48px" height="48px">
+                    <path
+                        d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                    <path d="M0 0h24v24H0z" fill="none" />
+                </svg>
+            </div>
+            <h1>Iniciar Sesión</h1>
+            <form id="login-form">
+                <div class="input-group">
+                    <input type="email" id="login-email" name="email" required placeholder=" ">
+                    <label for="login-email">Correo Electrónico</label>
+                    <span class="focus-border"></span>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="login-password" name="password" required placeholder=" ">
+                    <label for="login-password">Contraseña</label>
+                    <span class="focus-border"></span>
+                </div>
+                <div class="extra-options">
+                    <div class="remember-me">
+                        <input type="checkbox" id="remember-me" name="remember-me">
+                        <label for="remember-me">Recuérdame</label>
+                    </div>
+                    <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
+                </div>
+                <button type="submit">Iniciar Sesión</button>
+            </form>
+            <div class="links">
+                <a href="#" id="show-signup">¿No tienes cuenta? Regístrate</a>
+            </div>
+        </div>
+
+        <!-- Signup Container -->
+        <div class="container signup-container">
+            <div class="icon-container">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#00FFFF" width="48px" height="48px">
+                    <path
+                        d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                    <path d="M0 0h24v24H0z" fill="none" />
+                </svg>
+            </div>
+            <h1>Registro de Usuario</h1>
+            <form id="registration-form">
+                <div class="input-group">
+                    <input type="email" id="signup-email" name="email" required placeholder=" ">
+                    <label for="signup-email">Correo Electrónico</label>
+                    <span class="focus-border"></span>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="signup-password" name="password" required placeholder=" ">
+                    <label for="signup-password">Contraseña</label>
+                    <span class="focus-border"></span>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="confirm-password" name="confirm-password" required placeholder=" ">
+                    <label for="confirm-password">Confirmar Contraseña</label>
+                    <span class="focus-border"></span>
+                </div>
+                <button type="submit">REGISTRARSE</button>
+            </form>
+            <div class="links">
+                <a href="#" id="show-login">¿Ya tienes una cuenta? Iniciar Sesión</a>
+            </div>
+        </div>
+    </div>
+    <script src="js/Login up_Sign in.js"></script>
+</body>
+
+</html>
