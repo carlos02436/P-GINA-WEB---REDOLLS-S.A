@@ -624,11 +624,6 @@ footer {
         font-size: 1.3rem;
     }
 }
-.nav-menu-actions {
-    padding: 1rem 1.5rem;
-    margin-top: 1rem;
-    border-top: 1px solid var(--light-gray);
-}
 
 .btn-nav-menu-action {
     display: block;

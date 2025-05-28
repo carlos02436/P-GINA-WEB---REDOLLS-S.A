@@ -1,5 +1,6 @@
 * {
-    opacity: 1 !important; /* Evita que cualquier elemento tenga opacidad aplicada */
+    opacity: 1 !important;
+    /* Evita que cualquier elemento tenga opacidad aplicada */
 }
 
 body {
@@ -15,7 +16,8 @@ body {
     overflow: hidden;
     perspective: 1000px;
     background-color: #1a1a1a;
-    background-image: url('image/logo.png'); /* Imagen de fondo */
+    background-image: url('image/logo.png');
+    /* Imagen de fondo */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -36,9 +38,17 @@ body::before {
 }
 
 @keyframes gradientBG {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .auth-wrapper {
@@ -132,8 +142,8 @@ h1 {
     border-bottom-color: #ffff;
 }
 
-.input-group input:focus + label,
-.input-group input:not(:placeholder-shown) + label {
+.input-group input:focus+label,
+.input-group input:not(:placeholder-shown)+label {
     top: -14px;
     font-size: 0.75em;
     color: #ffff;
@@ -150,7 +160,7 @@ h1 {
     z-index: 2;
 }
 
-.input-group input:focus ~ .focus-border {
+.input-group input:focus~.focus-border {
     width: 100%;
     left: 0;
 }
@@ -203,7 +213,7 @@ h1 {
 
 button {
     background: #000000;
-    color: #ffff;
+    color: #ffffff;
     border: 2px solid #0026ff;
     padding: 12px 20px;
     font-size: 1em;
@@ -213,15 +223,16 @@ button {
     width: 100%;
     margin-top: 15px;
     transition: transform 0.2s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 15px #ffff;
+    box-shadow: 0 4px 15px #ffffff;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
 button:hover {
     transform: translateY(-2px);
-    background-color: #001eff;
-    border-color: #0026ff;
+    background: #000000;
+    color: #ffff;
+    border: 2px solid #0026ff;
     letter-spacing: 1px;
 }
 
