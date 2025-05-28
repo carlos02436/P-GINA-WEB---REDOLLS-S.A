@@ -58,33 +58,40 @@ header .container {
     align-items: center;
     text-decoration: none;
     color: var(--primary-color);
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s, opacity 0.3s;
 }
 
-.logo-container:hover #logo-img,
-.logo-container:hover .logo-text {
+.logo-container:hover,
+.logo-container:hover #logo-img {
     transform: scale(1.03);
-    opacity: 0.85;
+    opacity: 0.9;
 }
 
 #logo-img {
-    height: 100px;
+    height: 250px;
     margin-right: 10px;
     border-radius: 100%;
 }
 
-.logo-text {
-    font-size: 1.8rem;
-    font-weight: 700;
-    transition: transform 0.3s ease, opacity 0.3s ease;
+.main-nav {
+    display: flex;
+    justify-content: space-between; /* Reparte el logo a la izquierda y el menú a la derecha */
+    align-items: center;
+    padding: 0 40px;
 }
 
 .main-nav .nav-links {
     list-style: none;
     display: flex;
+    gap: 20px; /* Espacio entre los enlaces */
+    padding: 0;
+    margin: 0;
 }
 
 .main-nav .nav-links li {
-    margin-left: 25px;
+    margin: 0;
 }
 
 .main-nav .nav-links a {
@@ -99,23 +106,31 @@ header .container {
     color: var(--accent-color);
 }
 
+
+/* Botón de menú (hamburguesa) */
 .nav-toggle {
-    display: none; /* Hidden by default, shown on mobile */
+    display: none; /* Puedes cambiar a 'block' con media queries para móviles */
     background: none;
     border: none;
     cursor: pointer;
     padding: 0.5rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem; /* Alineado a la derecha */
+    z-index: 1000;
 }
 
+/* Estilo de la hamburguesa */
 .hamburger {
     display: block;
-    position: relative;
     width: 25px;
     height: 3px;
     background-color: var(--primary-color);
-    transition: all 0.3s ease-in-out;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
 }
 
+/* Líneas superiores e inferiores */
 .hamburger::before,
 .hamburger::after {
     content: '';
@@ -124,7 +139,7 @@ header .container {
     width: 100%;
     height: 3px;
     background-color: var(--primary-color);
-    transition: all 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
 }
 
 .hamburger::before {
@@ -132,7 +147,7 @@ header .container {
 }
 
 .hamburger::after {
-    bottom: -8px;
+    top: 8px;
 }
 
 /* Hero Section */
@@ -358,9 +373,9 @@ header .container {
 /* Footer */
 footer {
     background-color: var(--primary-color);
-    color: var(--light-gray); /* Lighter text for contrast on dark bg */
+    color: var(--light-gray); 
     padding: 60px 0 20px; 
-    text-align: left; /* Reset text-align from previous simpler footer */
+    text-align: left; 
 }
 
 .footer-content {
@@ -383,7 +398,7 @@ footer {
 
 .footer-logo {
     height: 45px; 
-    filter: brightness(0) invert(1); /* Makes dark logo appear white on dark background */
+    filter: brightness(0) invert(1); 
 }
 
 .footer-tagline {
@@ -464,7 +479,7 @@ footer {
     border-top: 1px solid rgba(255,255,255,0.15); 
 }
 .footer-bottom p {
-    margin: 0; /* Reset margin from simpler footer */
+    margin: 0; 
     font-size: 0.9rem;
     opacity: 0.7;
     line-height: 1.5;
@@ -473,7 +488,7 @@ footer {
     margin-bottom: 5px;
 }
 
-/* Responsive Design */
+/* Diseño Responsivo */
 @media (max-width: 992px) {
     #hero h1 {
         font-size: 2.8rem;
@@ -485,7 +500,7 @@ footer {
         font-size: 2.2rem;
     }
     .footer-info, .footer-links, .footer-social {
-        min-width: calc(50% - 20px); /* Two columns, accounting for gap */
+        min-width: calc(50% - 20px);
     }
 }
 
@@ -495,7 +510,7 @@ footer {
         flex-direction: column;
         width: 100%;
         position: absolute;
-        top: 100%; /* Position below header */
+        top: 100%; 
         left: 0;
         background-color: var(--text-color-light);
         box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -624,16 +639,4 @@ footer {
         font-size: 1.3rem;
     }
 }
-.nav-menu-actions {
-    padding: 1rem 1.5rem;
-    margin-top: 1rem;
-    border-top: 1px solid var(--light-gray);
-}
 
-.btn-nav-menu-action {
-    display: block;
-    width: 100%;
-    text-align: center;
-    padding: 12px 20px !important; /* Override general btn padding if needed */
-    font-size: 1rem !important;
-}
