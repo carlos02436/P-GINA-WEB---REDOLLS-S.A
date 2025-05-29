@@ -64,8 +64,8 @@ header .container {
     color: var(--primary-color);
 }
 
-.logo-container:hover #logo-img,
-.logo-container:hover .logo-text {
+.logo-container:hover 
+.logo-container:hover {
     transform: scale(1.03);
     opacity: 0.85;
 }
@@ -142,7 +142,6 @@ header .container {
 
 /* Hero Section */
 #hero {
-    background: url('image/hero-background.png') no-repeat center center/cover;
     color: var(--text-color-light);
     text-align: center;
     padding: 100px 0;
@@ -151,7 +150,23 @@ header .container {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+    z-index: 1;
 }
+
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(#002fff, #e2dfec); /* oscurece la imagen */
+    z-index: 0;
+}
+
+#hero > * {
+    position: relative;
+    z-index: 1;
+}
+
 
 #hero h1 {
     font-size: 3.5rem;
@@ -194,7 +209,7 @@ header .container {
 
 .btn-secondary {
     background-color: transparent;
-    color: var(--text-color-light);
+    color: black;
     border: 2px solid var(--text-color-light);
 }
 
@@ -390,8 +405,32 @@ footer {
 .footer-info,
 .footer-links,
 .footer-social {
-    flex: 1;
-    min-width: 250px;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.footer-social h4 {
+    color: white;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.footer-social .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.footer-social .social-icons a {
+    color: white;
+    font-size: 1.8rem;
+    transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.footer-social .social-icons a:hover {
+    transform: scale(1.2);
+    color: #ffffff;
+    text-shadow: 0 0 8px #ffffff, 0 0 12px #ffffff;
 }
 
 .footer-logo-link {
@@ -494,8 +533,7 @@ footer {
 }
 
 .footer-bottom p {
-    margin: 0;
-    /* Reset margin from simpler footer */
+    margin: 0; /* Reset margin from simpler footer */
     font-size: 0.9rem;
     opacity: 0.7;
     line-height: 1.5;
@@ -505,7 +543,7 @@ footer {
     margin-bottom: 5px;
 }
 
-/* Responsive Design */
+/* Diseño Responsivo */
 @media (max-width: 992px) {
     #hero h1 {
         font-size: 2.8rem;

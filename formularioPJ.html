@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acceso / Registro</title>
-    <link rel="stylesheet" href="css/Login up_Sign in.css">
+    <link rel="stylesheet" href="css/formularioPJ.css">
 </head>
 
 <body>
@@ -14,8 +14,7 @@
         <div class="container login-container active">
             <div class="icon-container">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#00FFFF" width="48px" height="48px">
-                    <path
-                        d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
                     <path d="M0 0h24v24H0z" fill="none" />
                 </svg>
             </div>
@@ -49,13 +48,22 @@
         <div class="container signup-container">
             <div class="icon-container">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#00FFFF" width="48px" height="48px">
-                    <path
-                        d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
                     <path d="M0 0h24v24H0z" fill="none" />
                 </svg>
             </div>
-            <h1>Registro de Usuario</h1>
+            <h1>Registro de Empresa / Persona Jurídica</h1>
             <form id="registration-form">
+                <div class="input-group">
+                    <input type="text" id="empresa-nombre" name="empresa-nombre" required placeholder=" ">
+                    <label for="empresa-nombre">Nombre de la Empresa</label>
+                    <span class="focus-border"></span>
+                </div>
+                <div class="input-group">
+                    <input type="text" id="nit" name="nit" required placeholder=" ">
+                    <label for="nit">NIT</label>
+                    <span class="focus-border"></span>
+                </div>
                 <div class="input-group">
                     <input type="email" id="signup-email" name="email" required placeholder=" ">
                     <label for="signup-email">Correo Electrónico</label>
@@ -71,6 +79,20 @@
                     <label for="confirm-password">Confirmar Contraseña</label>
                     <span class="focus-border"></span>
                 </div>
+                <div class="input-group">
+                    <select id="tipo-registro" name="tipo-registro" required>
+                        <option value="" disabled selected>Selecciona una opción</option>
+                        <option value="vacante">Registrar Vacante</option>
+                        <option value="servicio">Registrar Servicio</option>
+                    </select>
+                    <label for="tipo-registro">Tipo de Registro</label>
+                    <span class="focus-border"></span>
+                </div>
+                <div class="input-group">
+                    <textarea id="descripcion" name="descripcion" rows="4" required placeholder=" "></textarea>
+                    <label for="descripcion">Descripción de la Vacante o Servicio</label>
+                    <span class="focus-border"></span>
+                </div>
                 <button type="submit">REGISTRARSE</button>
             </form>
             <div class="links">
@@ -78,7 +100,8 @@
             </div>
         </div>
     </div>
-    <script src="js/Login up_Sign in.js"></script>
+
+    <script src="js/formularioPJ.js"></script>
 </body>
 
 </html>
