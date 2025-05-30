@@ -3,25 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>REDOLLS S.A. - Conectando Talento y Oportunidades</title>
+    <title>REDOLLS S.A.</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" href="image/logo.png" type="image">
     <script type="importmap">
-    {
-      "imports": {
-        
-      }
-    }
+
     </script>
 </head>
 
 <body>
     <header>
         <div class="container">
-            <a href="index.html" class="logo-container">
+            <a class="logo-container">
                 <img src="image/logo.png" alt="REDOLLS Logo" id="logo-img">
                 <span class="logo-text">REDOLLS S.A.</span>
             </a>
@@ -32,8 +29,9 @@
                 <div>
                     <ul class="nav-links">
                         <li><a href="#hero">Inicio</a></li>
-                        <li><a href="#services">Servicios</a></li>
                         <li><a href="#nosotros">Nosotros</a></li>
+                        <li><a href="#services">Servicios</a></li>
+                        <li><a href="#vacancies">Vacantes</a></li>
                         <li><a href="#join">Únete</a></li>
                         <li><a href="#testimonios">Testimonios</a></li>
                         <li><a href="#contact">Contacto</a></li>
@@ -47,13 +45,31 @@
         <section id="hero">
             <div class="container">
                 <h1>Tu Plataforma para Conectar Talento y Oportunidades</h1>
-                <p>REDOLLS es el ecosistema donde profesionales, empresas y talento se encuentran. Publica tus
+                <p>REDOLLS es el entorno donde profesionales, empresas y talento se encuentran. Publica tus
                     servicios, encuentra vacantes o descubre el talento que necesitas.</p>
                 <div class="hero-buttons">
                     <a href="#join" class="btn btn-primary">Publica tu Anuncio</a>
                     <a href="#join" class="btn btn-secondary">Explorar Servicios</a>
                 </div>
             </div>
+        </section>
+
+        <!-- Nosotros -->
+        <section class="content-section" id="nosotros">
+            <div class="container">
+                <h2>Sobre REDOLLS</h2>
+                <p>En REDOLLS, creamos un puente digital que conecta a individuos y empresas. Facilitamos que personas
+                    naturales y jurídicas ofrezcan sus servicios, que las empresas publiquen sus vacantes, y que los
+                    aspirantes encuentren nuevas oportunidades. Nuestra misión es potenciar un ecosistema laboral y de
+                    servicios dinámico y eficiente.</p>
+            </div>
+        </section>
+
+        <section id="video">
+            <video autoplay muted loop playsinline id="hero-video">
+                <source src="video/216134_small.mp4" type="video/mp4">
+                Tu navegador no soporta video HTML5.
+            </video>
         </section>
 
         <!-- Servicios -->
@@ -83,12 +99,23 @@
                         <h3>Diseño UX/UI Innovador</h3>
                         <p>Creamos experiencias de usuario intuitivas y atractivas para tus plataformas digitales.</p>
                     </div>
+                    <div class="card">
+                        <img src="image/service-placeholder.png" alt="Icono Servicio Diseño UX/UI" class="card-icon">
+                        <h3>VBA / Excel</h3>
+                        <p>Aprende con nosotros a automatizar tus tareas en Excel, fácil y Rápido.</p>
+                    </div>
+                    <div class="card">
+                        <img src="image/service-placeholder.png" alt="Icono Servicio Diseño UX/UI" class="card-icon">
+                        <h3>Programación Web</h3>
+                        <p>Aprende programción de software a medida para potenciar y resaltar tus diseños web.</p>
+                    </div>
                 </div>
+                <a href="#" class="btn btn-primary contact-btn">Más servicios</a>
             </div>
         </section>
 
         <!-- Vacantes -->
-        <section id="vacancies" class="content-section alt-bg">
+        <section id="vacancies" class="content-section">
             <div class="container">
                 <h2>Vacantes de Empresas Destacadas</h2>
                 <p class="section-description">Descubre oportunidades laborales publicadas por empresas líderes en
@@ -122,18 +149,22 @@
                         <p><strong>Ubicación:</strong> Remoto</p>
                         <a href="#" class="btn-card">Ver Detalles</a>
                     </div>
+                    <div class="card">
+                        <img src="image/vacancy-placeholder.png" alt="Icono Vacante Ingeniero" class="card-icon">
+                        <h3>Carpintero</h3>
+                        <p><strong>Empresa:</strong> Carpintería la Estrella</p>
+                        <p><strong>Ubicación:</strong> La Jagua de Ibirico</p>
+                        <a href="#" class="btn-card">Ver Detalles</a>
+                    </div>
+                    <div class="card">
+                        <img src="image/vacancy-placeholder.png" alt="Icono Vacante Ingeniero" class="card-icon">
+                        <h3>Coordinador SSTA</h3>
+                        <p><strong>Empresa:</strong> Tech Global Inc.</p>
+                        <p><strong>Ubicación:</strong> La Jagua de Ibirico</p>
+                        <a href="#" class="btn-card">Ver Detalles</a>
+                    </div>
                 </div>
-            </div>
-        </section>
-
-        <!-- Nosotros -->
-        <section class="content-section" id="nosotros">
-            <div class="container">
-                <h2>Sobre REDOLLS</h2>
-                <p>En REDOLLS, creamos un puente digital que conecta a individuos y empresas. Facilitamos que personas
-                    naturales y jurídicas ofrezcan sus servicios, que las empresas publiquen sus vacantes, y que los
-                    aspirantes encuentren nuevas oportunidades. Nuestra misión es potenciar un ecosistema laboral y de
-                    servicios dinámico y eficiente.</p>
+                <a href="#" class="btn btn-primary contact-btn">Más vacantes</a>
             </div>
         </section>
 
@@ -148,14 +179,14 @@
                         <h3>Ofrece Tus Servicios</h3>
                         <p>Si eres un profesional o persona natural, publica tus servicios y conecta con nuevos
                             clientes.</p>
-                        <a href="#" class="btn-card">Regístrate y Publica</a>
+                        <a href="form_PN.html" class="btn-card">Regístrate y Publica</a>
                     </div>
                     <div class="card join-card">
                         <img src="image/service-placeholder-consult.png" alt="Icono Empresas" class="card-icon">
                         <h3>Para Empresas</h3>
                         <p>Publica tus vacantes para encontrar el mejor talento o lista los servicios que tu empresa
                             ofrece.</p>
-                        <a href="#" class="btn-card">Registra tu Empresa</a>
+                        <a href="form_PJ.html" class="btn-card">Registra tu Empresa</a>
                     </div>
                     <div class="card join-card">
                         <img src="image/service-placeholder-consult.png" alt="Icono Buscar Empleo" class="card-icon">
@@ -171,7 +202,7 @@
         <!-- Testimonios -->
         <div class="testimonios" id="testimonios">
             <div class="slide active">
-                <img src="image/testimonial-avatar-3.png" alt="Persona 1">
+                <img src="image/testimonial-avatar-1.png" alt="Persona 1">
                 <p class="comentario">"Gracias a REDOLLS S.A. encontré un empleo ideal en solo una semana. ¡Excelente
                     servicio!"</p>
                 <p class="nombre">Laura Martínez</p>
@@ -195,98 +226,122 @@
             </div>
         </div>
 
+        <!-- Contacto -->
         <section id="contact" class="content-section">
             <div class="container">
                 <h2>Contáctanos</h2>
-                <p>¿Interesado en nuestros servicios o tienes alguna vacante que publicar? Queremos escucharte.</p>
-                <p>Envíanos un correo a <a href="/cdn-cgi/l/email-protection#eb82858d84ab998e8f84878798c5888486"><span
-                            class="__cf_email__"
-                            data-cfemail="bad3d4dcd5fac8dfded5d6d6c994d9d5d7">[email&#160;protected]</span></a> o
-                    llámanos al <a href="tel:+1234567890">+123 456 7890</a>.</p>
-                <a href="/cdn-cgi/l/email-protection#6900070f06291b0c0d0605051a470a0604"
-                    class="btn btn-primary contact-btn">Enviar Email</a>
+                <p>¿Interesado en obtener más información sobre nosotros? Animate,</p>
+                <p>estamos dispuestos a escucharte y a brindarte la solución a tus necesidades.</p>
+
+                <!-- Formulario de contacto -->
+                <form action="mailto:ejemplo@dominio.com" method="post" enctype="text/plain" class="contact-form">
+                    <div>
+                        <label for="name">Nombre:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div>
+                        <label for="number">Celular:</label>
+                        <input type="text" id="number" name="number" required>
+                    </div>
+                    <div>
+                        <label for="email">Correo electrónico:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div>
+                        <label for="message">Mensaje:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <a href="#" class="btn btn-primary contact-btn">Enviar Mensaje</a>
+                </form>
+
+                <!-- Mapa (opcional) -->
+                <div class="map-container" style="margin-top: 20px;">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.996742504313!2d-74.08083!3d4.60971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f99c5a6f7b157%3A0x58dcb1a4f0881f7d!2sBogotá%2C%20Colombia!5e0!3m2!1ses!2sco!4v1650000000000"
+                        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
             </div>
         </section>
-    </main>
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-info">
-                    <a href="index.html" class="footer-logo-link">
-                        <img src="image/logo.png" alt="REDOLLS Logo" class="footer-logo">
-                    </a>
-                    <p class="footer-tagline">Conectando talento y oportunidades en un solo lugar.</p>
-                    <p class="footer-contact-info">Email: <a
-                            href="/cdn-cgi/l/email-protection#2d44434b426d5f48494241415e034e4240"><span
-                                class="__cf_email__"
-                                data-cfemail="e68f888089a6948382898a8a95c885898b">[email&#160;protected]</span></a></p>
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-info">
+                        <a><img src="image/logo.png" alt="REDOLLS Logo" class="footer-logo"></a>
+                        <p class="footer-tagline">Conectando talento y oportunidades en un solo lugar.</p>
+                        <p class="footer-contact-info">Email:
+                            <a href="#"><span class="__cf_email__"
+                                    data-cfemail="e68f888089a6948382898a8a95c885898b">REDOLLS_SA@gmail.com</span></a>
+                        </p>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Navegación</h4>
+                        <ul>
+                            <li><a href="#hero">Inicio</a></li>
+                            <li><a href="#services">Servicios</a></li>
+                            <li><a href="#nosotros">Nosotros</a></li>
+                            <li><a href="#join">Únete</a></li>
+                            <li><a href="#testimonios">Testimonios</a></li>
+                            <li><a href="#contact">Contacto</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-social">
+                        <div class="social-icons">
+                            <a href="#" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                            <a href="#" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+
                 </div>
                 <div class="footer-links">
-                    <h4>Navegación</h4>
-                    <ul>
-                        <li><a href="#hero">Inicio</a></li>
-                        <li><a href="#services">Servicios</a></li>
-                        <li><a href="#nosotros">Nosotros</a></li>
-                        <li><a href="#join">Únete</a></li>
-                        <li><a href="#testimonios">Testimonios</a></li>
-                        <li><a href="#contact">Contacto</a></li>
-                    </ul>
+                    <p>&copy; <span id="currentYear"></span> REDOLLS. Todos los derechos reservados | Plataforma
+                        desarrollada con pasión.</p>
                 </div>
-
-                <div class="footer-social">
-                    <div class="social-icons">
-                        <a href="#" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="#" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                    </div>
-                </div>
-
             </div>
-            <div class="footer-bottom">
-                <p>&copy; <span id="currentYear"></span> REDOLLS. Todos los derechos reservados.</p>
-                <p>Plataforma desarrollada con pasión.</p>
-            </div>
-        </div>
-    </footer>
+        </footer>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-    <script src="js/script.js"></script>
-    <script>
-        let index = 0;
-        const slides = document.querySelectorAll(".slide");
+        <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+        <script src="js/script.js"></script>
+        <script>
+            let index = 0;
+            const slides = document.querySelectorAll(".slide");
 
-        function mostrarSlide(i) {
-            slides.forEach(slide => slide.classList.remove("active"));
-            slides[i].classList.add("active");
-        }
+            function mostrarSlide(i) {
+                slides.forEach(slide => slide.classList.remove("active"));
+                slides[i].classList.add("active");
+            }
 
-        function mover(n) {
-            index = (index + n + slides.length) % slides.length;
-            mostrarSlide(index);
-            reiniciarTemporizador();
-        }
+            function mover(n) {
+                index = (index + n + slides.length) % slides.length;
+                mostrarSlide(index);
+                reiniciarTemporizador();
+            }
 
-        function avanzarAutomaticamente() {
-            mover(1);
-        }
+            function avanzarAutomaticamente() {
+                mover(1);
+            }
 
-        let temporizador = setInterval(avanzarAutomaticamente, 5000);
+            let temporizador = setInterval(avanzarAutomaticamente, 5000);
 
-        function reiniciarTemporizador() {
-            clearInterval(temporizador);
-            temporizador = setInterval(avanzarAutomaticamente, 5000);
-        }
-    </script>
+            function reiniciarTemporizador() {
+                clearInterval(temporizador);
+                temporizador = setInterval(avanzarAutomaticamente, 5000);
+            }
+        </script>
 </body>
 
 </html>

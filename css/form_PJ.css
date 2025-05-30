@@ -1,0 +1,129 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* background-color: #f8f9fa; */
+    background: linear-gradient(to bottom right, #eef2f3, #f8f9fa);
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 960px; /* Slightly wider */
+    background-color: #ffffff;
+    padding: 40px; /* More padding */
+    border-radius: 12px; /* Softer radius */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1); /* More pronounced shadow */
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    transition: box-shadow 0.3s ease-in-out; /* Added transition for hover effect */
+}
+
+.container:hover { /* Added hover effect */
+    box-shadow: 0 12px 35px rgba(0,0,0,0.15); /* Enhanced shadow on hover */
+}
+
+h1 {
+    color: #2c3e50; /* Darker, more modern blue/grey */
+    font-weight: 600;
+    margin-bottom: 2.5rem; /* More space below h1 */
+}
+
+legend {
+    font-weight: 600;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem; /* More space below legend */
+    border-bottom: 1px solid #eee; /* Subtle separator */
+    font-size: 1.4rem; /* Adjust size, Bootstrap h5 might be too small */
+}
+
+/* Specific legend colors - these can be kept or unified */
+fieldset legend.h5 { /* Target legends with h5 class, ensuring specificity */
+    color: #0d6efd; /* Default primary color for the first legend */
+}
+
+fieldset:nth-of-type(2) legend.h5 { /* Vacancies legend */
+    color: #060606; /* color título h5 */
+}
+
+.form-label {
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+    color: #495057;
+}
+
+.form-control {
+    border-radius: 0.375rem; /* Bootstrap's default, ensure consistency */
+    border: 1px solid #ced4da;
+    padding: 0.75rem 1rem; /* More padding for better feel */
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+    border-color: #86b7fe; /* Bootstrap focus color */
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25); /* Bootstrap focus shadow */
+}
+
+textarea.form-control {
+    min-height: 100px;
+}
+
+.vacancy-entry, .service-entry {
+    padding: 20px; /* More padding */
+    border: 1px solid #e9ecef; /* Softer border */
+    border-radius: 8px; /* Softer radius */
+    margin-bottom: 20px; /* More space */
+    background-color: #fdfdff; /* Slightly off-white */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05); /* Subtle shadow for card effect */
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.vacancy-entry:hover, .service-entry:hover {
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+.vacancy-entry h5, .service-entry h5 {
+    color: #343a40;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.95rem;
+    border-radius: 0.375rem; /* Consistent radius */
+    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.btn-primary {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    max-width: 200px;
+    margin: 0 auto;
+    transition: all 0.3s;
+}
+.btn-primary:hover {
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
+    transform: scale(1.1);
+}
+
+.btn-outline-primary, .btn-outline-success {
+    transition: background-color 0.2s ease, color 0.2s ease; /* Smoother hover for outline buttons */
+}
+
+.btn-danger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.4rem 0.8rem; /* Slightly smaller delete button */
+    font-size: 0.85rem;
+}
+
+.btn-danger svg {
+    margin-right: 5px;
+}
+
+/* Add a bit more spacing to fieldsets */
+fieldset.mb-4 {
+    margin-bottom: 2.5rem !important; /* More space between fieldsets */
+}
