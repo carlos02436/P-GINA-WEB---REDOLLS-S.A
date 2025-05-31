@@ -71,7 +71,7 @@ header .container {
 
 #logo-img {
     height: 100px;
-    margin-right: 10px;
+    margin-right: 0;
     border-radius: 100%;
 }
 
@@ -102,7 +102,8 @@ header .container {
 }
 
 .nav-toggle {
-    display: none; /* Hidden by default, shown on mobile */
+    display: none;
+    /* Hidden by default, shown on mobile */
     background: none;
     border: none;
     cursor: pointer;
@@ -150,9 +151,12 @@ header .container {
     position: relative;
     z-index: 1000;
     background-image: url(../image/fruta.jpg);
-    background-position: center center;  /* Centra la imagen */
-    background-repeat: no-repeat;         /* Evita que se repita */
-    background-size: cover;                /* Escala para cubrir todo el área sin deformar */
+    background-position: center center;
+    /* Centra la imagen */
+    background-repeat: no-repeat;
+    /* Evita que se repita */
+    background-size: cover;
+    /* Escala para cubrir todo el área sin deformar */
 }
 
 #hero::before {
@@ -517,13 +521,17 @@ header .container {
 /* Footer */
 footer {
     background-color: var(--primary-color);
-    color: var(--light-gray); /* Lighter text for contrast on dark bg */
+    color: var(--light-gray);
+    /* Lighter text for contrast on dark bg */
     padding: 60px 0 20px;
-    text-align: left; /* Reset text-align from previous simpler footer */
-    background-image: url(../image/la_jagua_de_ibirico2.jpg); 
-    background-position: center center;  /* Centra la imagen */
-    background-repeat: no-repeat;         /* Evita que se repita */
-    background-size: cover; 
+    text-align: left;
+    /* Reset text-align from previous simpler footer */
+    background-image: url(../image/la_jagua_de_ibirico2.jpg);
+    background-position: center center;
+    /* Centra la imagen */
+    background-repeat: no-repeat;
+    /* Evita que se repita */
+    background-size: cover;
 }
 
 .footer-content {
@@ -573,7 +581,8 @@ footer {
 }
 
 .footer-logo:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
+    box-shadow: 0 5px 15px rgb(142, 143, 144);
 }
 
 .footer-tagline {
@@ -592,14 +601,17 @@ footer {
 
 .footer-contact-info a {
     display: inline-block;
-    text-decoration: none; /* Elimina la línea por defecto */
-    color: inherit; /* Opcional: hereda el color base si lo prefieres */
+    text-decoration: none;
+    /* Elimina la línea por defecto */
+    color: inherit;
+    /* Opcional: hereda el color base si lo prefieres */
 }
 
 .footer-contact-info a:hover {
     color: white;
     text-shadow: 0 0 5px white, 0 0 10px white, 0 0 20px white;
-    text-decoration: none; /* Asegura que no se muestre subrayado en hover */
+    text-decoration: none;
+    /* Asegura que no se muestre subrayado en hover */
 }
 
 .footer-links h4,
@@ -671,7 +683,8 @@ footer {
 }
 
 .footer-bottom p {
-    margin: 0; /* Reset margin from simpler footer */
+    margin: 0;
+    /* Reset margin from simpler footer */
     font-size: 0.9rem;
     opacity: 0.7;
     line-height: 1.5;
@@ -891,11 +904,13 @@ footer {
     color: rgb(0, 0, 0);
     padding: 60px 20px;
     position: relative;
-    overflow: hidden;    
-    background-image: url(../image/la_jagua_de_ibirico1.jpg); 
-    background-position: center center;  /* Centra la imagen */
-    background-repeat: no-repeat;         /* Evita que se repita */
-    background-size: cover;  
+    overflow: hidden;
+    background-image: url(../image/la_jagua_de_ibirico1.jpg);
+    background-position: center center;
+    /* Centra la imagen */
+    background-repeat: no-repeat;
+    /* Evita que se repita */
+    background-size: cover;
 }
 
 .contenedor-carrusel {
@@ -991,4 +1006,34 @@ footer {
         height: 35px;
         font-size: 18px;
     }
+}
+
+/* Barra de Búsqueda y Formulario como contenedor flex */
+form.d-flex,
+.search-form {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Input dentro del formulario */
+form.d-flex input,
+.search-input {
+    min-width: 150px;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #e8e8e9;
+    color: rgb(0, 0, 0);
+}
+
+/* Si se quiere que .search-input tenga tamaño específico */
+.search-input {
+    width: 250px;
+    height: 40px;
+}
+
+/* Ajuste del botón */
+form.d-flex button {
+    white-space: nowrap;
 }
