@@ -68,9 +68,20 @@
 
         <section id="video">
             <video autoplay muted loop playsinline id="hero-video">
-                <source src="video/216134_small.mp4" type="video/mp4">
+                <source src="video/jagua2.mp4" type="video/mp4">
                 Tu navegador no soporta video HTML5.
             </video>
+            <div class="video-content1">
+                <h1 class="h1_R">REDOLLS S.A.</h1>
+                <p><em>
+                        "Siempre a la vanguardia de las grandes oportunidades para el municipio de La Jagua de Ibirico,
+                        impulsando el crecimiento económico, fortaleciendo el talento local y creando conexiones que
+                        transforman vidas. En REDOLLS S.A. creemos en el potencial de nuestra gente y trabajamos cada
+                        día
+                        para abrir nuevas puertas al desarrollo profesional y empresarial."
+                    </em>
+                </p>
+            </div>
         </section>
 
         <!-- Servicios -->
@@ -267,39 +278,62 @@
         </section>
 
         <!-- Footer -->
-        <footer>
+        <footer class="footer">
             <div class="container">
                 <div class="footer-content">
-                    <div class="footer-info">
-                        <p class="footer-tagline footer-contact-info">Conectando talento y oportunidades en un solo lugar. Email: <a href="#"><span class="__cf_email__"
-                                    data-cfemail="e68f888089a6948382898a8a95c885898b">REDOLLS_SA@gmail.com</span></a></p>
+
+                    <!-- Contacto -->
+                    <div class="footer-links">
+                        <h4>Contacto</h4>
+                        <ul class="footer-contact-info">
+                            <li>Email: <a href="mailto:redolls_sa@gmail.com">redolls_sa@gmail.com</a></li>
+                            <li>Teléfono: <a href="tel:+573211255487">(+57) 321 125 54 87</a></li>
+                            <li>Dirección: Cra 00 #00-00, Ciudad, Colombia</li>
+                        </ul>
                     </div>
 
+                    <!-- Navegación -->
+                    <div class="footer-links">
+                        <h4>Navegación</h4>
+                        <ul class="footer-contact-info">
+                            <li><a href="#hero">Inicio</a></li>
+                            <li><a href="#nosotros">Nosotros</a></li>
+                            <li><a href="#services">Servicios</a></li>
+                            <li><a href="#vacancies">Vacantes</a></li>
+                            <li><a href="#join">Únete</a></li>
+                            <li><a href="#testimonios">Testimonios</a></li>
+                            <li><a href="#contact">Contacto</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Redes Sociales -->
                     <div class="footer-social">
+                        <h4>Redes Sociales</h4>
                         <div class="social-icons">
-                            <a href="#" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="#" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
-                                <i class="fab fa-whatsapp"></i>
-                            </a>
-                            <a href="#" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="#" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
-                                <i class="fab fa-twitter"></i>
-                            </a>
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-github"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
-                    <a><img src="image/logo.png" alt="REDOLLS Logo" class="footer-logo"></a>
                 </div>
-                <hr>
-                <div class="footer-links">
-                    <p>&copy; <span id="currentYear"></span> REDOLLS. Todos los derechos reservados | Plataforma
-                        desarrollada con pasión.</p>
+
+                <!-- Pie inferior -->
+                <div class="footer-bottom">
+                    <h4>&copy; <span id="currentYear"></span> REDOLLS S.A. Todos los derechos reservados. Plataforma
+                        desarrollada con pasión y compromiso.<h4>
                 </div>
             </div>
         </footer>
+
+
+        <!-- Script para el año actual -->
+        <script>
+            document.getElementById("currentYear").textContent = new Date().getFullYear();
+        </script>
+
 
         <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
         <script src="js/script.js"></script>

@@ -6,15 +6,26 @@ body {
     line-height: 1.6;
 }
 
+#backgroundVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    object-fit: cover;
+    filter: brightness(0.7); /* opcional, para oscurecer el video y que el texto resalte */
+}
+
 .container {
-    max-width: 960px; /* Slightly wider */
-    background-color: #ffffff;
-    padding: 40px; /* More padding */
-    border-radius: 12px; /* Softer radius */
-    box-shadow: 0 8px 25px rgba(0,0,0,0.1); /* More pronounced shadow */
+    max-width: 960px;
+    background-color: rgba(255, 255, 255, 0.8); /* Transparencia solo al fondo */
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
     margin-top: 3rem;
     margin-bottom: 3rem;
-    transition: box-shadow 0.3s ease-in-out; /* Added transition for hover effect */
+    transition: box-shadow 0.3s ease-in-out;
 }
 
 .container:hover { /* Added hover effect */
