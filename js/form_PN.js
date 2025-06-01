@@ -37,10 +37,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 <label for="vacancyDescription-${vacancyIdSuffix}" class="form-label">Descripción</label>
                 <textarea class="form-control" id="vacancyDescription-${vacancyIdSuffix}" name="vacancies[${vacancyCount-1}][description]" rows="3" required></textarea>
             </div>
-            <div class="mb-3">
-                <label for="vacancyRequirements-${vacancyIdSuffix}" class="form-label">¿Qué Ofreces?</label>
-                <textarea class="form-control" id="vacancyRequirements-${vacancyIdSuffix}" name="vacancies[${vacancyCount-1}][requirements]" rows="2"></textarea>
-            </div>
         `;
         const deleteBtn = createDeleteButton(() => {
             newVacancyEntry.remove();
