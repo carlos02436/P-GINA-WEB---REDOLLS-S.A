@@ -149,7 +149,7 @@ header .container {
     justify-content: center;
     align-items: center;
     position: relative;
-    z-index: 1000;
+    z-index: -1;
     background-image: url(../image/fruta.jpg);
     background-position: center center;
     /* Centra la imagen */
@@ -606,7 +606,7 @@ footer {
 .footer-logo {
     height: 100px;
     width: 100px;
-    border-radius: 0 40px 0 40px;
+    border-radius: 100px;
     transition: all 0.3s;
 }
 
