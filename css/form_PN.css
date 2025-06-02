@@ -1,9 +1,13 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    /* background-color: #f8f9fa; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;/* background-color: #f8f9fa; */
     background: linear-gradient(to bottom right, #eef2f3, #f8f9fa);
     color: #333;
     line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(to bottom right, #eef2f3, #f8f9fa);
 }
 
 #backgroundVideo {
@@ -18,7 +22,7 @@ body {
 }
 
 .container {
-    max-width: 960px;
+    max-width: 650px;
     background-color: rgba(255, 255, 255, 0.8); /* Transparencia solo al fondo */
     padding: 40px;
     border-radius: 12px;
@@ -26,6 +30,7 @@ body {
     margin-top: 3rem;
     margin-bottom: 3rem;
     transition: box-shadow 0.3s ease-in-out;
+    margin: 35px;
 }
 
 .container:hover { /* Added hover effect */

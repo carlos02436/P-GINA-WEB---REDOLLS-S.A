@@ -18,6 +18,10 @@ body {
     object-fit: cover;
 }
 
+.h1-5 {
+    text-align: center;
+}
+
 .container {
     max-width: 650px;
     background-color: rgba(255, 255, 255, 0.8); /* Transparencia solo al fondo */

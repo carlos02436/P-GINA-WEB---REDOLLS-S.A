@@ -606,7 +606,7 @@ footer {
 .footer-logo {
     height: 100px;
     width: 100px;
-    border-radius: 100px;
+    border-radius: 0 40px 0 40px;
     transition: all 0.3s;
 }
 
@@ -919,16 +919,13 @@ footer {
 /* Carrusel de testimonios */
 .testimonios {
     width: 100%;
-    background: transparent;
     color: rgb(0, 0, 0);
     padding: 60px 20px;
     position: relative;
     overflow: hidden;
-    background-image: url(../image/la_jagua_de_ibirico1.jpg);
-    background-position: center center;
-    /* Centra la imagen */
-    background-repeat: no-repeat;
-    /* Evita que se repita */
+    background-image: url(../image/La_Jagua_de_Ibirico5.jpg);
+    background-position: center center;/* Centra la imagen */
+    background-repeat: no-repeat;/* Evita que se repita */
     background-size: cover;
 }
 
