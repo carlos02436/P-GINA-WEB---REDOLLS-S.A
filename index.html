@@ -30,12 +30,12 @@
                 </button>
                 <div>
                     <ul class="nav-links">
-                        <li><a href="#services">Servicios</a></li>
-                        <li><a href="#vacancies">Vacantes</a></li>
-                        <li><a href="#about">Sobre Nosotros</a></li>
-                        <li><a href="#testimonials">Testimonios</a></li>
-                        <li><a href="#join">Únete</a></li>
-                        <li><a href="#contact">Contacto</a></li>
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Servicios</a></li>
+                        <li><a href="#">Nosotros</a></li>
+                        <li><a href="#">Testimonios</a></li>
+                        <li><a href="#">Únete</a></li>
+                        <li><a href="#">Contacto</a></li>
                     </ul>
                 </div>
             </nav>
@@ -55,6 +55,7 @@
             </div>
         </section>
 
+        <!-- Servicios -->
         <section id="services" class="content-section">
             <div class="container">
                 <h2>Servicios de Nuestra Comunidad</h2>
@@ -85,6 +86,7 @@
             </div>
         </section>
 
+        <!-- Vacantes -->
         <section id="vacancies" class="content-section alt-bg">
             <div class="container">
                 <h2>Vacantes de Empresas Destacadas</h2>
@@ -123,7 +125,8 @@
             </div>
         </section>
 
-        <section id="about" class="content-section">
+        <!-- Nosotros -->
+        <section class="content-section">
             <div class="container">
                 <h2>Sobre REDOLLS</h2>
                 <p>En REDOLLS, creamos un puente digital que conecta a individuos y empresas. Facilitamos que personas
@@ -138,21 +141,22 @@
                 <h2>Únete a la Comunidad REDOLLS</h2>
                 <div class="join-grid">
                     <div class="card join-card">
-                        <img src="image/service-placeholder-consult.png" alt="Icono Ofrecer Servicios" class="card-icon">
+                        <img src="image/service-placeholder-consult.png" alt="Icono Ofrecer Servicios"
+                            class="card-icon">
                         <h3>Ofrece Tus Servicios</h3>
                         <p>Si eres un profesional o persona natural, publica tus servicios y conecta con nuevos
                             clientes.</p>
                         <a href="login up.html" class="btn-card">Regístrate y Publica</a>
                     </div>
                     <div class="card join-card">
-                        <img src="image/service-placeholder.png" alt="Icono Empresas" class="card-icon">
+                        <img src="image/service-placeholder-consult.png" alt="Icono Empresas" class="card-icon">
                         <h3>Para Empresas</h3>
                         <p>Publica tus vacantes para encontrar el mejor talento o lista los servicios que tu empresa
                             ofrece.</p>
                         <a href="#" class="btn-card">Registra tu Empresa</a>
                     </div>
                     <div class="card join-card">
-                        <img src="image/vacancy-placeholder.png" alt="Icono Buscar Empleo" class="card-icon">
+                        <img src="image/service-placeholder-consult.png" alt="Icono Buscar Empleo" class="card-icon">
                         <h3>Busca Oportunidades</h3>
                         <p>Aspirantes, encuentren su próximo desafío profesional explorando las vacantes disponibles.
                         </p>
@@ -162,109 +166,32 @@
             </div>
         </section>
 
-        <!-- Arreglar Comentarios -->
-    <section style="padding-top: 150px; padding-bottom: 150px; margin: auto;">
-        <div class="container">
-            <h2 class="text-center mb-5 section-title">Testimonios</h2>
+        <!-- Testimonios -->
+        <div class="testimonios" id="testimonios">
+            <div class="slide active">
+                <img src="image/testimonial-avatar-1 copy.png" alt="Persona 1">
+                <p class="comentario">"Gracias a REDOLLS S.A. encontré un empleo ideal en solo una semana. ¡Excelente
+                    servicio!"</p>
+                <p class="nombre">Laura Martínez</p>
+            </div>
+            <div class="slide">
+                <img src="image/testimonial-avatar-2.png" alt="Persona 2">
+                <p class="comentario">"Su plataforma es muy fácil de usar y siempre están disponibles para ayudarte."
+                </p>
+                <p class="nombre">Carlos Gómez</p>
+            </div>
+            <div class="slide">
+                <img src="image/testimonial-avatar-3.png" alt="Persona 3">
+                <p class="comentario">"Recomiendo REDOLLS S.A. a todas las empresas que buscan talento humano de
+                    calidad."</p>
+                <p class="nombre">Sandra Torres</p>
+            </div>
 
-            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner" style="height: 200px;">
-
-                    <!-- Testimonio 1 -->
-                    <div class="carousel-item active" style="margin: 15px auto;">
-                        <div class="d-flex flex-column align-items-center">
-                            <img src="image/logo.png" alt="Juan Pérez" class="rounded-circle mb-4"
-                                style="width: 90px; height: 90px; object-fit: cover;">
-                            <p class="text-center mb-4">"Excelente servicio, el ambiente es espectacular. ¡Súper
-                                recomendado!"</p>
-                            <h5>Juan Pérez</h5>
-                        </div>
-                    </div>
-
-                    <!-- Testimonio 2 -->
-                    <div class="carousel-item" style="margin: 15px auto;">
-                        <div class="d-flex flex-column align-items-center">
-                            <img src="image/logo.png" alt="Andrés Gómez" class="rounded-circle mb-4"
-                                style="width: 90px; height: 90px; object-fit: cover;">
-                            <p class="text-center mb-4">"El mejor corte que me han hecho, atención personalizada y
-                                profesionalismo."</p>
-                            <h5>Andrés Gómez</h5>
-                        </div>
-                    </div>
-
-                    <!-- Testimonio 3 -->
-                    <div class="carousel-item" style="margin: 15px auto;">
-                        <div class="d-flex flex-column align-items-center">
-                            <img src="image/logo.png" alt="Camilo Torres" class="rounded-circle mb-4"
-                                style="width: 90px; height: 90px; object-fit: cover;">
-                            <p class="text-center mb-4">"Un lugar increíble donde te hacen sentir como en casa. Muy
-                                recomendado."</p>
-                            <h5>Camilo Torres</h5>
-                        </div>
-                    </div>
-
-                    <!-- Testimonio 4 -->
-                    <div class="carousel-item" style="margin: 15px auto;">
-                        <div class="d-flex flex-column align-items-center">
-                            <img src="image/logo.png" alt="Sebastián Martínez" class="rounded-circle mb-4"
-                                style="width: 90px; height: 90px; object-fit: cover;">
-                            <p class="text-center mb-4">"Cortes modernos y el personal súper amable. Sin duda volveré."
-                            </p>
-                            <h5>Sebastián Martínez</h5>
-                        </div>
-                    </div>
-
-                    <!-- Testimonio 5 -->
-                    <div class="carousel-item" style="margin: 15px auto;">
-                        <div class="d-flex flex-column align-items-center">
-                            <img src="image/logo.png" alt="Diego Herrera" class="rounded-circle mb-4"
-                                style="width: 90px; height: 90px; object-fit: cover;">
-                            <p class="text-center mb-4">"Muy buena experiencia, me encantó la asesoría sobre el estilo
-                                que más me convenía."</p>
-                            <h5>Diego Herrera</h5>
-                        </div>
-                    </div>
-
-                    <!-- Testimonio 6 -->
-                    <div class="carousel-item" style="margin: 15px auto;">
-                        <div class="d-flex flex-column align-items-center">
-                            <img src="image/logo.png" alt="Luis Ramírez" class="rounded-circle mb-4"
-                                style="width: 90px; height: 90px; object-fit: cover;">
-                            <p class="text-center mb-4">"Profesionales de verdad, te sientes en manos expertas desde el
-                                primer momento."</p>
-                            <h5>Luis Ramírez</h5>
-                        </div>
-                    </div>
-
-                    <!-- Testimonio 7 -->
-                    <div class="carousel-item" style="margin: 15px auto;">
-                        <div class="d-flex flex-column align-items-center">
-                            <img src="image/logo.png" alt="Ricardo Castaño" class="rounded-circle mb-4"
-                                style="width: 90px; height: 90px; object-fit: cover;">
-                            <p class="text-center mb-4">"Simplemente los mejores, me devolvieron la confianza en los
-                                barberos."</p>
-                            <h5>Ricardo Castaño</h5>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- Controles (flechas) -->
-                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel"
-                    data-bs-slide="prev" style="border: none; background: transparent;">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"
-                        style="text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;"></span>
-                    <span class="visually-hidden">Anterior</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel"
-                    data-bs-slide="next" style="border: none; background: transparent;">
-                    <span class="carousel-control-next-icon" aria-hidden="true"
-                        style="text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;"></span>
-                    <span class="visually-hidden">Siguiente</span>
-                </button>
+            <div class="controles">
+                <button class="control" onclick="mover(-1)">&#10094;</button>
+                <button class="control" onclick="mover(1)">&#10095;</button>
             </div>
         </div>
-    </section>
 
         <section id="contact" class="content-section">
             <div class="container">
@@ -325,6 +252,32 @@
 
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script src="js/script.js"></script>
+    <script>
+        let index = 0;
+        const slides = document.querySelectorAll(".slide");
+
+        function mostrarSlide(i) {
+            slides.forEach(slide => slide.classList.remove("active"));
+            slides[i].classList.add("active");
+        }
+
+        function mover(n) {
+            index = (index + n + slides.length) % slides.length;
+            mostrarSlide(index);
+            reiniciarTemporizador();
+        }
+
+        function avanzarAutomaticamente() {
+            mover(1);
+        }
+
+        let temporizador = setInterval(avanzarAutomaticamente, 5000);
+
+        function reiniciarTemporizador() {
+            clearInterval(temporizador);
+            temporizador = setInterval(avanzarAutomaticamente, 5000);
+        }
+    </script>
 </body>
 
 </html>
