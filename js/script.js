@@ -94,3 +94,33 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+// diseño responsive para cualquier dispositivo
+document.addEventListener('DOMContentLoaded', function () {
+    const isMobile = window.innerWidth <= 768; // puedes ajustar este valor
+
+    if (isMobile) {
+        // Aumentar el tamaño del logo
+        const logo = document.getElementById('logo-img');
+        if (logo) {
+            logo.style.width = '80px'; // tamaño más grande
+            logo.style.height = 'auto';
+        }
+
+        // Reducir el input de búsqueda
+        const searchInput = document.querySelector('.search-input');
+        if (searchInput) {
+            searchInput.style.width = '100px';
+            searchInput.style.fontSize = '12px';
+            searchInput.style.padding = '5px';
+        }
+
+        // Reducir el botón de búsqueda
+        const searchButton = document.querySelector('.search-form button');
+        if (searchButton) {
+            searchButton.style.fontSize = '12px';
+            searchButton.style.padding = '5px 10px';
+        }
+    }
+});
+
