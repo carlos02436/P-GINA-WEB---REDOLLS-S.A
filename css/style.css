@@ -31,7 +31,13 @@ body {
     line-height: 1.6;
     color: var(--text-color-dark);
     background-color: var(--text-color-light);
+    background-image: url(../image/fondo_marmol.jpg); /* Ruta a tu imagen */
+    background-size: cover;       /* Cubre toda la pantalla */
+    background-repeat: no-repeat; /* Evita que se repita */
+    background-attachment: fixed; /* Hace que la imagen quede fija al hacer scroll */
+    background-position: center;  /* Centra la imagen */
 }
+
 
 .container {
     width: 90%;
@@ -149,24 +155,24 @@ header .container {
     justify-content: center;
     align-items: center;
     position: relative;
-    z-index: -1;
-    background-image: url(../image/fruta.jpg);
+    z-index: 1; /* cambiamos de -1 a 1 para que el contenido esté por encima del ::before */
+    background-image: url(../image/edificio.jpg);
     background-position: center center;
-    /* Centra la imagen */
     background-repeat: no-repeat;
-    /* Evita que se repita */
     background-size: cover;
-    /* Escala para cubrir todo el área sin deformar */
+    overflow: hidden;
 }
 
+/* Este pseudo-elemento es la capa oscura */
 #hero::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* ajusta opacidad aquí */
+    z-index: -1;
 }
 
 #video {
@@ -197,7 +203,7 @@ header .container {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: auto; max-height: 800px;
     object-fit: cover;/* Asegura que el video cubra toda la sección */
     z-index: 1;
 }
@@ -327,9 +333,13 @@ header .container {
 
 /* Contenedor principal de contacto */
 #contact {
-    padding: 60px 20px;
-    background-color: #f9f9f9;
-    font-family: 'Segoe UI', sans-serif;
+    background-image: url(../image/fondo_marmol.jpg); /* Cambia la ruta a tu imagen */
+    background-size: cover;        /* Cubre toda la sección */
+    background-position: center;   /* Centra la imagen */
+    background-repeat: no-repeat;  /* Evita que se repita */
+    background-attachment: fixed;  /* Opcional: efecto parallax */
+    color: white;                  /* Mejora contraste si fondo es oscuro */
+    position: relative;
 }
 
 #contact h2 {
@@ -919,7 +929,6 @@ footer {
 /* Carrusel de testimonios */
 .testimonios {
     width: 100%;
-    color: rgb(0, 0, 0);
     padding: 60px 20px;
     position: relative;
     overflow: hidden;
@@ -928,6 +937,7 @@ footer {
     background-repeat: no-repeat;/* Evita que se repita */
     background-size: cover;
 }
+
 
 .contenedor-carrusel {
     max-width: 1200px;
