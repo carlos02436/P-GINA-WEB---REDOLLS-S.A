@@ -451,8 +451,33 @@
 
         <!-- js Personalizado -->
         <script src="js/script.js"></script>
-        
         <script type="importmap"></script>
+        <script>
+            let index = 0;
+            const slides = document.querySelectorAll(".slide");
+
+            function mostrarSlide(i) {
+                slides.forEach(slide => slide.classList.remove("active"));
+                slides[i].classList.add("active");
+            }
+
+            function mover(n) {
+                index = (index + n + slides.length) % slides.length;
+                mostrarSlide(index);
+                reiniciarTemporizador();
+            }
+
+            function avanzarAutomaticamente() {
+                mover(1);
+            }
+
+            let temporizador = setInterval(avanzarAutomaticamente, 5000);
+
+            function reiniciarTemporizador() {
+                clearInterval(temporizador);
+                temporizador = setInterval(avanzarAutomaticamente, 5000);
+            }
+        </script>
 </body>
 
 </html>
