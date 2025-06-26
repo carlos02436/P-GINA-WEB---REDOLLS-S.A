@@ -317,35 +317,38 @@
             </div>
         </section>
 
-<section id="testimonios" style="scroll-margin-top: 80px;">
-  <div class="testimonios">
-    <div class="slide active">
-      <img src="image/testimonial-avatar-1.png" alt="Persona 1">
-      <p class="comentario">"Gracias a REDOLLS S.A. encontré un empleo ideal en solo una semana. ¡Excelente servicio!"</p>
-      <p class="nombre">Laura Martínez</p>
-    </div>
-    <div class="slide">
-      <img src="image/testimonial-avatar-2.png" alt="Persona 2">
-      <p class="comentario">"Su plataforma es muy fácil de usar y siempre están disponibles para ayudarte."</p>
-      <p class="nombre">Carlos Gómez</p>
-    </div>
-    <div class="slide">
-      <img src="image/testimonial-avatar-3.png" alt="Persona 3">
-      <p class="comentario">"Recomiendo REDOLLS S.A. a todas las empresas que buscan talento humano de calidad."</p>
-      <p class="nombre">Sandra Torres</p>
-    </div>
+        <section id="testimonios" style="scroll-margin-top: 80px;">
+            <div class="testimonios">
+                <div class="slide active">
+                    <img src="image/testimonial-avatar-1.png" alt="Persona 1">
+                    <p class="comentario">"Gracias a REDOLLS S.A. encontré un empleo ideal en solo una semana.
+                        ¡Excelente servicio!"</p>
+                    <p class="nombre">Laura Martínez</p>
+                </div>
+                <div class="slide">
+                    <img src="image/testimonial-avatar-2.png" alt="Persona 2">
+                    <p class="comentario">"Su plataforma es muy fácil de usar y siempre están disponibles para
+                        ayudarte."</p>
+                    <p class="nombre">Carlos Gómez</p>
+                </div>
+                <div class="slide">
+                    <img src="image/testimonial-avatar-3.png" alt="Persona 3">
+                    <p class="comentario">"Recomiendo REDOLLS S.A. a todas las empresas que buscan talento humano de
+                        calidad."</p>
+                    <p class="nombre">Sandra Torres</p>
+                </div>
 
-    <!-- Botones con ID -->
-    <div class="control-wrapper">
-      <button class="control" id="prevBtn">
-        <i class="fas fa-chevron-left"></i>
-      </button>
-      <button class="control" id="nextBtn">
-        <i class="fas fa-chevron-right"></i>
-      </button>
-    </div>
-  </div>
-</section>
+                <!-- Botones con ID -->
+                <div class="control-wrapper">
+                    <button class="control" id="prevBtn">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="control" id="nextBtn">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
 
 
         <!-- Contacto -->
@@ -448,33 +451,8 @@
 
         <!-- js Personalizado -->
         <script src="js/script.js"></script>
+        
         <script type="importmap"></script>
-        <script>
-            let index = 0;
-            const slides = document.querySelectorAll(".slide");
-
-            function mostrarSlide(i) {
-                slides.forEach(slide => slide.classList.remove("active"));
-                slides[i].classList.add("active");
-            }
-
-            function mover(n) {
-                index = (index + n + slides.length) % slides.length;
-                mostrarSlide(index);
-                reiniciarTemporizador();
-            }
-
-            function avanzarAutomaticamente() {
-                mover(1);
-            }
-
-            let temporizador = setInterval(avanzarAutomaticamente, 5000);
-
-            function reiniciarTemporizador() {
-                clearInterval(temporizador);
-                temporizador = setInterval(avanzarAutomaticamente, 5000);
-            }
-        </script>
 </body>
 
 </html>
