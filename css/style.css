@@ -1063,22 +1063,3 @@ form.d-flex input,
 form.d-flex button {
     white-space: nowrap;
 }
-
-/* Responsivo en pantallas pequeñas */
-@media (max-width: 768px) {
-    #logo-img {
-        width: 80px;
-        height: auto;
-    }
-
-    .search-input {
-        width: 100px;
-        font-size: 12px;
-        padding: 5px;
-    }
-
-    .search-form button {
-        font-size: 12px;
-        padding: 5px 10px;
-    }
-}

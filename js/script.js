@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Mobile navigation toggle
     const navToggle = document.querySelector('.nav-toggle');
     const mainNav = document.querySelector('.main-nav');
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Smooth scroll for navigation links
     const navLinks = document.querySelectorAll('.nav-links a[href^="#"], .hero-buttons a[href^="#"], .footer-links a[href^="#"], .join-card a[href^="#"]');
     navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
+        link.addEventListener('click', function (e) {
             e.preventDefault();
             const targetId = this.getAttribute('href');
             const targetElement = document.querySelector(targetId);
@@ -37,11 +37,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     navToggle.setAttribute('aria-expanded', 'false');
                     navToggle.setAttribute('aria-label', 'Abrir menú de navegación');
                 }
-                
+
                 // scrollIntoView is smoother than manual calculation for basic cases
                 targetElement.scrollIntoView({
                     behavior: 'smooth',
-                    block: 'start' 
+                    block: 'start'
                 });
             }
         });
@@ -82,45 +82,57 @@ document.addEventListener('DOMContentLoaded', function() {
     // Parallax effect for hero section
     const heroSection = document.getElementById('hero');
     if (heroSection) {
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             const scrollPosition = window.pageYOffset;
-            // Adjust the 0.4 factor to change the parallax speed/intensity
-            // Ensure background-attachment is not 'fixed' in CSS for this to work as expected on some browsers
-            // The '50%' part helps keep it centered initially if your CSS background-position was 'center'
-            // If your CSS is `background-position: center center;` then:
-            // heroSection.style.backgroundPosition = `center ${50 + scrollPosition * 0.1}%`; // Slower, subtle
-            // Or for pixel-based shift from original center:
+            // Ajusta el factor 0.4 para cambiar la velocidad/intensidad del efecto parallax
+            // Asegúrate de que en el CSS la propiedad 'background-attachment' no esté en 'fixed' para que funcione correctamente en algunos navegadores
+            // La parte '50%' ayuda a mantener la imagen centrada inicialmente si tu CSS tenía 'background-position: center'
+            // Si tu CSS es `background-position: center center;` entonces:
+            // heroSection.style.backgroundPosition = `center ${50 + scrollPosition * 0.1}%`; // Más lento, sutil
+            // O para un desplazamiento basado en píxeles desde el centro original:
             heroSection.style.backgroundPositionY = (scrollPosition * 0.4) + 'px';
         });
     }
 });
 
 // diseño responsive para cualquier dispositivo
+// diseño responsive para cualquier dispositivo
 document.addEventListener('DOMContentLoaded', function () {
-    const isMobile = window.innerWidth <= 768; // puedes ajustar este valor
+    const isMobile = window.innerWidth <= 768;
 
     if (isMobile) {
-        // Aumentar el tamaño del logo
+        // Tamaño del logo
         const logo = document.getElementById('logo-img');
         if (logo) {
-            logo.style.width = '80px'; // tamaño más grande
+            logo.style.width = '80px';
             logo.style.height = 'auto';
         }
 
-        // Reducir el input de búsqueda
+        // Estilo del input
         const searchInput = document.querySelector('.search-input');
         if (searchInput) {
-            searchInput.style.width = '100px';
+            searchInput.style.width = '45px';     // 🔧 Más pequeño
+            searchInput.style.height = '30px';
             searchInput.style.fontSize = '12px';
-            searchInput.style.padding = '5px';
+            searchInput.style.padding = '4px 6px';
         }
 
-        // Reducir el botón de búsqueda
+        // Estilo del botón
         const searchButton = document.querySelector('.search-form button');
         if (searchButton) {
+            searchButton.style.height = '30px';
             searchButton.style.fontSize = '12px';
-            searchButton.style.padding = '5px 10px';
+            searchButton.style.padding = '4px 10px';
+            searchButton.style.border = 'none';
+            searchButton.style.lineHeight = '1';
+        }
+
+        // Estilo del contenedor del buscador para que se acomode todo en línea
+        const searchForm = document.querySelector('.search-form');
+        if (searchForm) {
+            searchForm.style.display = 'flex';
+            searchForm.style.alignItems = 'center';
+            searchForm.style.gap = '4px';  // espacio entre input y botón
         }
     }
 });
-
