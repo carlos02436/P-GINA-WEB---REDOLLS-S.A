@@ -96,28 +96,54 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // diseño responsive para cualquier dispositivo
-// diseño responsive para cualquier dispositivo
 document.addEventListener('DOMContentLoaded', function () {
     const isMobile = window.innerWidth <= 768;
 
     if (isMobile) {
-        // Tamaño del logo
+        
+        // Ajustes al logo y al texto REDOLLS S.A
+        const logoContainer = document.querySelector('.logo-container');
+        if (logoContainer) {
+            logoContainer.style.display = 'flex';
+            logoContainer.style.alignItems = 'center';
+            logoContainer.style.gap = '4px';
+            logoContainer.style.fontSize = '13px'; // Tamaño reducido para que quepa
+            logoContainer.style.whiteSpace = 'nowrap'; // Evita que se parta en dos líneas
+        }
+
         const logo = document.getElementById('logo-img');
         if (logo) {
-            logo.style.width = '80px';
+            logo.style.width = '40px'; // Aún más pequeño para liberar espacio
             logo.style.height = 'auto';
+        }
+
+        // Estilo del contenedor de búsqueda y menú
+        const searchContainer = document.querySelector('.search-container');
+        if (searchContainer) {
+            searchContainer.style.display = 'flex';
+            searchContainer.style.alignItems = 'center';
+            searchContainer.style.gap = '6px';
+            searchContainer.style.flexWrap = 'nowrap';
+        }
+
+        // Estilo del formulario de búsqueda
+        const searchForm = document.querySelector('.search-form');
+        if (searchForm) {
+            searchForm.style.display = 'flex';
+            searchForm.style.alignItems = 'center';
+            searchForm.style.gap = '4px';
         }
 
         // Estilo del input
         const searchInput = document.querySelector('.search-input');
         if (searchInput) {
-            searchInput.style.width = '45px';     // 🔧 Más pequeño
+            searchInput.style.width = '45px';
             searchInput.style.height = '30px';
             searchInput.style.fontSize = '12px';
             searchInput.style.padding = '4px 6px';
         }
 
-        // Estilo del botón
+        // Estilo del botón de búsqueda
         const searchButton = document.querySelector('.search-form button');
         if (searchButton) {
             searchButton.style.height = '30px';
@@ -127,12 +153,14 @@ document.addEventListener('DOMContentLoaded', function () {
             searchButton.style.lineHeight = '1';
         }
 
-        // Estilo del contenedor del buscador para que se acomode todo en línea
-        const searchForm = document.querySelector('.search-form');
-        if (searchForm) {
-            searchForm.style.display = 'flex';
-            searchForm.style.alignItems = 'center';
-            searchForm.style.gap = '4px';  // espacio entre input y botón
+        // Estilo del botón hamburguesa
+        const hamburger = document.querySelector('.hamburger-menu');
+        if (hamburger) {
+            hamburger.style.fontSize = '24px';
+            hamburger.style.background = 'none';
+            hamburger.style.border = 'none';
+            hamburger.style.cursor = 'pointer';
+            hamburger.style.padding = '4px';
         }
     }
 });
