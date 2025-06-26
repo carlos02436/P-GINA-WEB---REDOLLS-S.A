@@ -208,7 +208,8 @@ header .container {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.9); /* Ajusta opacidad: 0.4 = 40% oscuro */
+    background: rgba(0, 0, 0, 0.9);
+    /* Ajusta opacidad: 0.4 = 40% oscuro */
     z-index: 2;
 }
 
@@ -1124,5 +1125,58 @@ footer {
     .search-form,
     .search-hamburger-container {
         gap: 4px;
+    }
+}
+
+/* Ajuste en la sección 'Sobre Nosotros' */
+/* === Tarjetas de Misión y Visión === */
+/* Misión y Visión */
+.m_v {
+    transition: all 0.3s ease-in-out;
+}
+
+.m_v:hover {
+    transform: scale(1.05);
+}
+
+.card-hover {
+    border-radius: 16px;
+    background-color: #ffffff;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+}
+
+.card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card-title i {
+    margin-right: 8px;
+    font-size: 1.3rem;
+    vertical-align: middle;
+}
+
+.card-title {
+    font-size: 1.25rem;
+}
+
+/* === Responsive spacing móvil === */
+@media (max-width: 768px) {
+    #nosotros img {
+        margin-bottom: 1.5rem;
+    }
+
+    #nosotros h2 {
+        text-align: center;
+    }
+
+    #nosotros p {
+        text-align: center;
+    }
+
+    .card-hover {
+        margin-bottom: 1rem;
     }
 }

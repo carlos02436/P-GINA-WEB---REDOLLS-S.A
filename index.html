@@ -10,7 +10,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="icon" href="image/logo2.png" type="image">
-    <script type="importmap"></script>
 </head>
 
 <body>
@@ -68,13 +67,18 @@
         </section>
 
         <!-- Nosotros -->
-        <section class="content-section" id="nosotros" style="scroll-margin-top: 80px;">
+        <section class="content-section py-5" id="nosotros" style="scroll-margin-top: 80px;">
             <div class="container">
-                <h2>Sobre REDOLLS</h2>
-                <p>En REDOLLS, creamos un puente digital que conecta a individuos y empresas. Facilitamos que personas
-                    naturales y jurídicas ofrezcan sus servicios, que las empresas publiquen sus vacantes, y que los
-                    aspirantes encuentren nuevas oportunidades. Nuestra misión es potenciar un ecosistema laboral y de
-                    servicios dinámico y eficiente.</p>
+                <h2 class="text-center mb-4">Sobre REDOLLS S.A</h2>
+                <p class="lead text-center mb-5">
+                    En REDOLLS S.A, creamos un puente digital que conecta a individuos y empresas en toda Colombia.
+                    Facilitamos que personas naturales y jurídicas ofrezcan sus servicios de forma profesional, que las
+                    empresas
+                    publiquen sus vacantes con rapidez y que los aspirantes encuentren nuevas oportunidades laborales
+                    alineadas con sus talentos.
+                    Nuestra plataforma impulsa un ecosistema dinámico, transparente y eficiente que fortalece el tejido
+                    productivo del país.
+                </p>
             </div>
         </section>
 
@@ -350,9 +354,11 @@
             document.getElementById("currentYear").textContent = new Date().getFullYear();
         </script>
 
-
         <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+
+        <!-- js Personalizado -->
         <script src="js/script.js"></script>
+        <script type="importmap"></script>
         <script>
             let index = 0;
             const slides = document.querySelectorAll(".slide");
