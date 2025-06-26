@@ -31,11 +31,16 @@ body {
     line-height: 1.6;
     color: var(--text-color-dark);
     background-color: var(--text-color-light);
-    background-image: url(../image/fondo_marmol.jpg); /* Ruta a tu imagen */
-    background-size: cover;       /* Cubre toda la pantalla */
-    background-repeat: no-repeat; /* Evita que se repita */
-    background-attachment: fixed; /* Hace que la imagen quede fija al hacer scroll */
-    background-position: center;  /* Centra la imagen */
+    background-image: url(../image/fondo_marmol.jpg);
+    /* Ruta a tu imagen */
+    background-size: cover;
+    /* Cubre toda la pantalla */
+    background-repeat: no-repeat;
+    /* Evita que se repita */
+    background-attachment: fixed;
+    /* Hace que la imagen quede fija al hacer scroll */
+    background-position: center;
+    /* Centra la imagen */
 }
 
 
@@ -155,7 +160,8 @@ header .container {
     justify-content: center;
     align-items: center;
     position: relative;
-    z-index: 1; /* cambiamos de -1 a 1 para que el contenido esté por encima del ::before */
+    z-index: 1;
+    /* cambiamos de -1 a 1 para que el contenido esté por encima del ::before */
     background-image: url(../image/edificio.jpg);
     background-position: center center;
     background-repeat: no-repeat;
@@ -171,7 +177,8 @@ header .container {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* ajusta opacidad aquí */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* ajusta opacidad aquí */
     z-index: -1;
 }
 
@@ -203,8 +210,10 @@ header .container {
     top: 0;
     left: 0;
     width: 100%;
-    height: auto; max-height: 800px;
-    object-fit: cover;/* Asegura que el video cubra toda la sección */
+    height: auto;
+    max-height: 800px;
+    object-fit: cover;
+    /* Asegura que el video cubra toda la sección */
     z-index: 1;
 }
 
@@ -220,7 +229,8 @@ header .container {
     color: white;
     padding: 0 20px;
     gap: 5px;
-    background: rgba(0, 0, 0, 0.3);/* opcional: para mejorar la legibilidad del texto */
+    background: rgba(0, 0, 0, 0.3);
+    /* opcional: para mejorar la legibilidad del texto */
 }
 
 .h1_R {
@@ -333,12 +343,18 @@ header .container {
 
 /* Contenedor principal de contacto */
 #contact {
-    background-image: url(../image/fondo_marmol.jpg); /* Cambia la ruta a tu imagen */
-    background-size: cover;        /* Cubre toda la sección */
-    background-position: center;   /* Centra la imagen */
-    background-repeat: no-repeat;  /* Evita que se repita */
-    background-attachment: fixed;  /* Opcional: efecto parallax */
-    color: white;                  /* Mejora contraste si fondo es oscuro */
+    background-image: url(../image/fondo_marmol.jpg);
+    /* Cambia la ruta a tu imagen */
+    background-size: cover;
+    /* Cubre toda la sección */
+    background-position: center;
+    /* Centra la imagen */
+    background-repeat: no-repeat;
+    /* Evita que se repita */
+    background-attachment: fixed;
+    /* Opcional: efecto parallax */
+    color: white;
+    /* Mejora contraste si fondo es oscuro */
     position: relative;
 }
 
@@ -585,7 +601,8 @@ footer {
 .footer-info,
 .footer-links,
 .footer-social {
-    text-align: left; /* Asegura que todo esté alineado a la izquierda */
+    text-align: left;
+    /* Asegura que todo esté alineado a la izquierda */
     margin-top: 2rem;
 }
 
@@ -933,8 +950,10 @@ footer {
     position: relative;
     overflow: hidden;
     background-image: url(../image/La_Jagua_de_Ibirico5.jpg);
-    background-position: center center;/* Centra la imagen */
-    background-repeat: no-repeat;/* Evita que se repita */
+    background-position: center center;
+    /* Centra la imagen */
+    background-repeat: no-repeat;
+    /* Evita que se repita */
     background-size: cover;
 }
 
@@ -1034,32 +1053,78 @@ footer {
     }
 }
 
-/* Barra de Búsqueda y Formulario como contenedor flex */
-form.d-flex,
-.search-form {
+/* Contenedor flex de búsqueda y menú */
+.search-hamburger-container {
     display: flex;
     align-items: center;
     gap: 0.5rem;
 }
 
-/* Input dentro del formulario */
-form.d-flex input,
-.search-input {
-    min-width: 150px;
-    padding: 0 10px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    background-color: #e8e8e9;
-    color: rgb(0, 0, 0);
+/* Formulario de búsqueda */
+.search-form {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0;
 }
 
-/* Si se quiere que .search-input tenga tamaño específico */
+/* Input de búsqueda */
 .search-input {
     width: 250px;
     height: 40px;
+    padding: 0 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #e8e8e9;
+    color: #000;
 }
 
-/* Ajuste del botón */
-form.d-flex button {
+/* Botón de búsqueda */
+.search-form button {
+    height: 40px;
+    padding: 0 16px;
+    font-size: 14px;
+    border-radius: 10px;
     white-space: nowrap;
+}
+
+/* Botón menú hamburguesa */
+.hamburger-menu {
+    height: 40px;
+    width: 40px;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+/* --- RESPONSIVE para móviles --- */
+@media (max-width: 768px) {
+    .search-input {
+        width: 100px;
+        height: 32px;
+        font-size: 12px;
+        padding: 4px 6px;
+    }
+
+    .search-form button {
+        height: 32px;
+        padding: 0 10px;
+        font-size: 12px;
+    }
+
+    .hamburger-menu {
+        height: 32px;
+        width: 32px;
+        font-size: 18px;
+    }
+
+    .search-form,
+    .search-hamburger-container {
+        gap: 4px;
+    }
 }

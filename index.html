@@ -23,16 +23,20 @@
 
             <!-- Formulario de búsqueda + botón hamburguesa -->
             <div class="d-flex align-items-center gap-2">
-                <form class="search-form d-flex align-items-center" role="search">
-                    <input class="search-input" type="search" placeholder="Buscar" aria-label="Search" />
-                    <button class="btn btn-primary" type="submit">Buscar</button>
-                </form>
+                <div class="search-hamburger-container d-flex align-items-center">
+                    <form class="search-form d-flex align-items-center" role="search">
+                        <input class="search-input" type="search" placeholder="Buscar" aria-label="Search" />
+                        <button class="btn btn-primary" type="submit">Buscar</button>
+                    </form>
 
-                <!-- Botón menú hamburguesa -->
-                <button class="nav-toggle" aria-label="Abrir menú de navegación">
-                    <span class="hamburger"></span>
-                </button>
+                    <!-- Botón menú hamburguesa (único y correcto) -->
+                    <button class="nav-toggle" aria-label="Abrir menú de navegación">
+                        <span class="hamburger"><!-- No colocar el icono de hamburguesa aquí,
+                            ya que se encuentra en el archivo CSS --></span>
+                    </button>
+                </div>
             </div>
+
 
             <!-- Menú de navegación -->
             <nav class="main-nav">
