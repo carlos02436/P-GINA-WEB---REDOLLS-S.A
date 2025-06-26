@@ -94,3 +94,61 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+
+// Pasar comentarios
+const slides = document.querySelectorAll('.slide');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+let index = 0;
+let intervalo;
+
+// Función para mostrar un slide específico
+function mostrarSlide(i) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    slides[i].classList.add('active');
+}
+
+// Función para pasar al siguiente slide
+function siguienteSlide() {
+    index = (index + 1) % slides.length;
+    mostrarSlide(index);
+}
+
+// Función para volver al anterior slide
+function anteriorSlide() {
+    index = (index - 1 + slides.length) % slides.length;
+    mostrarSlide(index);
+}
+
+// Iniciar autoplay
+function iniciarAutoplay() {
+    intervalo = setInterval(siguienteSlide, 5000); // Cambia cada 5 segundos
+}
+
+// Detener autoplay (por si quieres reiniciar al hacer clic)
+function detenerAutoplay() {
+    clearInterval(intervalo);
+}
+
+// Eventos de los botones manuales
+prevBtn.addEventListener('click', () => {
+    anteriorSlide();
+    reiniciarAutoplay();
+});
+
+nextBtn.addEventListener('click', () => {
+    siguienteSlide();
+    reiniciarAutoplay();
+});
+
+// Reinicia el autoplay cuando se interactúa
+function reiniciarAutoplay() {
+    detenerAutoplay();
+    iniciarAutoplay();
+}
+
+// Inicialización
+mostrarSlide(index);
+iniciarAutoplay();
+
+
