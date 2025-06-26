@@ -208,7 +208,7 @@ header .container {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.4); /* Ajusta opacidad: 0.4 = 40% oscuro */
+    background: rgba(0, 0, 0, 0.9); /* Ajusta opacidad: 0.4 = 40% oscuro */
     z-index: 2;
 }
 
@@ -1024,7 +1024,6 @@ footer {
     font-size: 22px;
     transition: all 0.3s ease;
     object-fit: cover;
-    margin: auto;
 }
 
 .control:hover {
@@ -1104,7 +1103,7 @@ footer {
 /* --- RESPONSIVE para móviles --- */
 @media (max-width: 768px) {
     .search-input {
-        width: 100px;
+        width: 200px;
         height: 32px;
         font-size: 12px;
         padding: 4px 6px;
