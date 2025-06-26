@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>REDOLLS S.A.</title>
+    <!-- Tu hoja de estilos personalizada -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- Fuentes y otros recursos -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="icon" href="image/logo2.png" type="image">
 </head>
+
 
 <body>
     <header>
@@ -52,7 +55,6 @@
         </div>
     </header>
 
-
     <main>
         <section id="hero" style="scroll-margin-top: 80px;">
             <div class="container">
@@ -66,20 +68,110 @@
             </div>
         </section>
 
-        <!-- Nosotros -->
-        <section class="content-section py-5" id="nosotros" style="scroll-margin-top: 80px;">
-            <div class="container">
-                <h2 class="text-center mb-4">Sobre REDOLLS S.A</h2>
-                <p class="lead text-center mb-5">
-                    En REDOLLS S.A, creamos un puente digital que conecta a individuos y empresas en toda Colombia.
-                    Facilitamos que personas naturales y jurídicas ofrezcan sus servicios de forma profesional, que las
-                    empresas
-                    publiquen sus vacantes con rapidez y que los aspirantes encuentren nuevas oportunidades laborales
-                    alineadas con sus talentos.
-                    Nuestra plataforma impulsa un ecosistema dinámico, transparente y eficiente que fortalece el tejido
-                    productivo del país.
-                </p>
+        <!-- Sección Categorías -->
+        <div class="contenedor-buscador">
+            <h2 class="titulo">¿Qué servicio y/o trabajo estás buscando?</h2>
+
+            <div class="buscador">
+                <input type="text" placeholder="Puesto, palabras clave" class="campo">
+
+                <!-- Input con datalist para ciudades -->
+                <input list="ciudades" placeholder="Ubicación" class="campo">
+                <datalist id="ciudades">
+                    <option value="La Jagua de Ibirico">
+                    <option value="Becerril">
+                    <option value="Codazzi">
+                    <option value="Valledupar">
+                    <option value="San Diego">
+                    <option value="La Paz">
+                    <option value="Casacará">
+                    <option value="Las Palmitas">
+                </datalist>
+
+                <!-- Select para categorías -->
+                <input list="categorias" placeholder="Categoría" class="campo">
+                <datalist id="categorias">
+                    <option value="Desarrollador">
+                    <option value="Diseñador">
+                    <option value="Marketing">
+                    <option value="Ventas">
+                    <option value="Administración">
+                    <option value="Trabajo Remoto">
+                </datalist>
+
+                <button class="boton-buscar">🔍</button>
             </div>
+
+            <div class="busquedas-populares">
+                <span>Búsquedas populares:</span>
+                <a href="#">Desarrollador</a> •
+                <a href="#">Diseñador</a> •
+                <a href="#">Marketing</a> •
+                <a href="#">Remoto</a>
+            </div>
+        </div>
+
+        <!-- Sección Sobre Nosotros -->
+        <section id="nosotros" class="container my-5" style="scroll-margin-top: 100px;">
+            <div class="row align-items-center contenedor-logo-texto">
+                <img src="image/logo2.png" alt="Logo REDOLLS" class="img-fluid shadow logo1">
+                <div class="col-md-6 text-start texto">
+                    <h2 class="mb-3 fw-bold">Sobre REDOLLS S.A</h2>
+                    <p>
+                        En <strong>REDOLLS S.A</strong>, creamos un puente digital que conecta a individuos y empresas
+                        en toda Colombia.
+                        Facilitamos que personas naturales y jurídicas ofrezcan sus servicios de forma profesional, que
+                        las empresas
+                        publiquen sus vacantes con rapidez y que los aspirantes encuentren nuevas oportunidades
+                        laborales alineadas con sus talentos.
+                    </p>
+                    <p>
+                        Nuestra plataforma impulsa un ecosistema dinámico, transparente y eficiente, fortaleciendo el
+                        tejido productivo del país
+                        y generando nuevas posibilidades de desarrollo profesional para todos.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Misión -->
+            <!-- Contenedor general con clase cards-container que tiene display: flex -->
+            <div class="cards-container mt-5">
+
+                <!-- Tarjeta Misión -->
+                <div class="card-hover glass-card shadow border-0">
+                    <div class="card-body">
+                        <h4 class="card-title fw-bold text-primary mb-3">
+                            <i class="bi bi-bullseye"></i> Misión
+                        </h4>
+                        <p class="card-text">
+                            En REDOLLS S.A, trabajamos con el firme propósito de facilitar el acceso a oportunidades
+                            laborales y la promoción de servicios profesionales en todo el país.
+                            Nuestra misión es brindar una plataforma confiable e innovadora que potencie el talento
+                            humano, fomente la empleabilidad
+                            y conecte eficazmente a quienes ofrecen servicios con quienes los necesitan.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Tarjeta Visión -->
+                <div class="card-hover glass-card shadow border-0">
+                    <div class="card-body">
+                        <h4 class="card-title fw-bold text-success mb-3">
+                            <i class="bi bi-eye"></i> Visión
+                        </h4>
+                        <p class="card-text">
+                            Para 2030, REDOLLS S.A será la plataforma digital líder en Colombia para conectar
+                            talentos con oportunidades.
+                            Seremos reconocidos por transformar la manera en que se gestionan los servicios y el
+                            talento humano,
+                            brindando herramientas innovadoras y confiables para el desarrollo profesional y
+                            empresarial.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
         </section>
 
         <section id="video">
