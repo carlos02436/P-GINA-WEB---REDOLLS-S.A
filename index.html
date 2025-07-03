@@ -115,21 +115,23 @@
         <section id="nosotros" class="container my-5" style="scroll-margin-top: 100px;">
             <div class="row align-items-center contenedor-logo-texto">
                 <img src="image/logo2.png" alt="Logo REDOLLS" class="img-fluid shadow logo1">
-                <div class="col-md-6 text-start texto">
+                <div class="col-md-6 text-start texto" style="text-align: justify;">
                     <h2 class="mb-3 fw-bold">Sobre REDOLLS S.A</h2>
-                    <p>
-                        En <strong>REDOLLS S.A</strong>, creamos un puente digital que conecta a individuos y empresas
-                        en toda Colombia.
-                        Facilitamos que personas naturales y jurídicas ofrezcan sus servicios de forma profesional, que
-                        las empresas
-                        publiquen sus vacantes con rapidez y que los aspirantes encuentren nuevas oportunidades
-                        laborales alineadas con sus talentos.
-                    </p>
-                    <p>
-                        Nuestra plataforma impulsa un ecosistema dinámico, transparente y eficiente, fortaleciendo el
-                        tejido productivo del país
-                        y generando nuevas posibilidades de desarrollo profesional para todos.
-                    </p>
+                    <div style="margin-top: 1.5rem;">
+                        <p>
+                            En <strong>REDOLLS S.A</strong>, creamos un puente digital que conecta a individuos y empresas
+                            en toda Colombia.
+                            Facilitamos que personas naturales y jurídicas ofrezcan sus servicios de forma profesional, que
+                            las empresas
+                            publiquen sus vacantes con rapidez y que los aspirantes encuentren nuevas oportunidades
+                            laborales alineadas con sus talentos.
+                        </p>
+                        <p>
+                            Nuestra plataforma impulsa un ecosistema dinámico, transparente y eficiente, fortaleciendo el
+                            tejido productivo del país
+                            y generando nuevas posibilidades de desarrollo profesional para todos.
+                        </p>
+                    </div>
                 </div>
             </div>
 
@@ -143,7 +145,7 @@
                         <h4 class="card-title fw-bold text-primary mb-3">
                             <i class="bi bi-bullseye"></i> Misión
                         </h4>
-                        <p class="card-text">
+                        <p class="card-text" style="text-align: justify;">
                             En REDOLLS S.A, trabajamos con el firme propósito de facilitar el acceso a oportunidades
                             laborales y la promoción de servicios profesionales en todo el país.
                             Nuestra misión es brindar una plataforma confiable e innovadora que potencie el talento
@@ -159,7 +161,7 @@
                         <h4 class="card-title fw-bold text-success mb-3">
                             <i class="bi bi-eye"></i> Visión
                         </h4>
-                        <p class="card-text">
+                        <p class="card-text" style="text-align: justify;">
                             Para 2030, REDOLLS S.A será la plataforma digital líder en Colombia para conectar
                             talentos con oportunidades.
                             Seremos reconocidos por transformar la manera en que se gestionan los servicios y el
@@ -172,11 +174,14 @@
             </div>
         </section>
 
-        <section id="video">
-            <video autoplay muted loop playsinline id="hero-video">
-                <source src="video/jagua2.mp4" type="video/mp4">
-                Tu navegador no soporta video HTML5.
-            </video>
+        <section id="video" style="position: relative; overflow: hidden;">
+            <div style="position: relative; width: 100%; height: 100%;">
+                <video autoplay muted loop playsinline id="hero-video" style="width: 100%; height: auto; display: block;">
+                    <source src="video/jagua2.mp4" type="video/mp4">
+                    Tu navegador no soporta video HTML5.
+                </video>
+                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.4); pointer-events: none;"></div>
+            </div>
             <div class="video-content1">
                 <h1 class="h1_R">REDOLLS S.A.</h1>
                 <p><em>
