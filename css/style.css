@@ -951,22 +951,40 @@ footer {
     overflow: hidden;
     background-image: url(../image/La_Jagua_de_Ibirico5.jpg);
     background-position: center center;
-    /* Centra la imagen */
     background-repeat: no-repeat;
-    /* Evita que se repita */
     background-size: cover;
+}
+
+.testimonios::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.55); /* oscurece la imagen */
+    z-index: 0;
+}
+
+.testimonios * {
+    position: relative;
+    z-index: 1;
+}
+
+.testimonios,
+.testimonios .comentario,
+.testimonios .nombre {
+    color: #fff;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.7), 0 1px 1px rgba(0,0,0,0.4);
 }
 
 /* Botones Anterior y Siguiente de comentarios */
 .slide {
-  display: none;
-  text-align: center;
-  color: #fff;
-  transition: all 0.5s ease;
+    display: none;
+    text-align: center;
+    color: #fff;
+    transition: all 0.5s ease;
 }
 
 .slide.active {
-  display: block;
+    display: block;
 }
 
 .contenedor-carrusel {
@@ -1030,8 +1048,10 @@ footer {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 400px; /* o el tamaño deseado */
-    margin: 0 auto; /* centra el contenedor */
+    max-width: 400px;
+    /* o el tamaño deseado */
+    margin: 0 auto;
+    /* centra el contenedor */
     padding: 0 10px;
 }
 
@@ -1162,8 +1182,7 @@ footer {
     transform: translateY(-40px);
     /* Sobresale hacia arriba */
     position: relative;
-    z-index: 10;
-    /* Se asegura de estar por encima */
+    z-index: 10;/* Se asegura de estar por encima */
     max-width: 900px;
     margin: 0 auto;
 }
@@ -1242,9 +1261,20 @@ footer {
     display: flex;
     align-items: center;
     gap: 40px;
-    flex-wrap: wrap; /* permite que el logo y el texto se acomoden uno debajo del otro en pantallas pequeñas */
+    flex-wrap: wrap;/* permite que el logo y el texto se acomoden uno debajo del otro en pantallas pequeñas */
     justify-content: center;
     padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .contenedor-logo-texto {
+        flex-direction: column;
+        text-align: center;
+        gap: 24px; /* separa más el logo de la barra de búsqueda */
+    }
+    .logo1 {
+        margin-bottom: 18px; /* espacio extra debajo del logo */
+    }
 }
 
 .logo1 {
@@ -1346,3 +1376,34 @@ footer {
     }
 }
 
+/* Estilo Tarjetas Vacantes */
+.join-card .join-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 1rem;
+}
+
+.join-card {
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.join-card h3,
+.join-card p {
+    margin: 0 18px 12px 18px;
+    padding: 6px 0;
+}
+
+.small-btn {
+    font-size: 0.9rem;
+    padding: 6px 16px;
+    margin: 12px auto 16px auto;
+    display: inline-block;
+    min-width: 0;
+}

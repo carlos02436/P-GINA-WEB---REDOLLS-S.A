@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Mobile navigation toggle
+    // Alternar navegación móvil
     const navToggle = document.querySelector('.nav-toggle');
     const mainNav = document.querySelector('.main-nav');
 
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Smooth scroll for navigation links
+    // Desplazamiento suave para enlaces de navegación
     const navLinks = document.querySelectorAll('.nav-links a[href^="#"], .hero-buttons a[href^="#"], .footer-links a[href^="#"], .join-card a[href^="#"]');
     navLinks.forEach(link => {
         link.addEventListener('click', function (e) {
@@ -25,20 +25,20 @@ document.addEventListener('DOMContentLoaded', function () {
             const targetElement = document.querySelector(targetId);
 
             if (targetElement) {
-                // For dummy links like #login-register, don't prevent default or scroll
+                // Para enlaces ficticios como #login-register, no prevenir el comportamiento por defecto ni desplazar
                 if (targetId === "#login-register") {
-                    // Potentially open a modal here in the future, for now, do nothing or alert
+                    // Potencialmente abrir un modal aquí en el futuro, por ahora, no hacer nada o alertar
                     // alert("Login/Registro no implementado aún.");
-                    return; // Exit without scrolling for this specific link
+                    return; // Salir sin desplazar para este enlace específico
                 }
-                // Close mobile nav if open
+                // Cerrar navegación móvil si está abierta
                 if (mainNav && mainNav.classList.contains('nav-open')) {
                     mainNav.classList.remove('nav-open');
                     navToggle.setAttribute('aria-expanded', 'false');
                     navToggle.setAttribute('aria-label', 'Abrir menú de navegación');
                 }
 
-                // scrollIntoView is smoother than manual calculation for basic cases
+                // scrollIntoView es más suave que el cálculo manual para casos básicos
                 targetElement.scrollIntoView({
                     behavior: 'smooth',
                     block: 'start'
@@ -47,18 +47,18 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Set current year in footer
+    // Establecer el año actual en el pie de página
     const currentYearSpan = document.getElementById('currentYear');
     if (currentYearSpan) {
         currentYearSpan.textContent = new Date().getFullYear();
     }
 
-    // Simple scroll animations for cards (optional, for "engaging" feel)
+    // Animaciones simples de desplazamiento para tarjetas (opcional, para un efecto "atractivo")
     const cards = document.querySelectorAll('.card');
     const observerOptions = {
-        root: null, // viewport
+        root: null, // ventana gráfica
         rootMargin: '0px',
-        threshold: 0.1 // 10% of item visible
+        threshold: 0.1 // 10% del elemento visible
     };
 
     const observer = new IntersectionObserver((entries, observer) => {
@@ -66,20 +66,20 @@ document.addEventListener('DOMContentLoaded', function () {
             if (entry.isIntersecting) {
                 entry.target.style.opacity = '1';
                 entry.target.style.transform = 'translateY(0)';
-                observer.unobserve(entry.target); // Stop observing once animated
+                observer.unobserve(entry.target); // Dejar de observar una vez animado
             }
         });
     }, observerOptions);
 
     cards.forEach(card => {
-        // Initial state for animation
+        // Estado inicial para la animación
         card.style.opacity = '0';
         card.style.transform = 'translateY(20px)';
         card.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
         observer.observe(card);
     });
 
-    // Parallax effect for hero section
+    // Efecto parallax para la sección hero
     const heroSection = document.getElementById('hero');
     if (heroSection) {
         window.addEventListener('scroll', function () {
@@ -120,12 +120,12 @@ function anteriorSlide() {
     mostrarSlide(index);
 }
 
-// Iniciar autoplay
+// Iniciar reproducción automática
 function iniciarAutoplay() {
     intervalo = setInterval(siguienteSlide, 5000); // Cambia cada 5 segundos
 }
 
-// Detener autoplay (por si quieres reiniciar al hacer clic)
+// Detener reproducción automática (por si quieres reiniciar al hacer clic)
 function detenerAutoplay() {
     clearInterval(intervalo);
 }
@@ -141,7 +141,7 @@ nextBtn.addEventListener('click', () => {
     reiniciarAutoplay();
 });
 
-// Reinicia el autoplay cuando se interactúa
+// Reinicia la reproducción automática cuando se interactúa
 function reiniciarAutoplay() {
     detenerAutoplay();
     iniciarAutoplay();
@@ -150,5 +150,3 @@ function reiniciarAutoplay() {
 // Inicialización
 mostrarSlide(index);
 iniciarAutoplay();
-
-

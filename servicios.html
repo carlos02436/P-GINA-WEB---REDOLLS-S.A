@@ -1,0 +1,165 @@
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REDOLLS S.A.</title>
+    <!-- Tu hoja de estilos personalizada -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Fuentes y otros recursos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" href="image/logo2.png" type="image">
+</head>
+
+
+<body>
+    <header>
+        <div class="container d-flex align-items-center justify-content-between flex-wrap gap-2">
+            <!-- Logo -->
+            <a class="logo-container">
+                <img src="image/logo2.png" alt="REDOLLS Logo" id="logo-img">
+            </a>
+
+            <!-- Formulario de búsqueda + botón hamburguesa -->
+            <div class="d-flex align-items-center gap-2">
+                <div class="search-hamburger-container d-flex align-items-center">
+                    <form class="search-form d-flex align-items-center" role="search">
+                        <input class="search-input" type="search" placeholder="Buscar" aria-label="Search" />
+                        <button class="btn btn-primary" type="submit">Buscar</button>
+                    </form>
+
+                    <!-- Botón menú hamburguesa (único y correcto) -->
+                    <button class="nav-toggle" aria-label="Abrir menú de navegación">
+                        <span class="hamburger"><!-- No colocar el icono de hamburguesa aquí,
+                            ya que se encuentra en el archivo CSS --></span>
+                    </button>
+                </div>
+            </div>
+
+
+            <!-- Menú de navegación -->
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="#hero">Inicio</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#services">Servicios</a></li>
+                    <li><a href="#vacancies">Vacantes</a></li>
+                    <li><a href="#join">Únete</a></li>
+                    <li><a href="#testimonios">Testimonios</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+
+
+
+
+
+
+
+    <!-- Contacto -->
+    <section id="contact" class="content-section" style="scroll-margin-top: 80px;">
+        <div class="container">
+            <h2>Contáctanos</h2>
+            <p>¿Interesado en obtener más información sobre nosotros? Animate,</p>
+            <p>estamos dispuestos a escucharte y a brindarte la solución a tus necesidades.</p>
+
+            <!-- Formulario de contacto -->
+            <form action="mailto:ejemplo@dominio.com" method="post" enctype="text/plain" class="contact-form">
+                <div>
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="number">Celular:</label>
+                    <input type="text" id="number" name="number" required>
+                </div>
+                <div>
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="message">Mensaje:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <a href="#" class="btn btn-primary contact-btn">Enviar Mensaje</a>
+            </form>
+
+            <!-- Mapa (opcional) -->
+            <div class="map-container" style="margin-top: 20px;">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.996742504313!2d-74.08083!3d4.60971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f99c5a6f7b157%3A0x58dcb1a4f0881f7d!2sBogotá%2C%20Colombia!5e0!3m2!1ses!2sco!4v1650000000000"
+                    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+
+                <!-- Contacto -->
+                <div class="footer-links">
+                    <h4>Contacto</h4>
+                    <ul class="footer-contact-info">
+                        <li>Email: <a href="mailto:redolls_sa@gmail.com">redolls_sa@gmail.com</a></li>
+                        <li>Teléfono: <a href="tel:+573211255487">(+57) 321 125 54 87</a></li>
+                        <li>Dirección: Cra 00 #00-00, La Jagua de Ibirico, Cesar</li>
+                    </ul>
+                </div>
+
+                <!-- Navegación -->
+                <div class="footer-links">
+                    <h4>Navegación</h4>
+                    <ul class="footer-contact-info">
+                        <li><a href="#hero">Inicio</a></li>
+                        <li><a href="#nosotros">Nosotros</a></li>
+                        <li><a href="#services">Servicios</a></li>
+                        <li><a href="#vacancies">Vacantes</a></li>
+                        <li><a href="#join">Únete</a></li>
+                        <li><a href="#testimonios">Testimonios</a></li>
+                        <li><a href="#contact">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <!-- Redes Sociales -->
+                <div class="footer-social">
+                    <h4>Redes Sociales</h4>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pie inferior -->
+            <div class="footer-bottom">
+                <h4>&copy; <span id="currentYear"></span> REDOLLS S.A. Todos los derechos reservados | Plataforma
+                    desarrollada con pasión y compromiso.<h4>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Script para el año actual -->
+    <script>
+        document.getElementById("currentYear").textContent = new Date().getFullYear();
+    </script>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+
+    <!-- js Personalizado -->
+    <script src="js/script.js"></script>
