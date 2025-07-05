@@ -150,3 +150,33 @@ function reiniciarAutoplay() {
 // Inicialización
 mostrarSlide(index);
 iniciarAutoplay();
+
+// Modales
+document.addEventListener('DOMContentLoaded', () => {
+    const openButtons = document.querySelectorAll('[data-modal-target]');
+    const closeButtons = document.querySelectorAll('[data-close-button]');
+    const modals = document.querySelectorAll('.modal');
+
+    openButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const modalId = button.getAttribute('data-modal-target');
+            const modal = document.getElementById(modalId);
+            if (modal) modal.style.display = 'block';
+        });
+    });
+
+    closeButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const modal = button.closest('.modal');
+            if (modal) modal.style.display = 'none';
+        });
+    });
+
+    window.addEventListener('click', (e) => {
+        modals.forEach(modal => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    });
+});

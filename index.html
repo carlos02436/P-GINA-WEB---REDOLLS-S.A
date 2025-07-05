@@ -97,7 +97,15 @@
                     <option value="Trabajo Remoto">
                 </datalist>
 
-                <button class="boton-buscar">🔍</button>
+                <button class="boton-buscar" aria-label="Buscar">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001l3.85 3.85a1 1 0 0 0 
+                            1.415-1.414l-3.85-3.85zm-5.242 1.156a5 5 0 1 
+                            1 0-10 5 5 0 0 1 0 10z" />
+                    </svg>
+                </button>
+
             </div>
 
             <div class="busquedas-populares">
@@ -119,37 +127,105 @@
                     <div class="card">
                         <h3>Desarrollo de Software</h3>
                         <p>Soluciones de software a medida para potenciar tu negocio y optimizar procesos.</p>
-                        <button class="btn-card">Ver más <span style="margin-left:4px;">&#8594;</span></button>
+                        <button class="btn-card" data-modal-target="modal1">Ver más &#8594;</button>
                     </div>
                     <div class="card">
                         <h3>Consultoría Tecnológica</h3>
                         <p>Asesoramiento estratégico para alinear la tecnología con tus objetivos empresariales.</p>
-                        <button class="btn-card">Ver más <span style="margin-left:4px;">&#8594;</span></button>
+                        <button class="btn-card" data-modal-target="modal1">Ver más &#8594;</button>
                     </div>
                     <div class="card">
                         <h3>Marketing Digital y SEO</h3>
                         <p>Incrementa tu visibilidad online y alcanza a tu público objetivo eficazmente.</p>
-                        <button class="btn-card">Ver más <span style="margin-left:4px;">&#8594;</span></button>
+                        <button class="btn-card" data-modal-target="modal1">Ver más &#8594;</button>
                     </div>
                     <div class="card">
                         <h3>Diseño UX/UI Innovador</h3>
                         <p>Creamos experiencias de usuario intuitivas y atractivas para tus plataformas digitales.</p>
-                        <button class="btn-card">Ver más <span style="margin-left:4px;">&#8594;</span></button>
+                        <button class="btn-card" data-modal-target="modal1">Ver más &#8594;</button>
                     </div>
                     <div class="card">
                         <h3>VBA / Excel</h3>
                         <p>Aprende con nosotros a automatizar tus tareas en Excel, fácil y Rápido.</p>
-                        <button class="btn-card">Ver más <span style="margin-left:4px;">&#8594;</span></button>
+                        <button class="btn-card" data-modal-target="modal1">Ver más &#8594;</button>
                     </div>
                     <div class="card">
                         <h3>Programación Web</h3>
                         <p>Aprende programción de software a medida para potenciar y resaltar tus diseños web.</p>
-                        <button class="btn-card">Ver más <span style="margin-left:4px;">&#8594;</span></button>
+                        <button class="btn-card" data-modal-target="modal1">Ver más &#8594;</button>
                     </div>
                 </div>
-                <a href="#" class="btn btn-primary contact-btn">Más servicios</a>
+                <a href="servicios.html" class="btn btn-primary contact-btn">Más servicios</a>
             </div>
         </section>
+
+        <!-- MODALES -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="cerrarModal('modal1')">&times;</span>
+                <h3>Desarrollo de Software</h3>
+                <p>Diseño y desarrollo de apps, sistemas web y de escritorio. <br>
+                <strong>Costo:</strong> desde $500.000 COP<br>
+                <strong>Ubicación:</strong> La Jagua de Ibirico, Cesar<br>
+                <strong>Contacto:</strong> +57 300 123 4567<br>
+                <strong>Email:</strong> software@comunidadlocal.com</p>
+            </div>
+        </div>
+
+        <div id="modal2" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="cerrarModal('modal2')">&times;</span>
+                <h3>Consultoría Tecnológica</h3>
+                <p>Evaluación y asesoramiento para empresas. <br>
+                <strong>Costo:</strong> desde $150.000 COP por sesión<br>
+                <strong>Contacto:</strong> +57 311 222 3344<br>
+                <strong>Email:</strong> consultoria@comunidadlocal.com</p>
+            </div>
+        </div>
+
+        <div id="modal3" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="cerrarModal('modal3')">&times;</span>
+                <h3>Marketing Digital y SEO</h3>
+                <p>Publicidad en redes y posicionamiento SEO. <br>
+                <strong>Costo:</strong> desde $200.000 COP/mes<br>
+                <strong>Contacto:</strong> +57 320 555 6677<br>
+                <strong>Email:</strong> marketing@comunidadlocal.com</p>
+            </div>
+        </div>
+
+        <div id="modal4" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="cerrarModal('modal4')">&times;</span>
+                <h3>Diseño UX/UI Innovador</h3>
+                <p>Diseños modernos, responsivos e intuitivos. <br>
+                <strong>Costo:</strong> desde $180.000 COP<br>
+                <strong>Contacto:</strong> +57 300 777 8899<br>
+                <strong>Email:</strong> diseno@comunidadlocal.com</p>
+            </div>
+        </div>
+
+        <div id="modal5" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="cerrarModal('modal5')">&times;</span>
+                <h3>Automatización en Excel (VBA)</h3>
+                <p>Macros, reportes y formularios con Excel. <br>
+                <strong>Costo:</strong> desde $100.000 COP<br>
+                <strong>Contacto:</strong> +57 305 999 0011<br>
+                <strong>Email:</strong> excel@comunidadlocal.com</p>
+            </div>
+        </div>
+
+        <div id="modal6" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="cerrarModal('modal6')">&times;</span>
+                <h3>Programación Web</h3>
+                <p>Desarrollo web completo y cursos de programación. <br>
+                <strong>Costo:</strong> desde $250.000 COP<br>
+                <strong>Contacto:</strong> +57 310 888 7766<br>
+                <strong>Email:</strong> web@comunidadlocal.com</p>
+            </div>
+        </div>
 
         <!-- Vacantes -->
         <section id="vacancies" class="content-section" style="scroll-margin-top: 80px;">
@@ -227,7 +303,6 @@
             </div>
 
             <!-- Misión -->
-            <!-- Contenedor general con clase cards-container que tiene display: flex -->
             <div class="cards-container mt-5">
 
                 <!-- Tarjeta Misión -->
@@ -264,8 +339,8 @@
                 </div>
             </div>
         </section>
+
         <!-- Sección Video de La Jagua (reducida en altura) -->
-        <!-- Video de La Jagua -->
         <section id="video" style="position: relative; overflow: hidden; height: 320px; max-height: 40vw;">
             <div style="position: relative; width: 100%; height: 100%;">
                 <video autoplay muted loop playsinline id="hero-video"
@@ -344,37 +419,55 @@
         </section>
 
         <!-- Contacto -->
-        <section id="contact" style="scroll-margin-top:80px;padding:40px 20px;background:#f5f5f5;">
+        <section id="contact"
+            style="scroll-margin-top:80px;padding:40px 20px;background:#f5f5f5;background: transparent;">
             <div style="max-width:1100px;margin:0 auto;">
                 <h2 style="text-align:center;margin-bottom:8px;">Contáctanos</h2>
-                <p style="text-align:center;margin:0;">¿Interesado en obtener más información sobre nosotros? Anímate,</p>
-                <p style="text-align:center;margin-top:4px;">estamos dispuestos a escucharte y a brindarte la solución a tus necesidades.</p>
-                <div style="display:flex;flex-wrap:wrap;gap:32px;justify-content:center;align-items:flex-start;margin-top:40px;">
+                <p style="text-align:center;margin:0;">¿Interesado en obtener más información sobre nosotros? Anímate,
+                </p>
+                <p style="text-align:center;margin-top:4px;">estamos dispuestos a escucharte y a brindarte la solución a
+                    tus necesidades.</p>
+                <div
+                    style="display:flex;flex-wrap:wrap;gap:32px;justify-content:center;align-items:flex-start;margin-top:40px;">
                     <!-- Formulario -->
-                    <form action="mailto:ejemplo@dominio.com" method="post" enctype="text/plain" style="flex:1 1 450px;background:#070274;border-radius:16px;box-shadow:0 4px 24px rgba(0,0,0,0.07);padding:32px;display:flex;flex-direction:column;gap:18px;">
+                    <form action="mailto:ejemplo@dominio.com" method="post" enctype="text/plain"
+                        style="flex:1 1 450px;background:#070274;border-radius:16px;box-shadow:0 4px 24px rgba(0,0,0,0.07);padding:32px;display:flex;flex-direction:column;gap:18px;">
                         <div>
                             <label for="name" style="display:block;margin-bottom:4px;">Nombre:</label>
-                            <input type="text" id="name" name="name" required style="width:100%;padding:10px;border:1px solid #ccc;border-radius:8px;">
+                            <input type="text" id="name" name="name" required
+                                style="width:100%;padding:10px;border:1px solid #ccc;border-radius:8px;">
                         </div>
                         <div>
                             <label for="number" style="display:block;margin-bottom:4px;">Celular:</label>
-                            <input type="text" id="number" name="number" required style="width:100%;padding:10px;border:1px solid #ccc;border-radius:8px;">
+                            <input type="text" id="number" name="number" required
+                                style="width:100%;padding:10px;border:1px solid #ccc;border-radius:8px;">
                         </div>
                         <div>
                             <label for="email" style="display:block;margin-bottom:4px;">Correo electrónico:</label>
-                            <input type="email" id="email" name="email" required style="width:100%;padding:10px;border:1px solid #ccc;border-radius:8px;">
+                            <input type="email" id="email" name="email" required
+                                style="width:100%;padding:10px;border:1px solid #ccc;border-radius:8px;">
                         </div>
                         <div>
                             <label for="message" style="display:block;margin-bottom:4px;">Mensaje:</label>
-                            <textarea id="message" name="message" rows="5" required style="width:100%;padding:10px;border:1px solid #ccc;border-radius:8px;resize:vertical;"></textarea>
+                            <textarea id="message" name="message" rows="5" required
+                                style="width:100%;padding:10px;border:1px solid #ccc;border-radius:8px;resize:vertical;"></textarea>
                         </div>
-                        <button type="submit" style="padding:12px;background:#007BFF;color:#fff;border:none;border-radius:8px;cursor:pointer;font-weight:bold;transition:background-color 0.3s;" onmouseover="this.style.backgroundColor='#0056b3'" onmouseout="this.style.backgroundColor='#007BFF'">
-                            Enviar Mensaje
+                        <button type="submit"
+                            style="padding:12px; color:#fff;font-size:18px;background-color:#808080; border:none; border-radius:8px; cursor:pointer; font-weight:bold; transition:background-color 0.3s;"
+                            onmouseover="this.style.backgroundColor='#322cf2'"
+                            onmouseout="this.style.backgroundColor='#808080'">
+                            Enviar mensaje
                         </button>
+
                     </form>
+                    
                     <!-- Mapa -->
-                    <div style="flex:1 1 450px;border-radius:16px;box-shadow:0 4px 24px rgba(0,0,0,0.07);overflow:hidden;">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.996742504313!2d-74.08083!3d4.60971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f99c5a6f7b157%3A0x58dcb1a4f0881f7d!2sBogotá%2C%20Colombia!5e0!3m2!1ses!2sco!4v1650000000000" width="100%" height="500" style="border:0;display:block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div
+                        style="flex:1 1 450px;border-radius:16px;box-shadow:0 4px 24px rgba(0,0,0,0.07);overflow:hidden;">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.996742504313!2d-74.08083!3d4.60971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f99c5a6f7b157%3A0x58dcb1a4f0881f7d!2sBogotá%2C%20Colombia!5e0!3m2!1ses!2sco!4v1650000000000"
+                            width="100%" height="500" style="border:0;display:block;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
             </div>
