@@ -151,7 +151,7 @@ function reiniciarAutoplay() {
 mostrarSlide(index);
 iniciarAutoplay();
 
-// Modales
+// Modales Servicios
 document.addEventListener('DOMContentLoaded', () => {
     const openButtons = document.querySelectorAll('[data-modal-target]');
     const closeButtons = document.querySelectorAll('[data-close-button]');
@@ -161,7 +161,27 @@ document.addEventListener('DOMContentLoaded', () => {
         button.addEventListener('click', () => {
             const modalId = button.getAttribute('data-modal-target');
             const modal = document.getElementById(modalId);
-            if (modal) modal.style.display = 'block';
+
+            if (modal) {
+                // Mostrar el modal
+                modal.style.display = 'block';
+                modal.style.position = 'fixed';
+                modal.style.left = '0';
+                modal.style.top = '0';
+                modal.style.width = '100%';
+                modal.style.height = '100%';
+                modal.style.backgroundColor = 'rgba(0, 0, 0, 0.6)';
+                modal.style.zIndex = '999';
+
+                // Centrar el contenido
+                const modalContent = modal.querySelector('.modal-content');
+                if (modalContent) {
+                    modalContent.style.position = 'absolute';
+                    modalContent.style.top = '35%';
+                    modalContent.style.left = '50%';
+                    modalContent.style.transform = 'translate(-50%, -50%)';
+                }
+            }
         });
     });
 
@@ -180,3 +200,56 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+// Modales Vacantes
+document.addEventListener("DOMContentLoaded", () => {
+    const openButtons = document.querySelectorAll('.btn-card');
+    const closeButtons = document.querySelectorAll('.close');
+
+    openButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const modalId = button.getAttribute('data-modal');
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                // Mostrar modal
+                modal.style.display = 'block';
+
+                // Centramos el contenido manualmente
+                const modalContent = modal.querySelector('.modal-content');
+                modal.style.display = 'block';
+                modal.style.position = 'fixed';
+                modal.style.left = '0';
+                modal.style.top = '0';
+                modal.style.width = '100%';
+                modal.style.height = '100%';
+                modal.style.backgroundColor = 'rgba(0, 0, 0, 0.6)';
+                modal.style.zIndex = '999';
+
+                modalContent.style.position = 'absolute';
+                modalContent.style.top = '35%';
+                modalContent.style.left = '50%';
+                modalContent.style.transform = 'translate(-50%, -50%)';
+            }
+        });
+    });
+
+    closeButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const modalId = button.getAttribute('data-close');
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.style.display = 'none';
+            }
+        });
+    });
+
+    // Cerrar al hacer clic fuera del contenido
+    window.addEventListener('click', (e) => {
+        document.querySelectorAll('.modal').forEach(modal => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    });
+});
+

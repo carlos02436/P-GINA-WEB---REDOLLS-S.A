@@ -45,9 +45,16 @@
                     <li><a href="#services">Servicios</a></li>
                     <li><a href="#vacancies">Vacantes</a></li>
                     <li><a href="#nosotros">Nosotros</a></li>
-                    <li><a href="#join">Únete</a></li>
-                    <li><a href="#testimonios">Testimonios</a></li>
-                    <li><a href="#contact">Contacto</a></li>
+
+                    <!-- Dropdown "Más" -->
+                    <li class="dropdown">
+                        <a href="#">Más <span class="arrow-down">&#9662;</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#join">Únete</a></li>
+                            <li><a href="#testimonios">Testimonios</a></li>
+                            <li><a href="#contact">Contacto</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -105,7 +112,6 @@
                             1 0-10 5 5 0 0 1 0 10z" />
                     </svg>
                 </button>
-
             </div>
 
             <div class="busquedas-populares">
@@ -132,27 +138,27 @@
                     <div class="card">
                         <h3>Consultoría Tecnológica</h3>
                         <p>Asesoramiento estratégico para alinear la tecnología con tus objetivos empresariales.</p>
-                        <button class="btn-card" data-modal-target="modal1">Ver más &#8594;</button>
+                        <button class="btn-card" data-modal-target="modal2">Ver más &#8594;</button>
                     </div>
                     <div class="card">
                         <h3>Marketing Digital y SEO</h3>
                         <p>Incrementa tu visibilidad online y alcanza a tu público objetivo eficazmente.</p>
-                        <button class="btn-card" data-modal-target="modal1">Ver más &#8594;</button>
+                        <button class="btn-card" data-modal-target="modal3">Ver más &#8594;</button>
                     </div>
                     <div class="card">
                         <h3>Diseño UX/UI Innovador</h3>
                         <p>Creamos experiencias de usuario intuitivas y atractivas para tus plataformas digitales.</p>
-                        <button class="btn-card" data-modal-target="modal1">Ver más &#8594;</button>
+                        <button class="btn-card" data-modal-target="modal4">Ver más &#8594;</button>
                     </div>
                     <div class="card">
                         <h3>VBA / Excel</h3>
                         <p>Aprende con nosotros a automatizar tus tareas en Excel, fácil y Rápido.</p>
-                        <button class="btn-card" data-modal-target="modal1">Ver más &#8594;</button>
+                        <button class="btn-card" data-modal-target="modal5">Ver más &#8594;</button>
                     </div>
                     <div class="card">
                         <h3>Programación Web</h3>
                         <p>Aprende programción de software a medida para potenciar y resaltar tus diseños web.</p>
-                        <button class="btn-card" data-modal-target="modal1">Ver más &#8594;</button>
+                        <button class="btn-card" data-modal-target="modal6">Ver más &#8594;</button>
                     </div>
                 </div>
                 <a href="servicios.html" class="btn btn-primary contact-btn">Más servicios</a>
@@ -162,68 +168,74 @@
         <!-- MODALES -->
         <div id="modal1" class="modal">
             <div class="modal-content">
-                <span class="close" onclick="cerrarModal('modal1')">&times;</span>
+                <span class="close" data-close-button>&times;</span>
                 <h3>Desarrollo de Software</h3>
                 <p>Diseño y desarrollo de apps, sistemas web y de escritorio. <br>
-                <strong>Costo:</strong> desde $500.000 COP<br>
-                <strong>Ubicación:</strong> La Jagua de Ibirico, Cesar<br>
-                <strong>Contacto:</strong> +57 300 123 4567<br>
-                <strong>Email:</strong> software@comunidadlocal.com</p>
+                    <strong>Costo:</strong> desde $500.000 COP<br>
+                    <strong>Ubicación:</strong> La Jagua de Ibirico, Cesar<br>
+                    <strong>Contacto:</strong> +57 300 123 4567<br>
+                    <strong>Email:</strong> software@comunidadlocal.com
+                </p>
             </div>
         </div>
 
         <div id="modal2" class="modal">
             <div class="modal-content">
-                <span class="close" onclick="cerrarModal('modal2')">&times;</span>
+                <span class="close" data-close-button>&times;</span>
                 <h3>Consultoría Tecnológica</h3>
                 <p>Evaluación y asesoramiento para empresas. <br>
-                <strong>Costo:</strong> desde $150.000 COP por sesión<br>
-                <strong>Contacto:</strong> +57 311 222 3344<br>
-                <strong>Email:</strong> consultoria@comunidadlocal.com</p>
+                    <strong>Costo:</strong> desde $150.000 COP por sesión<br>
+                    <strong>Contacto:</strong> +57 311 222 3344<br>
+                    <strong>Email:</strong> consultoria@comunidadlocal.com
+                </p>
             </div>
         </div>
 
         <div id="modal3" class="modal">
             <div class="modal-content">
-                <span class="close" onclick="cerrarModal('modal3')">&times;</span>
+                <span class="close" data-close-button>&times;</span>
                 <h3>Marketing Digital y SEO</h3>
                 <p>Publicidad en redes y posicionamiento SEO. <br>
-                <strong>Costo:</strong> desde $200.000 COP/mes<br>
-                <strong>Contacto:</strong> +57 320 555 6677<br>
-                <strong>Email:</strong> marketing@comunidadlocal.com</p>
+                    <strong>Costo:</strong> desde $200.000 COP/mes<br>
+                    <strong>Contacto:</strong> +57 320 555 6677<br>
+                    <strong>Email:</strong> marketing@comunidadlocal.com
+                </p>
             </div>
         </div>
 
         <div id="modal4" class="modal">
             <div class="modal-content">
-                <span class="close" onclick="cerrarModal('modal4')">&times;</span>
+                <span class="close" data-close-button>&times;</span>
                 <h3>Diseño UX/UI Innovador</h3>
                 <p>Diseños modernos, responsivos e intuitivos. <br>
-                <strong>Costo:</strong> desde $180.000 COP<br>
-                <strong>Contacto:</strong> +57 300 777 8899<br>
-                <strong>Email:</strong> diseno@comunidadlocal.com</p>
+                    <strong>Costo:</strong> desde $180.000 COP<br>
+                    <strong>Contacto:</strong> +57 300 777 8899<br>
+                    <strong>Email:</strong> diseno@comunidadlocal.com
+                </p>
             </div>
         </div>
 
         <div id="modal5" class="modal">
             <div class="modal-content">
-                <span class="close" onclick="cerrarModal('modal5')">&times;</span>
+                <span class="close" data-close-button>&times;</span>
                 <h3>Automatización en Excel (VBA)</h3>
                 <p>Macros, reportes y formularios con Excel. <br>
-                <strong>Costo:</strong> desde $100.000 COP<br>
-                <strong>Contacto:</strong> +57 305 999 0011<br>
-                <strong>Email:</strong> excel@comunidadlocal.com</p>
+                    <strong>Costo:</strong> desde $100.000 COP<br>
+                    <strong>Contacto:</strong> +57 305 999 0011<br>
+                    <strong>Email:</strong> excel@comunidadlocal.com
+                </p>
             </div>
         </div>
 
         <div id="modal6" class="modal">
             <div class="modal-content">
-                <span class="close" onclick="cerrarModal('modal6')">&times;</span>
+                <span class="close" data-close-button>&times;</span>
                 <h3>Programación Web</h3>
                 <p>Desarrollo web completo y cursos de programación. <br>
-                <strong>Costo:</strong> desde $250.000 COP<br>
-                <strong>Contacto:</strong> +57 310 888 7766<br>
-                <strong>Email:</strong> web@comunidadlocal.com</p>
+                    <strong>Costo:</strong> desde $250.000 COP<br>
+                    <strong>Contacto:</strong> +57 310 888 7766<br>
+                    <strong>Email:</strong> web@comunidadlocal.com
+                </p>
             </div>
         </div>
 
@@ -231,49 +243,147 @@
         <section id="vacancies" class="content-section" style="scroll-margin-top: 80px;">
             <div class="container">
                 <h2>Vacantes de Empresas Destacadas</h2>
-                <p class="section-description">Descubre oportunidades laborales publicadas por empresas líderes en
-                    diversos sectores. Tu próximo desafío profesional te espera.</p>
+                <p class="section-description">
+                    Descubre oportunidades laborales publicadas por empresas líderes en diversos sectores. Tu próximo
+                    desafío profesional te espera.
+                </p>
+
                 <div class="card-grid">
                     <div class="card">
                         <h3>Ingeniero de Software Senior</h3>
                         <p><strong>Empresa:</strong> Tech Global Inc.</p>
-                        <p><strong>Ubicación:</strong> Remoto</p>
-                        <button class="btn-card">Ver más <span style="margin-left:4px;">&#8594;</span></button>
+                        <p><strong>Modalidad:</strong> Remoto</p>
+                        <p><strong>Ubicación:</strong> La Jagua de Ibirico</p>
+                        <button class="btn-card" data-modal="modal7">Ver más <span
+                                style="margin-left:4px;">&#8594;</span></button>
                     </div>
+
                     <div class="card">
                         <h3>Especialista en Marketing</h3>
                         <p><strong>Empresa:</strong> Startup Creativa Co.</p>
-                        <p><strong>Ubicación:</strong> Híbrido</p>
-                        <button class="btn-card">Ver más <span style="margin-left:4px;">&#8594;</span></button>
+                        <p><strong>Modalidad:</strong> Híbrido</p>
+                        <p><strong>Ubicación:</strong> La Jagua de Ibirico</p>
+                        <button class="btn-card" data-modal="modal8">Ver más <span
+                                style="margin-left:4px;">&#8594;</span></button>
                     </div>
+
                     <div class="card">
                         <h3>Analista de Datos</h3>
                         <p><strong>Empresa:</strong> Finanzas Corp.</p>
-                        <p><strong>Ubicación:</strong> Presencial</p>
-                        <button class="btn-card">Ver más <span style="margin-left:4px;">&#8594;</span></button>
+                        <p><strong>Modalidad:</strong> Presencial</p>
+                        <p><strong>Ubicación:</strong> La Jagua de Ibirico</p>
+                        <button class="btn-card" data-modal="modal9">Ver más <span
+                                style="margin-left:4px;">&#8594;</span></button>
                     </div>
+
                     <div class="card">
                         <h3>Diseñador Gráfico Junior</h3>
                         <p><strong>Empresa:</strong> Publicidad Visual</p>
-                        <p><strong>Ubicación:</strong> Remoto</p>
-                        <button class="btn-card">Ver más <span style="margin-left:4px;">&#8594;</span></button>
+                        <p><strong>Modalidad:</strong> Remoto</p>
+                        <p><strong>Ubicación:</strong> La Jagua de Ibirico</p>
+                        <button class="btn-card" data-modal="modal10">Ver más <span
+                                style="margin-left:4px;">&#8594;</span></button>
                     </div>
+
                     <div class="card">
                         <h3>Carpintero</h3>
                         <p><strong>Empresa:</strong> Carpintería la Estrella</p>
+                        <p><strong>Modalidad:</strong> Presencial</p>
                         <p><strong>Ubicación:</strong> La Jagua de Ibirico</p>
-                        <button class="btn-card">Ver más <span style="margin-left:4px;">&#8594;</span></button>
+                        <button class="btn-card" data-modal="modal11">Ver más <span
+                                style="margin-left:4px;">&#8594;</span></button>
                     </div>
+
                     <div class="card">
                         <h3>Coordinador SSTA</h3>
                         <p><strong>Empresa:</strong> Tech Global Inc.</p>
+                        <p><strong>Modalidad:</strong> Presencial</p>
                         <p><strong>Ubicación:</strong> La Jagua de Ibirico</p>
-                        <button class="btn-card">Ver más <span style="margin-left:4px;">&#8594;</span></button>
+                        <button class="btn-card" data-modal="modal12">Ver más <span
+                                style="margin-left:4px;">&#8594;</span></button>
                     </div>
                 </div>
-                <a href="#" class="btn btn-primary contact-btn">Más vacantes</a>
             </div>
+            <a href="vacantes.html" class="btn btn-primary contact-btn">Más vacantes</a>
         </section>
+
+        <!-- MODALES -->
+        <div id="modal7" class="modal">
+            <div class="modal-content">
+                <span class="close" data-close="modal7">&times;</span>
+                <h3>Ingeniero de Software Senior</h3>
+                <p><strong>Empresa:</strong> Tech Global Inc.</p>
+                <p><strong>Ubicación:</strong> Remoto</p>
+                <p><strong>Pago:</strong> $12.000.000 COP mensuales</p>
+                <p><strong>Descripción:</strong> Lidera el desarrollo de plataformas web, arquitectura de software y
+                    dirección de equipos técnicos.</p>
+            </div>
+        </div>
+
+        <!-- Modal 2 -->
+        <div id="modal8" class="modal">
+            <div class="modal-content">
+                <span class="close" data-close="modal8">&times;</span>
+                <h3>Especialista en Marketing</h3>
+                <p><strong>Empresa:</strong> Startup Creativa Co.</p>
+                <p><strong>Ubicación:</strong> Híbrido</p>
+                <p><strong>Pago:</strong> $4.500.000 COP mensuales</p>
+                <p><strong>Descripción:</strong> Planeación de estrategias de marketing digital, manejo de redes
+                    sociales y análisis de campañas.</p>
+            </div>
+        </div>
+
+        <!-- Modal 3 -->
+        <div id="modal9" class="modal">
+            <div class="modal-content">
+                <span class="close" data-close="modal9">&times;</span>
+                <h3>Analista de Datos</h3>
+                <p><strong>Empresa:</strong> Finanzas Corp.</p>
+                <p><strong>Ubicación:</strong> Presencial</p>
+                <p><strong>Pago:</strong> $6.800.000 COP mensuales</p>
+                <p><strong>Descripción:</strong> Análisis de big data, elaboración de dashboards y reportes para áreas
+                    financieras.</p>
+            </div>
+        </div>
+
+        <!-- Modal 4 -->
+        <div id="modal10" class="modal">
+            <div class="modal-content">
+                <span class="close" data-close="modal10">&times;</span>
+                <h3>Diseñador Gráfico Junior</h3>
+                <p><strong>Empresa:</strong> Publicidad Visual</p>
+                <p><strong>Ubicación:</strong> Remoto</p>
+                <p><strong>Pago:</strong> $2.000.000 COP mensuales</p>
+                <p><strong>Descripción:</strong> Apoyo en diseño gráfico para redes sociales, anuncios y piezas
+                    publicitarias internas.</p>
+            </div>
+        </div>
+
+        <!-- Modal 5 -->
+        <div id="modal11" class="modal">
+            <div class="modal-content">
+                <span class="close" data-close="modal11">&times;</span>
+                <h3>Carpintero</h3>
+                <p><strong>Empresa:</strong> Carpintería la Estrella</p>
+                <p><strong>Ubicación:</strong> La Jagua de Ibirico</p>
+                <p><strong>Pago:</strong> $1.800.000 COP mensuales</p>
+                <p><strong>Descripción:</strong> Trabajo manual en fabricación de muebles, estructuras de madera y
+                    reparaciones en obra.</p>
+            </div>
+        </div>
+
+        <!-- Modal 6 -->
+        <div id="modal12" class="modal">
+            <div class="modal-content">
+                <span class="close" data-close-button>&times;</span>
+                <h3>Coordinador SSTA</h3>
+                <p><strong>Empresa:</strong> Tech Global Inc.</p>
+                <p><strong>Ubicación:</strong> La Jagua de Ibirico</p>
+                <p><strong>Pago:</strong> $5.500.000 COP mensuales</p>
+                <p><strong>Descripción:</strong> Coordinar planes de salud, seguridad y medio ambiente en zonas
+                    operativas y administrativas.</p>
+            </div>
+        </div>
 
         <!-- Sección Sobre Nosotros -->
         <section id="nosotros" class="container my-5" style="scroll-margin-top: 100px;">
@@ -460,7 +570,7 @@
                         </button>
 
                     </form>
-                    
+
                     <!-- Mapa -->
                     <div
                         style="flex:1 1 450px;border-radius:16px;box-shadow:0 4px 24px rgba(0,0,0,0.07);overflow:hidden;">

@@ -1437,3 +1437,49 @@ footer {
     font-weight: bold;
     cursor: pointer;
 }
+
+/* menú Dropdown */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    position: relative;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+}
+
+/* Dropdown */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0; /* 🔽 Aparece alineado hacia la izquierda */
+    background: #fff;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    min-width: 180px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 100;
+}
+
+.dropdown-menu li a {
+    padding: 10px;
+    color: #333;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #f0f0f0;
+}
