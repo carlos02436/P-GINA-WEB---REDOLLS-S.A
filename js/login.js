@@ -1,80 +1,106 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const loginForm = document.getElementById('login-form');
-    const registerForm = document.getElementById('register-form');
-    const googleBtn = document.querySelector('.google-btn');
-    const facebookBtn = document.querySelector('.facebook-btn');
-    const flipCard = document.querySelector('.flip-card');
-    const goToRegisterBtn = document.getElementById('go-to-register');
-    const goToLoginBtn = document.getElementById('go-to-login');
+const loginForm = document.getElementById('login-form');
+const registrationForm = document.getElementById('registration-form');
+const loginContainer = document.querySelector('.login-container');
+const signupContainer = document.querySelector('.signup-container');
+const showSignupLink = document.getElementById('show-signup');
+const showLoginLink = document.getElementById('show-login');
+const authWrapper = document.querySelector('.auth-wrapper');
 
-    const showDemoAlert = (message) => {
-        alert(`${message} (Esto es solo una demostración)`);
+// --- Input Label Handling ---
+const allInputs = document.querySelectorAll('.input-group input');
+
+allInputs.forEach(input => {
+    if (input.value) {
+        input.closest('.input-group').classList.add('has-content');
     }
 
-    if (loginForm) {
-        loginForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
-            console.log('Intento de inicio de sesión con:');
-            console.log('Email:', email);
-            console.log('Password:', password);
-            if(email && password) {
-                showDemoAlert('Inicio de sesión exitoso');
-            } else {
-                showDemoAlert('Por favor, ingresa email y contraseña');
-            }
-        });
+    input.addEventListener('focus', () => {
+        input.closest('.input-group').classList.add('is-focused');
+    });
+
+    input.addEventListener('blur', () => {
+        input.closest('.input-group').classList.remove('is-focused');
+        if (!input.value) {
+            input.closest('.input-group').classList.remove('has-content');
+        }
+    });
+
+    input.addEventListener('input', () => {
+        if (input.value) {
+            input.closest('.input-group').classList.add('has-content');
+        } else {
+            input.closest('.input-group').classList.remove('has-content');
+        }
+    });
+});
+
+// --- Cambio de formulario con efecto de giro ---
+showSignupLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    authWrapper.classList.add('flipped');
+    loginContainer.classList.remove('active');
+    signupContainer.classList.add('active');
+});
+
+showLoginLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    authWrapper.classList.remove('flipped');
+    signupContainer.classList.remove('active');
+    loginContainer.classList.add('active');
+});
+
+// --- Login ---
+loginForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const email = document.getElementById('login-email').value;
+    const password = document.getElementById('login-password').value;
+    const rememberMe = document.getElementById('remember-me').checked;
+
+    if (!email || !password) {
+        alert('Por favor, ingresa correo y contraseña.');
+        return;
     }
 
-    if(registerForm) {
-        registerForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const name = document.getElementById('register-name').value;
-            const email = document.getElementById('register-email').value;
-            const password = document.getElementById('register-password').value;
-            const service = document.getElementById('register-service').value;
+    alert('¡Inicio de sesión exitoso! (simulado)');
+    loginForm.reset();
+    loginForm.querySelectorAll('.input-group').forEach(group => group.classList.remove('has-content'));
+    document.getElementById('remember-me').checked = false;
+});
 
-            console.log('Intento de registro con:');
-            console.log('Nombre:', name);
-            console.log('Email:', email);
-            console.log('Password:', password);
-            console.log('Servicio:', service);
+// --- Registro ---
+registrationForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const email = document.getElementById('signup-email').value;
+    const password = document.getElementById('signup-password').value;
+    const confirmPassword = document.getElementById('confirm-password').value;
 
-            if(name && email && password && service) {
-                 showDemoAlert('Registro exitoso');
-                 flipCard.classList.remove('is-flipped');
-            } else {
-                showDemoAlert('Por favor, completa todos los campos para registrarte');
-            }
-        });
+    const passwordInput = document.getElementById('signup-password');
+    const confirmPasswordInput = document.getElementById('confirm-password');
+
+    passwordInput.style.borderColor = '';
+    confirmPasswordInput.style.borderColor = '';
+
+    if (!email || !password || !confirmPassword) {
+        alert('Por favor, rellena todos los campos.');
+        return;
     }
 
-    if (googleBtn) {
-        googleBtn.addEventListener('click', () => {
-            console.log('Botón "Acceder con Google" presionado.');
-            showDemoAlert('Iniciando sesión con Google...');
-        });
+    if (password !== confirmPassword) {
+        alert('Las contraseñas no coinciden.');
+        passwordInput.style.borderColor = 'red';
+        confirmPasswordInput.style.borderColor = 'red';
+        return;
     }
 
-    if (facebookBtn) {
-        facebookBtn.addEventListener('click', () => {
-            console.log('Botón "Acceder con Facebook" presionado.');
-            showDemoAlert('Iniciando sesión con Facebook...');
-        });
-    }
+    alert('¡Registro exitoso! (simulado)');
+    registrationForm.reset();
+    registrationForm.querySelectorAll('.input-group').forEach(group => group.classList.remove('has-content'));
+    passwordInput.style.borderColor = '';
+    confirmPasswordInput.style.borderColor = '';
 
-    if(goToRegisterBtn) {
-        goToRegisterBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            flipCard.classList.add('is-flipped');
-        });
-    }
-
-    if(goToLoginBtn) {
-        goToLoginBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            flipCard.classList.remove('is-flipped');
-        });
-    }
+    setTimeout(() => {
+        authWrapper.classList.remove('flipped');
+        signupContainer.classList.remove('active');
+        loginContainer.classList.add('active');
+    }, 500);
 });
