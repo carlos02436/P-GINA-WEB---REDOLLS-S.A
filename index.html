@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Bootstrap Icons (para que <i class="bi bi-arrow-up"> funcione) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="icon" href="image/logo2.png" type="image">
 </head>
 
@@ -59,6 +61,30 @@
             </nav>
         </div>
     </header>
+
+    <!-- Botón Scroll hacia abajo y devuelve al inicio -->
+    <button id="scrollToTopBtn" class="btn btn-primary"
+        style="position:fixed; bottom:40px; right:30px; z-index:9999; width: 30px; height:45px; display:none; align-items:center; justify-content:center;">
+        <i class="fa-solid fa-chevron-up fa-lg"></i>
+    </button>
+
+    <!-- Código JS para el Botón Scroll hacia abajo y devuelve al inicio -->
+    <script>
+        // Mostrar/ocultar el botón al hacer scroll
+        window.addEventListener('scroll', function () {
+            const btn = document.getElementById('scrollToTopBtn');
+            if (window.scrollY > 200) {
+                btn.style.display = 'flex';
+            } else {
+                btn.style.display = 'none';
+            }
+        });
+
+        // Scroll suave al inicio al hacer clic
+        document.getElementById('scrollToTopBtn').addEventListener('click', function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
 
     <main>
         <section id="hero" style="scroll-margin-top: 80px;">
@@ -474,14 +500,14 @@
                         <h3>Ofrece Tus Servicios</h3>
                         <p>Si eres un profesional o persona natural, publica tus servicios y conecta con nuevos
                             clientes.</p>
-                        <a href="form_PN.html" class="btn-card small-btn">Regístrate y Publica</a>
+                        <a href="loginPN.html" class="btn-card small-btn">Regístrate y Publica</a>
                     </div>
                     <div class="card join-card">
                         <img src="image/empresas.jpg" alt="Icono Empresas" class="card-icon join-img">
                         <h3>Para Empresas</h3>
                         <p>Publica tus vacantes para encontrar el mejor talento o lista los servicios que tu empresa
                             ofrece.</p>
-                        <a href="form_PJ.html" class="btn-card small-btn">Registra tu Empresa</a>
+                        <a href="loginPJ.html" class="btn-card small-btn">Registra tu Empresa</a>
                     </div>
                     <div class="card join-card">
                         <img src="image/oportunidad.jpg" alt="Icono Buscar Empleo" class="card-icon join-img">
