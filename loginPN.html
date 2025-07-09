@@ -2,567 +2,418 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>REDOLLS S.A.</title>
-
-    <!-- Estilos personalizados -->
-    <link rel="stylesheet" href="css/style.css" />
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    <!-- Favicon -->
-    <link rel="icon" href="image/logo2.png" type="image" />
-    <!-- Bootstrap SOLO para el header -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-
-    <!-- Se colocan el CSS dentro del HTML, para que no choque con el archivo CSS Style del encabezado -->
-    <style>
-        body {
-            background: url('image/ofrecer_servicios.jpg') no-repeat center center fixed;
-            background-size: cover;
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding-top: 110px;
-            color: #fff;
-            padding-bottom: 80px;
-            /* Añade espacio al final del body */
-        }
-
-        header {
-            position: fixed;
-            width: 100%;
-            top: 0;
-        }
-
-        .login-wrapper {
-            height: 600px;
-            /* igual o mayor al alto de .scene */
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding-bottom: 60px;
-            /* o más si aún se ve muy pegado */
-        }
-
-        .scene {
-            width: 50%;
-            min-height: 500px;
-            position: relative;
-            transition: transform 0.8s;
-            transform-style: preserve-3d;
-        }
-
-        .scene.flipped {
-            transform: rotateY(180deg);
-        }
-
-        .card-face {
-            position: absolute;
-            width: 100%;
-            min-height: 500px;
-            /* Alto mínimo del formulario */
-            margin-bottom: 40px;
-            /* Espacio inferior debajo del formulario */
-            backface-visibility: hidden;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(20px);
-            border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .card-face h2 {
-            text-align: center;
-            margin-bottom: 25px;
-            font-weight: 600;
-        }
-
-        form {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .form-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-        }
-
-        label {
-            font-weight: 500;
-            font-size: 14px;
-        }
-
-        input[type="text"],
-        input[type="email"],
-        input[type="password"] {
-            padding: 10px;
-            border-radius: 8px;
-            border: 1px solid #94a3b8;
-            background-color: rgba(255, 255, 255, 0.12);
-            color: #fff;
-            font-size: 14px;
-            width: 100%;
-        }
-
-        input::placeholder {
-            color: #cbd5e1;
-        }
-
-        input:focus {
-            outline: none;
-            border-color: #011c87;
-            background-color: rgba(255, 255, 255, 0.15);
-        }
-
-        .btn-custom {
-            padding: 8px 16px;
-            background-color: #011c87;
-            border: none;
-            border-radius: 8px;
-            color: white;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            align-self: center;
-            width: 160px;
-            font-size: 14px;
-        }
-
-        .btn-custom:hover {
-            background-color: #2563eb;
-        }
-
-        .social-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 5px;
-        }
-
-        .social-btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            padding: 8px 12px;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 13px;
-            cursor: pointer;
-            border: none;
-            width: 140px;
-            transition: background-color 0.3s ease;
-        }
-
-        .google {
-            background-color: #fff;
-            color: #333;
-        }
-
-        .facebook {
-            background-color: #011c87;
-            color: white;
-        }
-
-        .social-btn i {
-            font-size: 16px;
-        }
-
-        .form-switch {
-            text-align: center;
-            font-size: 14px;
-            margin-top: 15px;
-        }
-
-        .form-switch a {
-            color: #38bdf8;
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-        .form-switch a:hover {
-            text-decoration: underline;
-        }
-
-        .divider {
-            text-align: center;
-            margin: 10px 0;
-            font-size: 13px;
-            opacity: 0.7;
-        }
-
-        .back {
-            transform: rotateY(180deg);
-        }
-
-        .password-wrapper {
-            position: relative;
-        }
-
-        .password-wrapper input {
-            padding-right: 40px;
-        }
-
-        .toggle-password {
-            position: absolute;
-            top: 50%;
-            right: 12px;
-            transform: translateY(-50%);
-            cursor: pointer;
-            color: #cbd5e1;
-            font-size: 16px;
-        }
-
-        @media (max-width: 640px) {
-            .scene {
-                width: 95%;
-            }
-
-            .form-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .social-buttons {
-                flex-direction: column;
-                gap: 10px;
-            }
-        }
-
-        /* Oculta el menú por defecto en pantallas pequeñas */
-        @media (max-width: 768px) {
-            .main-nav {
-                display: none;
-                flex-direction: column;
-                background-color: #fff;
-                width: 100%;
-                padding: 10px 20px;
-                position: absolute;
-                top: 70px;
-                left: 0;
-                z-index: 999;
-            }
-
-            .main-nav.active {
-                display: flex;
-            }
-
-            .nav-links {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            .nav-toggle {
-                display: block;
-                background: none;
-                border: none;
-                cursor: pointer;
-            }
-
-            .hamburger {
-                width: 25px;
-                height: 2px;
-                background-color: #333;
-                display: block;
-                position: relative;
-            }
-
-            .hamburger::before,
-            .hamburger::after {
-                content: "";
-                width: 25px;
-                height: 2px;
-                background-color: #333;
-                position: absolute;
-                left: 0;
-            }
-
-            .hamburger::before {
-                top: -8px;
-            }
-
-            .hamburger::after {
-                top: 8px;
-            }
-        }
-
-        /* Formulario Registro Modal */
-        .modal-servicio-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.6);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 99999;
-        }
-
-        .modal-servicio-content {
-            background-color: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(15px);
-            padding: 30px;
-            border-radius: 15px;
-            width: 90%;
-            max-width: 500px;
-            color: white;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-        }
-
-        .modal-servicio-content input,
-        .modal-servicio-content textarea {
-            width: 100%;
-            margin-bottom: 12px;
-            padding: 10px;
-            border-radius: 10px;
-            background-color: rgba(255, 255, 255, 0.1);
-            border: 1px solid #ccc;
-            color: white;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Personas Naturales y Jurídicas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="login.css">
 </head>
+<style>
+    .bg-custom-gradient {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
 
-<body>
+    .switch-tab {
+        transition: all 0.3s ease;
+    }
 
-    <!-- ENCABEZADO -->
-    <header>
-        <div class="container d-flex align-items-center justify-content-between flex-wrap gap-2">
-            <a class="logo-container">
-                <img src="image/logo2.png" alt="REDOLLS Logo" id="logo-img" />
-            </a>
-            <!-- Botón menú hamburguesa (único y correcto) -->
-            <button class="nav-toggle" aria-label="Abrir menú de navegación">
-                <span class="hamburger"><!-- No colocar el icono de hamburguesa aquí,
-                            ya que se encuentra en el archivo CSS --></span>
-            </button>
-            <nav class="main-nav">
-                <ul class="nav-links d-flex gap-3 list-unstyled mb-0">
-                    <li><a href="index.html#hero">Inicio</a></li>
-                    <li><a href="index.html#services">Servicios</a></li>
-                    <li><a href="index.html#vacancies">Vacantes</a></li>
-                    <li><a href="index.html#nosotros">Nosotros</a></li>
-                    <li class="dropdown position-relative">
-                        <a href="#">Más <span class="arrow-down">&#9662;</span></a>
-                        <ul class="dropdown-menu position-absolute">
-                            <li><a href="index.html#join">Únete</a></li>
-                            <li><a href="index.html#testimonios">Testimonios</a></li>
-                            <li><a href="index.html#contact">Contacto</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    .switch-tab.active {
+        background-color: white;
+        color: #4f46e5;
+        font-weight: 600;
+    }
 
-    <section>
-        <!-- LOGIN / REGISTRO -->
-        <div class="login-wrapper">
-            <div class="scene" id="sceneCard">
-                <!-- LOGIN -->
-                <div class="card-face front">
-                    <h2>Iniciar Sesión</h2>
-                    <form>
-                        <div class="form-grid">
-                            <div>
-                                <label for="loginEmail">Correo electrónico</label>
-                                <input type="email" id="loginEmail" placeholder="ejemplo@correo.com" required />
-                            </div>
-                            <div>
-                                <label for="loginPassword">Contraseña</label>
-                                <div class="password-wrapper">
-                                    <input type="password" id="loginPassword" placeholder="********" required />
-                                    <i class="fa-solid fa-eye-slash toggle-password" data-target="loginPassword"></i>
-                                </div>
-                            </div>
-                        </div>
+    .input-group {
+        position: relative;
+    }
 
-                        <button type="submit" class="btn-custom">Ingresar</button>
+    .input-group input {
+        padding-left: 40px;
+    }
 
-                        <div class="divider">O accede con</div>
-                        <div class="social-buttons">
-                            <button type="button" class="social-btn google"><i class="fab fa-google"></i>
-                                Google</button>
-                            <button type="button" class="social-btn facebook"><i class="fab fa-facebook-f"></i>
-                                Facebook</button>
-                        </div>
+    .input-group i {
+        position: absolute;
+        left: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #9ca3af;
+    }
 
-                        <div class="form-switch">
-                            ¿No tienes cuenta? <a onclick="flipCard()">Regístrate</a>
-                        </div>
-                    </form>
+    .floating-label {
+        position: absolute;
+        pointer-events: none;
+        left: 40px;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: all 0.3s ease;
+        color: #9ca3af;
+        background-color: white;
+        padding: 0 5px;
+    }
+
+    .input-group input:focus~.floating-label,
+    .input-group input:not(:placeholder-shown)~.floating-label {
+        top: 0;
+        font-size: 12px;
+        color: #4f46e5;
+    }
+
+    .toggle-checkbox:checked {
+        right: 0;
+        border-color: #4f46e5;
+    }
+
+    .toggle-checkbox:checked+.toggle-label {
+        background-color: #4f46e5;
+    }
+</style>
+
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
+    <div class="w-full max-w-md">
+        <div class="bg-white rounded-xl shadow-2xl overflow-hidden">
+            <div class="flex border-b">
+                <button id="login-tab" class="switch-tab active flex-1 py-4 px-6 text-center">
+                    <i class="fas fa-sign-in-alt mr-2"></i>Iniciar Sesión
+                </button>
+                <button id="register-tab" class="switch-tab flex-1 py-4 px-6 text-center">
+                    <i class="fas fa-user-plus mr-2"></i>Registrarse
+                </button>
+            </div>
+
+            <div id="login-content" class="p-8">
+                <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">Bienvenido de vuelta</h2>
+
+                <div class="flex justify-center mb-6">
+                    <div class="inline-flex rounded-md shadow-sm" role="group">
+                        <button type="button" id="natural-btn"
+                            class="user-type-btn px-4 py-2 text-sm font-medium rounded-l-lg border border-gray-200 bg-white text-gray-700 hover:bg-gray-50 focus:z-10 focus:ring-2 focus:ring-indigo-500">
+                            <i class="fas fa-user mr-2"></i>Persona Natural
+                        </button>
+                        <button type="button" id="juridica-btn"
+                            class="user-type-btn px-4 py-2 text-sm font-medium rounded-r-md border border-gray-200 bg-gray-100 text-gray-700 hover:bg-gray-50 focus:z-10 focus:ring-2 focus:ring-indigo-500">
+                            <i class="fas fa-building mr-2"></i>Persona Jurídica
+                        </button>
+                    </div>
                 </div>
 
-                <!-- REGISTRO -->
-                <div class="card-face back">
-                    <h2>Registro</h2>
-                    <form>
-                        <div class="form-grid">
-                            <div>
-                                <label for="regName">Nombre completo</label>
-                                <input type="text" id="regName" placeholder="Tu nombre" required />
-                            </div>
-                            <div>
-                                <label for="regEmail">Correo electrónico</label>
-                                <input type="email" id="regEmail" placeholder="ejemplo@correo.com" required />
-                            </div>
-                            <div>
-                                <label for="regPassword">Contraseña</label>
-                                <div class="password-wrapper">
-                                    <input type="password" id="regPassword" placeholder="********" required />
-                                    <i class="fa-solid fa-eye-slash toggle-password" data-target="regPassword"></i>
-                                </div>
-                            </div>
-                            <div>
-                                <label for="confirmPassword">Confirmar Contraseña</label>
-                                <div class="password-wrapper">
-                                    <input type="password" id="confirmPassword" placeholder="********" required />
-                                    <i class="fa-solid fa-eye-slash toggle-password" data-target="confirmPassword"></i>
-                                </div>
-                            </div>
+                <form id="login-form" class="space-y-4">
+                    <div class="input-group">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="login-email"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                            placeholder=" " required>
+                        <label class="floating-label">Correo electrónico</label>
+                    </div>
+
+                    <div class="input-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="login-password"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                            placeholder=" " required>
+                        <label class="floating-label">Contraseña</label>
+                    </div>
+
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <input id="remember-me" type="checkbox"
+                                class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded">
+                            <label for="remember-me" class="ml-2 block text-sm text-gray-700">Recordarme</label>
                         </div>
+                        <a href="#" class="text-sm text-indigo-600 hover:text-indigo-500">¿Olvidaste tu contraseña?</a>
+                    </div>
 
-                        <div style="display: flex; justify-content: center; gap: 15px;">
-                            <button type="button" class="btn-custom" onclick="openModal()">Añadir Servicios</button>
-                            <button type="submit" class="btn-custom">Registrarse</button>
+                    <button type="submit"
+                        class="w-full bg-custom-gradient text-white py-2 px-4 rounded-lg hover:opacity-90 transition duration-300 font-medium">
+                        Iniciar Sesión
+                    </button>
+                </form>
+
+                <div class="mt-6">
+                    <div class="relative">
+                        <div class="absolute inset-0 flex items-center">
+                            <div class="w-full border-t border-gray-300"></div>
                         </div>
-
-
-                        <div id="modalServicios" class="modal-servicio-overlay" style="display: none;">
-                            <div class="modal-servicio-content">
-                                <h3>Agregar Servicio</h3>
-                                <form id="formServicio">
-                                    <input type="text" id="servicio" placeholder="Nombre del servicio" required />
-                                    <input type="text" id="costoServicio" placeholder="Costo del servicio" required />
-                                    <input type="text" id="ubicacion" placeholder="Ubicación" required />
-                                    <textarea id="descripcionServicio"
-                                        placeholder="Descripción del servicio"></textarea>
-
-                                    <div style="display: flex; justify-content: center; gap: 10px; margin-top: 10px;">
-                                        <button type="button" class="btn-custom"
-                                            onclick="guardarServicio()">Agregar</button>
-                                        <button type="button" class="btn-custom" onclick="closeModal()">Cerrar</button>
-                                    </div>
-                                </form>
-
-                                <ul id="listaServicios" style="margin-top: 20px; font-size: 14px;"></ul>
-                            </div>
+                        <div class="relative flex justify-center text-sm">
+                            <span class="px-2 bg-white text-gray-500">O inicia sesión con</span>
                         </div>
+                    </div>
 
+                    <div class="mt-6 grid grid-cols-2 gap-3">
+                        <button type="button"
+                            class="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">
+                            <i class="fab fa-google text-red-500 mr-2"></i> Google
+                        </button>
+                        <button type="button"
+                            class="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">
+                            <i class="fab fa-facebook-f text-blue-600 mr-2"></i> Facebook
+                        </button>
+                    </div>
+                </div>
+            </div>
 
+            <div id="register-content" class="p-8 hidden">
+                <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">Crea tu cuenta</h2>
 
-                        <script>
-                            function toggleServiceForm() {
-                                const form = document.getElementById('serviceForm');
-                                form.style.display = (form.style.display === 'none' || form.style.display === '') ? 'block' : 'none';
-                            }
+                <div class="flex justify-center mb-6">
+                    <div class="inline-flex rounded-md shadow-sm" role="group">
+                        <button type="button" id="reg-natural-btn"
+                            class="user-type-btn px-4 py-2 text-sm font-medium rounded-l-lg border border-gray-200 bg-white text-gray-700 hover:bg-gray-50 focus:z-10 focus:ring-2 focus:ring-indigo-500">
+                            <i class="fas fa-user mr-2"></i>Persona Natural
+                        </button>
+                        <button type="button" id="reg-juridica-btn"
+                            class="user-type-btn px-4 py-2 text-sm font-medium rounded-r-md border border-gray-200 bg-gray-100 text-gray-700 hover:bg-gray-50 focus:z-10 focus:ring-2 focus:ring-indigo-500">
+                            <i class="fas fa-building mr-2"></i>Persona Jurídica
+                        </button>
+                    </div>
+                </div>
 
-                            function toggleServiceForm() {
-                                const form = document.getElementById('serviceForm');
-                                form.style.display = (form.style.display === 'none' || form.style.display === '') ? 'block' : 'none';
-                            }
-
-                            // Formatear automáticamente a pesos colombianos
-                            document.addEventListener('DOMContentLoaded', () => {
-                                const costoInput = document.getElementById('costoServicio');
-                                costoInput.addEventListener('blur', () => {
-                                    let valor = costoInput.value.replace(/\D/g, '');
-                                    if (valor) {
-                                        let formato = new Intl.NumberFormat('es-CO', { style: 'currency', currency: 'COP' }).format(valor);
-                                        costoInput.value = formato;
-                                    }
-                                });
-                            });
-                        </script>
-
-                        <div class="divider">O regístrate con</div>
-                        <div class="social-buttons">
-                            <button type="button" class="social-btn google"><i class="fab fa-google"></i>
-                                Google</button>
-                            <button type="button" class="social-btn facebook"><i class="fab fa-facebook-f"></i>
-                                Facebook</button>
+                <form id="register-natural-form" class="space-y-4">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="input-group">
+                            <i class="fas fa-user"></i>
+                            <input type="text" id="natural-firstname"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                                placeholder=" " required>
+                            <label class="floating-label">Nombres</label>
                         </div>
-
-                        <div class="form-switch">
-                            ¿Ya tienes cuenta? <a onclick="flipCard()">Inicia sesión</a>
+                        <div class="input-group">
+                            <i class="fas fa-user"></i>
+                            <input type="text" id="natural-lastname"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                                placeholder=" " required>
+                            <label class="floating-label">Apellidos</label>
                         </div>
-                    </form>
+                    </div>
+
+                    <div class="input-group">
+                        <i class="fas fa-id-card"></i>
+                        <input type="text" id="natural-document"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                            placeholder=" " required>
+                        <label class="floating-label">Doc.Legales o Doc.Identificasion</label>
+                    </div>
+
+                    <div class="input-group">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="natural-email"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                            placeholder=" " required>
+                        <label class="floating-label">Correo electrónico</label>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="input-group">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="natural-password"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                                placeholder=" " required>
+                            <label class="floating-label">Contraseña</label>
+                        </div>
+                        <div class="input-group">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="natural-confirm-password"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                                placeholder=" " required>
+                            <label class="floating-label">Confirmar contraseña</label>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center">
+                        <input id="natural-terms" type="checkbox"
+                            class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded" required>
+                        <label for="natural-terms" class="ml-2 block text-sm text-gray-700">
+                            Acepto los <a href="#" class="text-indigo-600 hover:text-indigo-500">Términos y
+                                Condiciones</a>
+                        </label>
+                    </div>
+
+                    <button type="submit"
+                        class="w-full bg-custom-gradient text-white py-2 px-4 rounded-lg hover:opacity-90 transition duration-300 font-medium">
+                        Registrarse
+                    </button>
+                </form>
+
+                <form id="register-juridica-form" class="space-y-4 hidden">
+                    <div class="input-group">
+                        <i class="fas fa-building"></i>
+                        <input type="text" id="juridica-razon-social"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                            placeholder=" " required>
+                        <label class="floating-label">Razón Social</label>
+                    </div>
+
+                    <div class="input-group">
+                        <i class="fas fa-id-card"></i>
+                        <input type="text" id="juridica-ruc"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                            placeholder=" " required>
+                        <label class="floating-label">RUC</label>
+                    </div>
+
+                    <div class="input-group">
+                        <i class="fas fa-user-tie"></i>
+                        <input type="text" id="juridica-representante"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                            placeholder=" " required>
+                        <label class="floating-label">Representante Legal</label>
+                    </div>
+
+                    <div class="input-group">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="juridica-email"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                            placeholder=" " required>
+                        <label class="floating-label">Correo electrónico</label>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="input-group">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="juridica-password"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                                placeholder=" " required>
+                            <label class="floating-label">Contraseña</label>
+                        </div>
+                        <div class="input-group">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="juridica-confirm-password"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                                placeholder=" " required>
+                            <label class="floating-label">Confirmar contraseña</label>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center">
+                        <input id="juridica-terms" type="checkbox"
+                            class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded" required>
+                        <label for="juridica-terms" class="ml-2 block text-sm text-gray-700">
+                            Acepto los <a href="#" class="text-indigo-600 hover:text-indigo-500">Términos y
+                                Condiciones</a>
+                        </label>
+                    </div>
+
+                    <button type="submit"
+                        class="w-full bg-custom-gradient text-white py-2 px-4 rounded-lg hover:opacity-90 transition duration-300 font-medium">
+                        Registrarse
+                    </button>
+                </form>
+
+                <div class="mt-6 text-center">
+                    <p class="text-sm text-gray-600">
+                        ¿Ya tienes una cuenta?
+                        <a href="#" id="switch-to-login"
+                            class="text-indigo-600 hover:text-indigo-500 font-medium">Inicia sesión</a>
+                    </p>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- Scripts para el Menú Hamburguesa -->
+        <div class="mt-6 text-center text-sm text-gray-600">
+            <p>© 2023 MiEmpresa. Todos los derechos reservados.</p>
+        </div>
+    </div>
+
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const toggleButton = document.querySelector('.nav-toggle');
-            const navMenu = document.querySelector('.main-nav');
-
-            toggleButton.addEventListener('click', function () {
-                navMenu.classList.toggle('active');
-            });
+        // Toggle entre login y registro
+        document.getElementById('login-tab').addEventListener('click', function () {
+            document.getElementById('login-content').classList.remove('hidden');
+            document.getElementById('register-content').classList.add('hidden');
+            document.getElementById('login-tab').classList.add('active');
+            document.getElementById('register-tab').classList.remove('active');
         });
-    </script>
 
-    <script>
-        function flipCard() {
-            document.getElementById('sceneCard').classList.toggle('flipped');
-        }
-
-        document.querySelectorAll('.toggle-password').forEach(icon => {
-            icon.addEventListener('click', () => {
-                const input = document.getElementById(icon.dataset.target);
-                const isPassword = input.type === "password";
-                input.type = isPassword ? "text" : "password";
-                icon.classList.toggle('fa-eye');
-                icon.classList.toggle('fa-eye-slash');
-            });
+        document.getElementById('register-tab').addEventListener('click', function () {
+            document.getElementById('login-content').classList.add('hidden');
+            document.getElementById('register-content').classList.remove('hidden');
+            document.getElementById('login-tab').classList.remove('active');
+            document.getElementById('register-tab').classList.add('active');
         });
-    </script>
 
-    <script>
-        function openModal() {
-            document.getElementById('modalServicios').style.display = 'flex';
-        }
+        document.getElementById('switch-to-login').addEventListener('click', function (e) {
+            e.preventDefault();
+            document.getElementById('login-tab').click();
+        });
 
-        function closeModal() {
-            document.getElementById('modalServicios').style.display = 'none';
-        }
+        // Toggle entre persona natural y jurídica en login
+        document.getElementById('natural-btn').addEventListener('click', function () {
+            document.getElementById('natural-btn').classList.remove('bg-gray-100');
+            document.getElementById('natural-btn').classList.add('bg-white');
+            document.getElementById('juridica-btn').classList.remove('bg-white');
+            document.getElementById('juridica-btn').classList.add('bg-gray-100');
+            // Aquí podrías cambiar campos del formulario si es necesario
+        });
 
-        function guardarServicio() {
-            const nombre = document.getElementById('servicio').value.trim();
-            const costoRaw = document.getElementById('costoServicio').value.trim();
-            const ubicacion = document.getElementById('ubicacion').value.trim();
-            const descripcion = document.getElementById('descripcionServicio').value.trim();
+        document.getElementById('juridica-btn').addEventListener('click', function () {
+            document.getElementById('juridica-btn').classList.remove('bg-gray-100');
+            document.getElementById('juridica-btn').classList.add('bg-white');
+            document.getElementById('natural-btn').classList.remove('bg-white');
+            document.getElementById('natural-btn').classList.add('bg-gray-100');
+            // Aquí podrías cambiar campos del formulario si es necesario
+        });
 
-            if (!nombre || !costoRaw || !ubicacion) {
-                alert("Por favor completa todos los campos.");
-                return;
+        // Toggle entre persona natural y jurídica en registro
+        document.getElementById('reg-natural-btn').addEventListener('click', function () {
+            document.getElementById('reg-natural-btn').classList.remove('bg-gray-100');
+            document.getElementById('reg-natural-btn').classList.add('bg-white');
+            document.getElementById('reg-juridica-btn').classList.remove('bg-white');
+            document.getElementById('reg-juridica-btn').classList.add('bg-gray-100');
+            document.getElementById('register-natural-form').classList.remove('hidden');
+            document.getElementById('register-juridica-form').classList.add('hidden');
+        });
+
+        document.getElementById('reg-juridica-btn').addEventListener('click', function () {
+            document.getElementById('reg-juridica-btn').classList.remove('bg-gray-100');
+            document.getElementById('reg-juridica-btn').classList.add('bg-white');
+            document.getElementById('reg-natural-btn').classList.remove('bg-white');
+            document.getElementById('reg-natural-btn').classList.add('bg-gray-100');
+            document.getElementById('register-natural-form').classList.add('hidden');
+            document.getElementById('register-juridica-form').classList.remove('hidden');
+        });
+
+        // Manejo de envío de formularios
+        document.getElementById('login-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Inicio de sesión procesado');
+            // Aquí iría la lógica de autenticación
+        });
+
+        document.getElementById('register-natural-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Registro de persona natural procesado');
+            // Aquí iría la lógica de registro
+        });
+
+        document.getElementById('register-juridica-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Registro de persona jurídica procesado');
+            // Aquí iría la lógica de registro
+        });
+
+        // Inicialización de labels flotantes
+        document.querySelectorAll('.input-group input').forEach(input => {
+            // Si el campo tiene contenido al cargar, mover el label
+            if (input.value) {
+                input.nextElementSibling.style.top = '0';
+                input.nextElementSibling.style.fontSize = '12px';
+                input.nextElementSibling.style.color = '#4f46e5';
             }
 
-            const costo = new Intl.NumberFormat('es-CO', {
-                style: 'currency',
-                currency: 'COP'
-            }).format(costoRaw.replace(/\D/g, ''));
+            input.addEventListener('focus', function () {
+                this.nextElementSibling.style.top = '0';
+                this.nextElementSibling.style.fontSize = '12px';
+                this.nextElementSibling.style.color = '#4f46e5';
+            });
 
-            const li = document.createElement('li');
-            li.innerText = `${nombre} - ${costo} - ${ubicacion}${descripcion ? `: ${descripcion}` : ''}`;
-            document.getElementById('listaServicios').appendChild(li);
-
-            // Limpia campos
-            document.getElementById('formServicio').reset();
-        }
+            input.addEventListener('blur', function () {
+                if (!this.value) {
+                    this.nextElementSibling.style.top = '50%';
+                    this.nextElementSibling.style.fontSize = 'inherit';
+                    this.nextElementSibling.style.color = '#9ca3af';
+                }
+            });
+        });
     </script>
-
 </body>
 
 </html>
