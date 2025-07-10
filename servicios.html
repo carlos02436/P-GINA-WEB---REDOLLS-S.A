@@ -12,8 +12,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
     <link rel="icon" href="image/logo2.png" type="image">
 </head>
 
@@ -87,188 +85,304 @@
         });
     </script>
 
-    <!-- prueba de servicios -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-        <div
-            class="job-card bg-white rounded-lg shadow-md p-6 relative border-l-4 border-blue-500 transition-all duration-300">
+    <!-- Contenido de servicios -->
+    <main class="container mx-auto px-4 py-8">
+        <h1 class="text-3xl font-bold mb-6 text-center">Servicios Disponibles</h1>
+        <div class="flex justify-center mb-6">
+            <button class="filter-option active bg-blue-600 text-white px-4 py-2 rounded-md mr-2">Todos</button>
+            <button class="filter-option bg-gray-200 text-gray-800 px-4 py-2 rounded-md mr-2">Con Experiencia</button>
+            <button class="filter-option bg-gray-200 text-gray-800 px-4 py-2 rounded-md mr-2">Sin Experiencia</button>
+            <button class="filter-option bg-gray-200 text-gray-800 px-4 py-2 rounded-md">Con Contrato</button>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+            <div
+                class="job-card bg-white rounded-lg shadow-md p-6 relative border-l-4 border-blue-500 transition-all duration-300">
 
-            <div class="flex items-start mb-4">
-                <img src="https://logo.clearbit.com/google.com" alt="Google" class="w-12 h-12 rounded-md mr-4">
-                <div>
-                    <h3 class="font-bold text-lg">personal de limpieza</h3>
-                    <p class="text-gray-600">I.E. El carmen</p>
+                <div class="flex items-start mb-4">
+                    <img src="https://logo.clearbit.com/google.com" alt="Google" class="w-12 h-12 rounded-md mr-4">
+                    <div>
+                        <h3 class="font-bold text-lg">Servicios de limpieza a domicilio</h3>
+                        <p class="text-gray-600">Prestado por: María Gómez</p>
+                    </div>
+                </div>
+                <p class="text-gray-700 mb-4">
+                    Ofrezco servicios profesionales de limpieza para hogares, oficinas y locales comerciales. Me enfoco
+                    en la puntualidad, responsabilidad y dejar cada espacio completamente impecable.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="tag bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">Independiente</span>
+                    <span class="tag bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">Flexible</span>
+                    <span class="tag bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">Con experiencia</span>
+                </div>
+
+                <div class="flex justify-between items-center">
+                    <span class="text-sm text-gray-500">Publicado hace 2 días</span>
+                    <button
+                        class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors">
+                        Aplicar
+                    </button>
                 </div>
             </div>
-            <p class="text-gray-700 mb-4"> Buscamos personal de limpieza para mantener nuestras instalaciones escolares
-                impecables. Tu labor es clave para un ambiente de aprendizaje óptimo.</p>
-            <div class="flex flex-wrap gap-2 mb-4">
-                <span class="tag bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">con contrato</span>
-                <span class="tag bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">Horario de mañana y
-                    tarde</span>
-                <span class="tag bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">Prima</span>
-            </div>
-            <div class="flex justify-between items-center">
-                <span class="text-sm text-gray-500">Publicado hace 2 días</span>
-                <button
-                    class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors">
-                    Aplicar
-                </button>
-            </div>
-        </div>
 
-        <div
-            class="job-card bg-white rounded-lg shadow-md p-6 relative border-l-4 border-purple-500 transition-all duration-300">
+            <div
+                class="job-card bg-white rounded-lg shadow-md p-6 relative border-l-4 border-purple-500 transition-all duration-300">
 
-            <div class="flex items-start mb-4">
-                <img src="https://logo.clearbit.com/amazon.com" alt="Amazon" class="w-12 h-12 rounded-md mr-4">
-                <div>
-                    <h3 class="font-bold text-lg">Albañil</h3>
-                    <p class="text-gray-600">Constructora Ibirico S.A.S.</p>
+                <div class="flex items-start mb-4">
+                    <img src="https://logo.clearbit.com/amazon.com" alt="Amazon" class="w-12 h-12 rounded-md mr-4">
+                    <div>
+                        <h3 class="font-bold text-lg">Servicios de Albañilería</h3>
+                        <p class="text-gray-600">Ofrecido por: Juan Rodríguez</p>
+                    </div>
+                </div>
+                <p class="text-gray-700 mb-4">Realizo trabajos de mampostería, construcción de estructuras básicas,
+                    encofrado y
+                    acabados en general. Trabajo con responsabilidad, cumplo los plazos y garantizo un acabado de
+                    calidad.
+                    ¡Estoy listo para ayudarte en tu proyecto!.</p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="tag bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">Independiente</span>
+                    <span class="tag bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">Flexible</span>
+                    <span class="tag bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">Con experiencia</span>
+                </div>
+                <div class="flex justify-between items-center">
+                    <span class="text-sm text-gray-500">Publicado hoy</span>
+                    <button
+                        class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors">
+                        Aplicar
+                    </button>
                 </div>
             </div>
-            <p class="text-gray-700 mb-4">Buscamos a alguien que pueda ejecutar trabajos de mampostería, cimentación,
-                encofrado y acabados con precisión y eficiencia. Si eres proactivo, cumples los plazos y te enorgullece
-                de tu trabajo, ¡queremos conocerte!.</p>
-            <div class="flex flex-wrap gap-2 mb-4">
-                <span class="tag bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs">con esperiencioa </span>
-                <span class="tag bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs">contrato</span>
-                <span class="tag bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs">entreotros</span>
-            </div>
-            <div class="flex justify-between items-center">
-                <span class="text-sm text-gray-500">Publicado hoy</span>
-                <button
-                    class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors">
-                    Aplicar
-                </button>
-            </div>
-        </div>
 
-        <div
-            class="job-card bg-white rounded-lg shadow-md p-6 relative border-l-4 border-green-500 transition-all duration-300">
+            <div
+                class="job-card bg-white rounded-lg shadow-md p-6 relative border-l-4 border-purple-500 transition-all duration-300">
 
-            <div class="flex items-start mb-4">
-                <img src="https://logo.clearbit.com/microsoft.com" alt="Microsoft" class="w-12 h-12 rounded-md mr-4">
-                <div>
-                    <h3 class="font-bold text-lg">Cajero</h3>
-                    <p class="text-gray-600">Ara</p>
+                <div class="flex items-start mb-4">
+                    <img src="https://logo.clearbit.com/amazon.com" alt="Amazon" class="w-12 h-12 rounded-md mr-4">
+                    <div>
+                        <h3 class="font-bold text-lg">Servicios de Albañilería</h3>
+                        <p class="text-gray-600">Ofrecido por: Juan Rodríguez</p>
+                    </div>
+                </div>
+                <p class="text-gray-700 mb-4">Realizo trabajos de mampostería, construcción de estructuras básicas,
+                    encofrado y
+                    acabados en general. Trabajo con responsabilidad, cumplo los plazos y garantizo un acabado de
+                    calidad.
+                    ¡Estoy listo para ayudarte en tu proyecto!.</p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="tag bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">Independiente</span>
+                    <span class="tag bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">Flexible</span>
+                    <span class="tag bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">Con experiencia</span>
+                </div>
+                <div class="flex justify-between items-center">
+                    <span class="text-sm text-gray-500">Publicado hoy</span>
+                    <button
+                        class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors">
+                        Aplicar
+                    </button>
                 </div>
             </div>
-            <p class="text-gray-700 mb-4">Buscamos personas proactivas, con excelente actitud y capacidad para trabajar
-                en un ambiente de ritmo rápido. Tu sonrisa y tu atención serán clave para que nuestros clientes tengan
-                la mejor experiencia de compra.</p>
-            <div class="flex flex-wrap gap-2 mb-4">
-                <span class="tag bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs">contrato</span>
-                <span class="tag bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs">horario de 8h</span>
-                <span class="tag bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs">sin y con
-                    experiencia</span>
-                <span class="tag bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs">entreotro</span>
-            </div>
-            <div class="flex justify-between items-center">
-                <span class="text-sm text-gray-500">Publicado hace 1 semana</span>
-                <button
-                    class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors">
-                    Aplicar
-                </button>
-            </div>
-        </div>
 
-        <div
-            class="job-card bg-white rounded-lg shadow-md p-6 relative border-l-4 border-yellow-500 transition-all duration-300">
+            <div
+                class="job-card bg-white rounded-lg shadow-md p-6 relative border-l-4 border-purple-500 transition-all duration-300">
 
-            <div class="flex items-start mb-4">
-                <img src="https://logo.clearbit.com/facebook.com" alt="Facebook" class="w-12 h-12 rounded-md mr-4">
-                <div>
-                    <h3 class="font-bold text-lg">Meseros</h3>
-                    <p class="text-gray-600">Sason Jaguero</p>
+                <div class="flex items-start mb-4">
+                    <img src="https://logo.clearbit.com/amazon.com" alt="Amazon" class="w-12 h-12 rounded-md mr-4">
+                    <div>
+                        <h3 class="font-bold text-lg">Servicios de Albañilería</h3>
+                        <p class="text-gray-600">Ofrecido por: Juan Rodríguez</p>
+                    </div>
+                </div>
+                <p class="text-gray-700 mb-4">Realizo trabajos de mampostería, construcción de estructuras básicas,
+                    encofrado y
+                    acabados en general. Trabajo con responsabilidad, cumplo los plazos y garantizo un acabado de
+                    calidad.
+                    ¡Estoy listo para ayudarte en tu proyecto!.</p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="tag bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">Independiente</span>
+                    <span class="tag bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">Flexible</span>
+                    <span class="tag bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">Con experiencia</span>
+                </div>
+                <div class="flex justify-between items-center">
+                    <span class="text-sm text-gray-500">Publicado hoy</span>
+                    <button
+                        class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors">
+                        Aplicar
+                    </button>
                 </div>
             </div>
-            <p class="text-gray-700 mb-4">Buscamos personas con o sin experiencia, pero con una actitud positiva, ganas
-                de aprender y el compromiso de ofrecer un servicio de primera. Si eres ágil, organizado/a y te comunicas
-                con facilidad, ¡queremos conocerte!.</p>
-            <div class="flex flex-wrap gap-2 mb-4">
-                <span class="tag bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-xs">vacantes:6</span>
-                <span class="tag bg-yellow-100 yellow-800 px-3 py-1 rounded-full text-xs">por dia </span>
-                <span class="tag bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-xs">Entreoro</span>
-            </div>
-            <div class="flex justify-between items-center">
-                <span class="text-sm text-gray-500">Publicado hace 3 días</span>
-                <button
-                    class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors">
-                    Aplicar
-                </button>
-            </div>
-        </div>
 
-        <div
-            class="job-card bg-white rounded-lg shadow-md p-6 relative border-l-4 border-red-500 transition-all duration-300">
+            <div
+                class="job-card bg-white rounded-lg shadow-md p-6 relative border-l-4 border-purple-500 transition-all duration-300">
 
-            <div class="flex items-start mb-4">
-                <img src="https://logo.clearbit.com/apple.com" alt="Apple" class="w-12 h-12 rounded-md mr-4">
-                <div>
-                    <h3 class="font-bold text-lg">Jardinero</h3>
-                    <p class="text-gray-600">Floreria el amanecer</p>
+                <div class="flex items-start mb-4">
+                    <img src="https://logo.clearbit.com/amazon.com" alt="Amazon" class="w-12 h-12 rounded-md mr-4">
+                    <div>
+                        <h3 class="font-bold text-lg">Servicios de Albañilería</h3>
+                        <p class="text-gray-600">Ofrecido por: Juan Rodríguez</p>
+                    </div>
+                </div>
+                <p class="text-gray-700 mb-4">Realizo trabajos de mampostería, construcción de estructuras básicas,
+                    encofrado y
+                    acabados en general. Trabajo con responsabilidad, cumplo los plazos y garantizo un acabado de
+                    calidad.
+                    ¡Estoy listo para ayudarte en tu proyecto!.</p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="tag bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">Independiente</span>
+                    <span class="tag bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">Flexible</span>
+                    <span class="tag bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">Con experiencia</span>
+                </div>
+                <div class="flex justify-between items-center">
+                    <span class="text-sm text-gray-500">Publicado hoy</span>
+                    <button
+                        class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors">
+                        Aplicar
+                    </button>
                 </div>
             </div>
-            <p class="text-gray-700 mb-4">Buscamos a alguien que pueda asegurar que cada planta en nuestra tienda esté
-                en óptimas condiciones, desde el riego y la poda hasta la prevención de plagas y enfermedades. Tu
-                experiencia y tu ojo para el detalle serán clave para mantener nuestro inventario vibrante y atractivo
-                para nuestros clientes.Tus responsabilidades incluirá.</p>
-            <div class="flex flex-wrap gap-2 mb-4">
-                <span class="tag bg-red-100 text-red-800 px-3 py-1 rounded-full text-xs">Por dia</span>
-                <span class="tag bg-red-100 text-red-800 px-3 py-1 rounded-full text-xs">con esperiencia</span>
-                <span class="tag bg-red-100 text-red-800 px-3 py-1 rounded-full text-xs">entreotro</span>
-            </div>
-            <div class="flex justify-between items-center">
-                <span class="text-sm text-gray-500">Publicado hace 5 días</span>
-                <button
-                    class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors">
-                    Aplicar
-                </button>
-            </div>
-        </div>
 
-        <div
-            class="job-card bg-white rounded-lg shadow-md p-6 relative border-l-4 border-indigo-500 transition-all duration-300">
+            <div
+                class="job-card bg-white rounded-lg shadow-md p-6 relative border-l-4 border-green-500 transition-all duration-300">
 
-            <div class="flex items-start mb-4">
-                <img src="https://logo.clearbit.com/netflix.com" alt="Netflix" class="w-12 h-12 rounded-md mr-4">
-                <div>
-                    <h3 class="font-bold text-lg">Cocinero</h3>
-                    <p class="text-gray-600">Sason Jaguero</p>
+                <div class="flex items-start mb-4">
+                    <img src="https://logo.clearbit.com/microsoft.com" alt="Microsoft"
+                        class="w-12 h-12 rounded-md mr-4">
+                     <div>
+                        <h3 class="font-bold text-lg">Servicios de Albañilería</h3>
+                        <p class="text-gray-600">Ofrecido por: Juan Rodríguez</p>
+                    </div>
+                </div>
+                <p class="text-gray-700 mb-4">Realizo trabajos de mampostería, construcción de estructuras básicas,
+                    encofrado y
+                    acabados en general. Trabajo con responsabilidad, cumplo los plazos y garantizo un acabado de
+                    calidad.
+                    ¡Estoy listo para ayudarte en tu proyecto!.</p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="tag bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">Independiente</span>
+                    <span class="tag bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">Flexible</span>
+                    <span class="tag bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">Con experiencia</span>
+                </div>
+                <div class="flex justify-between items-center">
+                    <span class="text-sm text-gray-500">Publicado hoy</span>
+                    <button
+                        class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors">
+                        Aplicar
+                    </button>
                 </div>
             </div>
-            <p class="text-gray-700 mb-4">Buscamos a alguien con experiencia comprobada en la cocina, capaz de trabajar
-                bajo presión, con atención al detalle y un profundo conocimiento de las técnicas culinarias. Si eres
-                proactivo/a, organizado/a y te enorgulleces de cada plato que sale de tu cocina, ¡queremos conocerte!.
-            </p>
-            <div class="flex flex-wrap gap-2 mb-4">
-                <span class="tag bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-xs">Producto</span>
-                <span class="tag bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-xs">Agile</span>
-                <span class="tag bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-xs">SCRUM</span>
+
+            <div
+                class="job-card bg-white rounded-lg shadow-md p-6 relative border-l-4 border-yellow-500 transition-all duration-300">
+
+                <div class="flex items-start mb-4">
+                    <img src="https://logo.clearbit.com/facebook.com" alt="Facebook" class="w-12 h-12 rounded-md mr-4">
+                    <div>
+                        <h3 class="font-bold text-lg">Meseros</h3>
+                        <p class="text-gray-600">Sason Jaguero</p>
+                    </div>
+                </div>
+                <p class="text-gray-700 mb-4">Buscamos personas con o sin experiencia, pero con una actitud positiva,
+                    ganas
+                    de aprender y el compromiso de ofrecer un servicio de primera. Si eres ágil, organizado/a y te
+                    comunicas
+                    con facilidad, ¡queremos conocerte!.</p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="tag bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-xs">vacantes:6</span>
+                    <span class="tag bg-yellow-100 yellow-800 px-3 py-1 rounded-full text-xs">por dia </span>
+                    <span class="tag bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-xs">Entreoro</span>
+                </div>
+                <div class="flex justify-between items-center">
+                    <span class="text-sm text-gray-500">Publicado hace 3 días</span>
+                    <button
+                        class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors">
+                        Aplicar
+                    </button>
+                </div>
             </div>
-            <div class="flex justify-between items-center">
-                <span class="text-sm text-gray-500">Publicado ayer</span>
-                <button
-                    class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors">
-                    Aplicar
-                </button>
+
+            <div
+                class="job-card bg-white rounded-lg shadow-md p-6 relative border-l-4 border-red-500 transition-all duration-300">
+
+                <div class="flex items-start mb-4">
+                    <img src="https://logo.clearbit.com/apple.com" alt="Apple" class="w-12 h-12 rounded-md mr-4">
+                    <div>
+                        <h3 class="font-bold text-lg">Jardinero</h3>
+                        <p class="text-gray-600">Floreria el amanecer</p>
+                    </div>
+                </div>
+                <p class="text-gray-700 mb-4">Buscamos a alguien que pueda asegurar que cada planta en nuestra tienda
+                    esté
+                    en óptimas condiciones, desde el riego y la poda hasta la prevención de plagas y enfermedades. Tu
+                    experiencia y tu ojo para el detalle serán clave para mantener nuestro inventario vibrante y
+                    atractivo
+                    para nuestros clientes.Tus responsabilidades incluirá.</p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="tag bg-red-100 text-red-800 px-3 py-1 rounded-full text-xs">Por dia</span>
+                    <span class="tag bg-red-100 text-red-800 px-3 py-1 rounded-full text-xs">con esperiencia</span>
+                    <span class="tag bg-red-100 text-red-800 px-3 py-1 rounded-full text-xs">entreotro</span>
+                </div>
+                <div class="flex justify-between items-center">
+                    <span class="text-sm text-gray-500">Publicado hace 5 días</span>
+                    <button
+                        class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors">
+                        Aplicar
+                    </button>
+                </div>
+            </div>
+
+            <div
+                class="job-card bg-white rounded-lg shadow-md p-6 relative border-l-4 border-indigo-500 transition-all duration-300">
+
+                <div class="flex items-start mb-4">
+                    <img src="https://logo.clearbit.com/netflix.com" alt="Netflix" class="w-12 h-12 rounded-md mr-4">
+                    <div>
+                        <h3 class="font-bold text-lg">Cocinero</h3>
+                        <p class="text-gray-600">Sason Jaguero</p>
+                    </div>
+                </div>
+                <p class="text-gray-700 mb-4">Buscamos a alguien con experiencia comprobada en la cocina, capaz de
+                    trabajar
+                    bajo presión, con atención al detalle y un profundo conocimiento de las técnicas culinarias. Si eres
+                    proactivo/a, organizado/a y te enorgulleces de cada plato que sale de tu cocina, ¡queremos
+                    conocerte!.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="tag bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-xs">Producto</span>
+                    <span class="tag bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-xs">Agile</span>
+                    <span class="tag bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-xs">SCRUM</span>
+                </div>
+                <div class="flex justify-between items-center">
+                    <span class="text-sm text-gray-500">Publicado ayer</span>
+                    <button
+                        class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors">
+                        Aplicar
+                    </button>
+                </div>
             </div>
         </div>
-    </div>
-    <!-- fin -->
-    <nav aria-label="Page navigation example">
-  <ul class="pagination justify-content-center">
-    <li class="page-item disabled">
-      <a class="page-link">Previous</a>
-    </li>
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item">
-      <a class="page-link" href="#">Next</a>
-    </li>
-  </ul>
-</nav>
+        <!-- fin -->
+        <div class="flex justify-center gap-2">
+            <button class="pagination-btn px-4 py-2 border border-gray-300 rounded-md text-sm font-medium">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="pagination-btn active px-4 py-2 border border-gray-300 rounded-md text-sm font-medium">
+                1
+            </button>
+            <button class="pagination-btn px-4 py-2 border border-gray-300 rounded-md text-sm font-medium">
+                2
+            </button>
+            <button class="pagination-btn px-4 py-2 border border-gray-300 rounded-md text-sm font-medium">
+                3
+            </button>
+            <button class="pagination-btn px-4 py-2 border border-gray-300 rounded-md text-sm font-medium">
+                ...
+            </button>
+            <button class="pagination-btn px-4 py-2 border border-gray-300 rounded-md text-sm font-medium">
+                10
+            </button>
+            <button class="pagination-btn px-4 py-2 border border-gray-300 rounded-md text-sm font-medium">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
     </main>
 
     <section class="bg-blue-50 py-12" style="background: transparent;">
@@ -279,8 +393,8 @@
             <div class="flex flex-col sm:flex-row gap-2 justify-center max-w-md mx-auto">
                 <input type="email" placeholder="Tu correo electrónico"
                     class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
-                <button
-                    class="btn-primary text-white px-6 py-3 rounded-lg font-medium transition-colors" style="transition: all 0.3s ease-in-out;">
+                <button class="btn-primary text-white px-6 py-3 rounded-lg font-medium transition-colors"
+                    style="transition: all 0.3s ease-in-out;">
                     Suscribirse
                 </button>
             </div>
