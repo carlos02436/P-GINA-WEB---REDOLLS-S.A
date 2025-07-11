@@ -1,81 +1,63 @@
-// Toggle entre login y registro
+// --- Alternancia entre Login y Registro ---
 document.getElementById('login-tab').addEventListener('click', function () {
     document.getElementById('login-content').classList.remove('hidden');
     document.getElementById('register-content').classList.add('hidden');
-    document.getElementById('login-tab').classList.add('active');
+    this.classList.add('active');
     document.getElementById('register-tab').classList.remove('active');
 });
 
 document.getElementById('register-tab').addEventListener('click', function () {
-    document.getElementById('login-content').classList.add('hidden');
     document.getElementById('register-content').classList.remove('hidden');
+    document.getElementById('login-content').classList.add('hidden');
+    this.classList.add('active');
     document.getElementById('login-tab').classList.remove('active');
-    document.getElementById('register-tab').classList.add('active');
 });
 
-document.getElementById('switch-to-login').addEventListener('click', function (e) {
-    e.preventDefault();
-    document.getElementById('login-tab').click();
-});
 
-// Toggle entre persona natural y jurídica en login
-document.getElementById('natural-btn').addEventListener('click', function () {
-    document.getElementById('natural-btn').classList.remove('bg-gray-100');
-    document.getElementById('natural-btn').classList.add('bg-white');
-    document.getElementById('juridica-btn').classList.remove('bg-white');
-    document.getElementById('juridica-btn').classList.add('bg-gray-100');
-    // Aquí podrías cambiar campos del formulario si es necesario
-});
+// --- Registro: Mostrar el formulario adecuado ---
+function activarBoton(activo, inactivos) {
+    activo.classList.remove('bg-gray-100');
+    activo.classList.add('bg-white');
+    inactivos.forEach(id => {
+        const btn = document.getElementById(id);
+        btn.classList.remove('bg-white');
+        btn.classList.add('bg-gray-100');
+    });
+}
 
-document.getElementById('juridica-btn').addEventListener('click', function () {
-    document.getElementById('juridica-btn').classList.remove('bg-gray-100');
-    document.getElementById('juridica-btn').classList.add('bg-white');
-    document.getElementById('natural-btn').classList.remove('bg-white');
-    document.getElementById('natural-btn').classList.add('bg-gray-100');
-    // Aquí podrías cambiar campos del formulario si es necesario
-});
+function mostrarFormulario(idMostrar, idsOcultar) {
+    document.getElementById(idMostrar).classList.remove('hidden');
+    idsOcultar.forEach(id => {
+        document.getElementById(id).classList.add('hidden');
+    });
+}
 
-// Toggle entre persona natural y jurídica en registro
 document.getElementById('reg-natural-btn').addEventListener('click', function () {
-    document.getElementById('reg-natural-btn').classList.remove('bg-gray-100');
-    document.getElementById('reg-natural-btn').classList.add('bg-white');
-    document.getElementById('reg-juridica-btn').classList.remove('bg-white');
-    document.getElementById('reg-juridica-btn').classList.add('bg-gray-100');
-    document.getElementById('register-natural-form').classList.remove('hidden');
-    document.getElementById('register-juridica-form').classList.add('hidden');
+    activarBoton(this, ['reg-aspirante-btn', 'reg-juridica-btn']);
+    mostrarFormulario('register-natural-form', ['register-aspirante-form', 'register-juridica-form']);
+});
+
+document.getElementById('reg-aspirante-btn').addEventListener('click', function () {
+    activarBoton(this, ['reg-natural-btn', 'reg-juridica-btn']);
+    mostrarFormulario('register-aspirante-form', ['register-natural-form', 'register-juridica-form']);
 });
 
 document.getElementById('reg-juridica-btn').addEventListener('click', function () {
-    document.getElementById('reg-juridica-btn').classList.remove('bg-gray-100');
-    document.getElementById('reg-juridica-btn').classList.add('bg-white');
-    document.getElementById('reg-natural-btn').classList.remove('bg-white');
-    document.getElementById('reg-natural-btn').classList.add('bg-gray-100');
-    document.getElementById('register-natural-form').classList.add('hidden');
-    document.getElementById('register-juridica-form').classList.remove('hidden');
+    activarBoton(this, ['reg-natural-btn', 'reg-aspirante-btn']);
+    mostrarFormulario('register-juridica-form', ['register-natural-form', 'register-aspirante-form']);
 });
 
-// Manejo de envío de formularios
-document.getElementById('login-form').addEventListener('submit', function (e) {
-    e.preventDefault();
-    alert('Inicio de sesión procesado');
-    // Aquí iría la lógica de autenticación
-});
 
-document.getElementById('register-natural-form').addEventListener('submit', function (e) {
-    e.preventDefault();
-    alert('Registro de persona natural procesado');
-    // Aquí iría la lógica de registro
-});
-
-document.getElementById('register-juridica-form').addEventListener('submit', function (e) {
-    e.preventDefault();
-    alert('Registro de persona jurídica procesado');
-    // Aquí iría la lógica de registro
-});
-
-// Inicialización de labels flotantes
+// --- Estilos para Inputs: Borde, Espaciado, Estilo Flotante ---
 document.querySelectorAll('.input-group input').forEach(input => {
-    // Si el campo tiene contenido al cargar, mover el label
+    input.style.border = '1px solid #ccc';
+    input.style.borderRadius = '0.5rem';
+    input.style.padding = '0.75rem 1rem';
+    input.style.width = '100%';
+    input.style.boxSizing = 'border-box';
+    input.style.marginTop = '0.25rem';
+    input.style.marginBottom = '0.5rem';
+
     if (input.value) {
         input.nextElementSibling.style.top = '0';
         input.nextElementSibling.style.fontSize = '12px';
@@ -95,4 +77,60 @@ document.querySelectorAll('.input-group input').forEach(input => {
             this.nextElementSibling.style.color = '#9ca3af';
         }
     });
+});
+
+
+// --- Estilo para botones sociales: Google y Facebook ---
+function estilizarBotonRedSocial(boton, colorTexto, colorBorde, colorFondoHover) {
+    boton.style.display = 'flex';
+    boton.style.alignItems = 'center';
+    boton.style.justifyContent = 'center';
+    boton.style.width = '100%';
+    boton.style.padding = '0.5rem 1rem';
+    boton.style.marginTop = '0.5rem';
+    boton.style.border = `1px solid ${colorBorde}`;
+    boton.style.borderRadius = '0.5rem';
+    boton.style.backgroundColor = '#ffffff';
+    boton.style.color = colorTexto;
+    boton.style.fontSize = '0.95rem';
+    boton.style.fontWeight = '500';
+    boton.style.cursor = 'pointer';
+    boton.style.transition = 'background-color 0.3s, border-color 0.3s';
+
+    boton.addEventListener('mouseover', () => {
+        boton.style.backgroundColor = colorFondoHover;
+    });
+
+    boton.addEventListener('mouseout', () => {
+        boton.style.backgroundColor = '#ffffff';
+    });
+}
+
+document.querySelectorAll('button').forEach(boton => {
+    if (boton.textContent.includes('Google')) {
+        estilizarBotonRedSocial(boton, '#d93025', '#d1d5db', '#fef2f2');
+    } else if (boton.textContent.includes('Facebook')) {
+        estilizarBotonRedSocial(boton, '#1877f2', '#d1d5db', '#eff6ff');
+    }
+});
+
+// --- Envío de formularios (simulado) ---
+document.getElementById('login-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    alert('Inicio de sesión procesado');
+});
+
+document.getElementById('register-natural-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    alert('Registro de persona natural procesado');
+});
+
+document.getElementById('register-aspirante-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    alert('Registro de aspirante procesado');
+});
+
+document.getElementById('register-juridica-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    alert('Registro de empresa procesado');
 });

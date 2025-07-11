@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/login.css">
 </head>
 
-<body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-4" style="margin: 2rem;">
     <div class="w-full max-w-md">
         <div class="bg-white rounded-xl shadow-2xl overflow-hidden">
             <div class="flex border-b">
@@ -29,11 +29,15 @@
                     <div class="inline-flex rounded-md shadow-sm" role="group">
                         <button type="button" id="natural-btn"
                             class="user-type-btn px-4 py-2 text-sm font-medium rounded-l-lg border border-gray-200 bg-white text-gray-700 hover:bg-gray-50 focus:z-10 focus:ring-2 focus:ring-indigo-500">
-                            <i class="fas fa-user mr-2"></i>Persona Natural
+                            <i class="fas fa-user mr-2"></i>P. Natural
+                        </button>
+                        <button type="button" id="aspirante-btn"
+                            class="user-type-btn px-4 py-2 text-sm font-medium border border-gray-200 bg-white text-gray-700 hover:bg-gray-50 focus:z-10 focus:ring-2 focus:ring-indigo-500">
+                            <i class="fas fa-user mr-2"></i>Aspirante
                         </button>
                         <button type="button" id="juridica-btn"
                             class="user-type-btn px-4 py-2 text-sm font-medium rounded-r-md border border-gray-200 bg-gray-100 text-gray-700 hover:bg-gray-50 focus:z-10 focus:ring-2 focus:ring-indigo-500">
-                            <i class="fas fa-building mr-2"></i>Persona Jurídica
+                            <i class="fas fa-building mr-2"></i>Empresa
                         </button>
                     </div>
                 </div>
@@ -99,163 +103,165 @@
                 <div class="flex justify-center mb-6">
                     <div class="inline-flex rounded-md shadow-sm" role="group">
                         <button type="button" id="reg-natural-btn"
-                            class="user-type-btn px-4 py-2 text-sm font-medium rounded-l-lg border border-gray-200 bg-white text-gray-700 hover:bg-gray-50 focus:z-10 focus:ring-2 focus:ring-indigo-500">
-                            <i class="fas fa-user mr-2"></i>Persona Natural
+                            class="user-type-btn px-4 py-2 text-sm font-medium rounded-l-lg border border-gray-200 bg-white text-gray-700 hover:bg-gray-50">
+                            <i class="fas fa-user mr-2"></i>P. Natural
+                        </button>
+                        <button type="button" id="reg-aspirante-btn"
+                            class="user-type-btn px-4 py-2 text-sm font-medium border border-gray-200 bg-gray-100 text-gray-700 hover:bg-gray-50">
+                            <i class="fas fa-user mr-2"></i>Aspirante
                         </button>
                         <button type="button" id="reg-juridica-btn"
-                            class="user-type-btn px-4 py-2 text-sm font-medium rounded-r-md border border-gray-200 bg-gray-100 text-gray-700 hover:bg-gray-50 focus:z-10 focus:ring-2 focus:ring-indigo-500">
-                            <i class="fas fa-building mr-2"></i>Persona Jurídica
+                            class="user-type-btn px-4 py-2 text-sm font-medium rounded-r-md border border-gray-200 bg-gray-100 text-gray-700 hover:bg-gray-50">
+                            <i class="fas fa-building mr-2"></i>Empresa
                         </button>
                     </div>
                 </div>
 
+                <!-- FORMULARIO PERSONA NATURAL -->
                 <form id="register-natural-form" class="space-y-4">
                     <div class="grid grid-cols-2 gap-4">
                         <div class="input-group">
                             <i class="fas fa-user"></i>
-                            <input type="text" id="natural-firstname"
-                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
-                                placeholder=" " required>
+                            <input type="text" required placeholder=" " />
                             <label class="floating-label">Nombres</label>
                         </div>
                         <div class="input-group">
                             <i class="fas fa-user"></i>
-                            <input type="text" id="natural-lastname"
-                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
-                                placeholder=" " required>
+                            <input type="text" required placeholder=" " />
                             <label class="floating-label">Apellidos</label>
                         </div>
                     </div>
 
                     <div class="input-group">
                         <i class="fas fa-id-card"></i>
-                        <input type="text" id="natural-document"
-                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
-                            placeholder=" " required>
-                        <label class="floating-label">Doc.Legales o Doc.Identificasion</label>
+                        <input type="text" required placeholder=" " />
+                        <label class="floating-label">Documento</label>
                     </div>
 
                     <div class="input-group">
                         <i class="fas fa-envelope"></i>
-                        <input type="email" id="natural-email"
-                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
-                            placeholder=" " required>
+                        <input type="email" required placeholder=" " />
                         <label class="floating-label">Correo electrónico</label>
                     </div>
 
                     <div class="grid grid-cols-2 gap-4">
                         <div class="input-group">
                             <i class="fas fa-lock"></i>
-                            <input type="password" id="natural-password"
-                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
-                                placeholder=" " required>
+                            <input type="password" required placeholder=" " />
                             <label class="floating-label">Contraseña</label>
                         </div>
                         <div class="input-group">
                             <i class="fas fa-lock"></i>
-                            <input type="password" id="natural-confirm-password"
-                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
-                                placeholder=" " required>
-                            <label class="floating-label">Confirmar contraseña</label>
+                            <input type="password" required placeholder=" " />
+                            <label class="floating-label">Repite Contraseña</label>
                         </div>
                     </div>
 
                     <div class="flex items-center">
-                        <input id="natural-terms" type="checkbox"
-                            class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded" required>
-                        <label for="natural-terms" class="ml-2 block text-sm text-gray-700">
-                            Acepto los <a href="#" class="text-indigo-600 hover:text-indigo-500">Términos y
-                                Condiciones</a>
-                        </label>
+                        <input type="checkbox" required class="mr-2" />
+                        <label>Acepto los <a href="terminos.html" class="text-indigo-600">Términos y Condiciones</a></label>
                     </div>
 
                     <button type="submit"
-                        class="w-full bg-custom-gradient text-white py-2 px-4 rounded-lg hover:opacity-90 transition duration-300 font-medium">
-                        Registrarse
-                    </button>
+                        class="w-full bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition">Registrarse</button>
                 </form>
 
+                <!-- FORMULARIO ASPIRANTE -->
+                <form id="register-aspirante-form" class="space-y-4 hidden">
+                    <div class="input-group">
+                        <i class="fas fa-user"></i>
+                        <input type="text" required placeholder=" " />
+                        <label class="floating-label">Nombre completo</label>
+                    </div>
+
+                    <div class="input-group">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" required placeholder=" " />
+                        <label class="floating-label">Correo electrónico</label>
+                    </div>
+
+                    <div class="input-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" required placeholder=" " />
+                        <label class="floating-label">Contraseña</label>
+                    </div>
+
+                    <div class="input-group">
+                        <i class="fas fa-file-alt"></i>
+                        <input type="file" required accept=".pdf,.doc,.docx" />
+                    </div>
+
+                    <div class="flex items-center">
+                        <input type="checkbox" required class="mr-2" />
+                        <label>Acepto los <a href="terminos.html" class="text-indigo-600">Términos y Condiciones</a></label>
+                    </div>
+
+                    <button type="submit"
+                        class="w-full bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition">Registrarse
+                        como Aspirante</button>
+                </form>
+
+                <!-- FORMULARIO EMPRESA -->
                 <form id="register-juridica-form" class="space-y-4 hidden">
                     <div class="input-group">
                         <i class="fas fa-building"></i>
-                        <input type="text" id="juridica-razon-social"
-                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
-                            placeholder=" " required>
+                        <input type="text" required placeholder=" " />
                         <label class="floating-label">Razón Social</label>
                     </div>
 
                     <div class="input-group">
                         <i class="fas fa-id-card"></i>
-                        <input type="text" id="juridica-ruc"
-                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
-                            placeholder=" " required>
+                        <input type="text" required placeholder=" " />
                         <label class="floating-label">RUC</label>
                     </div>
 
                     <div class="input-group">
                         <i class="fas fa-user-tie"></i>
-                        <input type="text" id="juridica-representante"
-                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
-                            placeholder=" " required>
-                        <label class="floating-label">Representante Legal</label>
+                        <input type="text" required placeholder=" " />
+                        <label class="floating-label">Representante</label>
                     </div>
 
                     <div class="input-group">
                         <i class="fas fa-envelope"></i>
-                        <input type="email" id="juridica-email"
-                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
-                            placeholder=" " required>
+                        <input type="email" required placeholder=" " />
                         <label class="floating-label">Correo electrónico</label>
                     </div>
 
                     <div class="grid grid-cols-2 gap-4">
                         <div class="input-group">
                             <i class="fas fa-lock"></i>
-                            <input type="password" id="juridica-password"
-                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
-                                placeholder=" " required>
+                            <input type="password" required placeholder=" " />
                             <label class="floating-label">Contraseña</label>
                         </div>
                         <div class="input-group">
                             <i class="fas fa-lock"></i>
-                            <input type="password" id="juridica-confirm-password"
-                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
-                                placeholder=" " required>
-                            <label class="floating-label">Confirmar contraseña</label>
+                            <input type="password" required placeholder=" " />
+                            <label class="floating-label">Repite Contraseña</label>
                         </div>
                     </div>
 
                     <div class="flex items-center">
-                        <input id="juridica-terms" type="checkbox"
-                            class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded" required>
-                        <label for="juridica-terms" class="ml-2 block text-sm text-gray-700">
-                            Acepto los <a href="#" class="text-indigo-600 hover:text-indigo-500">Términos y
-                                Condiciones</a>
-                        </label>
+                        <input type="checkbox" required class="mr-2" />
+                        <label>Acepto los <a href="terminos.html" class="text-indigo-600">Términos y Condiciones</a></label>
                     </div>
 
                     <button type="submit"
-                        class="w-full bg-custom-gradient text-white py-2 px-4 rounded-lg hover:opacity-90 transition duration-300 font-medium">
-                        Registrarse
-                    </button>
+                        class="w-full bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition">Registrarse
+                        como Empresa</button>
                 </form>
-
-                <div class="mt-6 text-center">
-                    <p class="text-sm text-gray-600">
-                        ¿Ya tienes una cuenta?
-                        <a href="#" id="switch-to-login"
-                            class="text-indigo-600 hover:text-indigo-500 font-medium">Inicia sesión</a>
-                    </p>
-                </div>
             </div>
+
+
         </div>
 
-        <div class="mt-6 text-center text-sm text-gray-600">
-            <p>© 2023 MiEmpresa. Todos los derechos reservados.</p>
-        </div>
-    </div>
+        <footer>
+            <div class="mt-6 text-center text-sm text-gray-600" style="margin: 1rem;">
+                <p>&copy; REDOLLS S.A. Todos los derechos reservados | Plataforma
+                    desarrollada con pasión y compromiso.</p>
+            </div>
+        </footer>
 
-   <script src="js/login.js"></script>
+        <script src="js/login.js"></script>
 </body>
 
 </html>
