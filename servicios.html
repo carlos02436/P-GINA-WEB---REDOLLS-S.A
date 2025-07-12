@@ -90,21 +90,21 @@
         <h1 class="text-3xl font-bold mb-6 text-center">¡Encuentra tu servicio ideal en REDOLLS S.A!</h1>
         <div class="flex flex-col sm:flex-row justify-center items-center mb-6 space-y-2 sm:space-y-0 sm:space-x-2">
             <button
-                class="filter-option bg-[#011c87] text-white hover:bg-blue-700 px-4 py-2 rounded-md w-55 transition-colors duration-300">Todos</button>
+                class="filter-option bg-[#011c87] text-white hover:bg-blue-700 px-4 py-2 rounded-md transition-colors duration-300">Todos</button>
             <button
-                class="filter-option bg-[#011c87] text-white hover:bg-blue-700 px-4 py-2 rounded-md w-55 transition-colors duration-300">Con
+                class="filter-option bg-[#011c87] text-white hover:bg-blue-700 px-4 py-2 rounded-md transition-colors duration-300">Con
                 Experiencia</button>
             <button
-                class="filter-option bg-[#011c87] text-white hover:bg-blue-700 px-4 py-2 rounded-md w-55 transition-colors duration-300">Sin
+                class="filter-option bg-[#011c87] text-white hover:bg-blue-700 px-4 py-2 rounded-md transition-colors duration-300">Sin
                 Experiencia</button>
             <button
-                class="filter-option bg-[#011c87] text-white hover:bg-blue-700 px-4 py-2 rounded-md w-55 transition-colors duration-300">Con
+                class="filter-option bg-[#011c87] text-white hover:bg-blue-700 px-4 py-2 rounded-md transition-colors duration-300">Con
                 Contrato</button>
         </div>
 
 
         <!-- Tarjetas de Servicios -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
             <!-- Tarjeta 1 -->
             <div
@@ -364,25 +364,6 @@
         </button>
     </div>
 
-    <script>
-        const botones = document.querySelectorAll(".pagination-btn");
-
-        botones.forEach(btn => {
-            btn.addEventListener("click", () => {
-                // Ignora botones con íconos (como flechas)
-                if (btn.innerText.trim() === " " || btn.querySelector("i")) return;
-
-                botones.forEach(b => {
-                    b.classList.remove("bg-[#011c87]", "text-white");
-                    b.classList.add("bg-white", "text-black");
-                });
-
-                btn.classList.remove("bg-white", "text-black");
-                btn.classList.add("bg-[#011c87]", "text-white");
-            });
-        });
-    </script>
-
     <!-- Sección de suscripción al boletín -->
     <section class="bg-blue-50 py-12" style="background: transparent;">
         <div class="container mx-auto px-4 text-center">
@@ -456,38 +437,29 @@
 
     </script>
 
-    <!-- Pantallas pequeñas: celular -->
+    <!--Ancho de Botones en modo responsive-->
     <script>
-        function ajustarBotones() {
-            const contenedor = document.querySelector('.flex');
+        function ajustarAnchoBotones() {
             const botones = document.querySelectorAll('.filter-option');
+            let maxWidth = 0;
 
-            if (window.innerWidth < 640) {
-                contenedor.classList.remove('flex-row');
-                contenedor.classList.add('flex-col', 'items-center');
+            // Restablece el ancho automático para recalcular bien
+            botones.forEach(btn => btn.style.width = '200px');
 
-                botones.forEach(btn => {
-                    btn.style.width = '240px'; // Mismo ancho, pero no 100%
-                    btn.classList.remove('mr-2');
-                    btn.classList.add('mb-2');
-                });
-            } else {
-                contenedor.classList.remove('flex-col', 'items-center');
-                contenedor.classList.add('flex-row');
+            // Encuentra el ancho máximo entre todos los botones
+            botones.forEach(btn => {
+                const ancho = btn.offsetWidth;
+                if (ancho > maxWidth) maxWidth = ancho;
+            });
 
-                botones.forEach(btn => {
-                    btn.style.width = '';
-                    btn.classList.remove('mb-2');
-                    btn.classList.add('mr-2');
-                });
-            }
+            // Aplica el mismo ancho a todos los botones
+            botones.forEach(btn => btn.style.width = `${maxWidth}px`);
         }
 
-        window.addEventListener('load', ajustarBotones);
-        window.addEventListener('resize', ajustarBotones);
+        // Ejecutar al cargar la página y al cambiar tamaño
+        window.addEventListener('load', ajustarAnchoBotones);
+        window.addEventListener('resize', ajustarAnchoBotones);
     </script>
-
-
 
     <!-- Footer -->
     <footer class="footer">
