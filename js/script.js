@@ -253,3 +253,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+// Hacer que el menu hamburguesa se muestre en tablets
+
+

@@ -959,8 +959,12 @@ footer {
 .testimonios::before {
     content: "";
     position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(0,0,0,0.55); /* oscurece la imagen */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.55);
+    /* oscurece la imagen */
     z-index: 0;
 }
 
@@ -973,7 +977,7 @@ footer {
 .testimonios .comentario,
 .testimonios .nombre {
     color: #fff;
-    text-shadow: 0 2px 8px rgba(0,0,0,0.7), 0 1px 1px rgba(0,0,0,0.4);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7), 0 1px 1px rgba(0, 0, 0, 0.4);
 }
 
 /* Botones Anterior y Siguiente de comentarios */
@@ -1183,7 +1187,8 @@ footer {
     transform: translateY(-40px);
     /* Sobresale hacia arriba */
     position: relative;
-    z-index: 10;/* Se asegura de estar por encima */
+    z-index: 10;
+    /* Se asegura de estar por encima */
     max-width: 900px;
     margin: 0 auto;
 }
@@ -1262,7 +1267,8 @@ footer {
     display: flex;
     align-items: center;
     gap: 40px;
-    flex-wrap: wrap;/* permite que el logo y el texto se acomoden uno debajo del otro en pantallas pequeñas */
+    flex-wrap: wrap;
+    /* permite que el logo y el texto se acomoden uno debajo del otro en pantallas pequeñas */
     justify-content: center;
     padding: 20px;
 }
@@ -1271,10 +1277,13 @@ footer {
     .contenedor-logo-texto {
         flex-direction: column;
         text-align: center;
-        gap: 24px; /* separa más el logo de la barra de búsqueda */
+        gap: 24px;
+        /* separa más el logo de la barra de búsqueda */
     }
+
     .logo1 {
-        margin-bottom: 18px; /* espacio extra debajo del logo */
+        margin-bottom: 18px;
+        /* espacio extra debajo del logo */
     }
 }
 
@@ -1344,39 +1353,6 @@ footer {
     color: black;
 }
 
-/* Media Queries para adaptar a pantallas pequeñas */
-@media (max-width: 768px) {
-    .contenedor-logo-texto {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .texto {
-        align-items: center;
-        text-align: center;
-    }
-
-    .cards-container {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-@media (max-width: 480px) {
-    .logo1 {
-        max-width: 90%;
-    }
-
-    .card-hover {
-        padding: 15px;
-        max-width: 90%;
-    }
-
-    .card-hover {
-        font-size: 20px;
-    }
-}
-
 /* Estilo Tarjetas Vacantes */
 .join-card .join-img {
     width: 100%;
@@ -1414,10 +1390,12 @@ footer {
     display: none;
     position: fixed;
     z-index: 999;
-    left: 0; top: 0;
-    width: 100%; height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
     overflow: auto;
-    background-color: rgba(0,0,0,0.6);
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 .modal-content {
@@ -1427,13 +1405,14 @@ footer {
     border-radius: 8px;
     width: 90%;
     max-width: 500px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     position: relative;
 }
 
 .close {
     position: absolute;
-    top: 10px; right: 15px;
+    top: 10px;
+    right: 15px;
     font-size: 24px;
     font-weight: bold;
     cursor: pointer;
@@ -1462,13 +1441,14 @@ footer {
     display: none;
     position: absolute;
     top: 100%;
-    right: 0; /* 🔽 Aparece alineado hacia la izquierda */
+    right: 0;
+    /* 🔽 Aparece alineado hacia la izquierda */
     background: #fff;
     list-style: none;
     padding: 0;
     margin: 0;
     min-width: 180px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 100;
 }
 
@@ -1483,4 +1463,100 @@ footer {
 
 .dropdown-menu li a:hover {
     background-color: #f0f0f0;
+}
+
+/* 1. Móviles */
+@media screen and (max-width: 320px) {
+
+    .contenedor-logo-texto,
+    .contenedor-logo,
+    .contenedor-menu,
+    .contenedor-menu .menu-links {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        align-items: center;
+    }
+
+    .texto {
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .card {
+        flex: 1 1 90%;
+        max-width: 90%;
+        width: 100%;
+    }
+}
+
+/* 2. Tablets */
+@media screen and (min-width: 428px) and (max-width: 1023px) {
+
+    .contenedor-logo-texto,
+    .contenedor-logo,
+    .contenedor-menu,
+    .contenedor-menu .menu-links {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        align-items: center;
+    }
+
+    .texto {
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .card {
+        flex: 1 1 90%;
+        max-width: 90%;
+        width: 100%;
+    }
+}
+
+/* 3. Escritorio / Portátil */
+@media screen and (min-width: 1024px) {
+
+    .contenedor-logo-texto,
+    .contenedor-logo,
+    .contenedor-menu,
+    .contenedor-menu .menu-links {
+        flex-direction: row;
+        text-align: left;
+        width: auto;
+        align-items: flex-start;
+    }
+
+    .texto {
+        align-items: flex-start;
+        text-align: left;
+        width: auto;
+    }
+
+    .cards-container {
+        flex-direction: row;
+        align-items: flex-start;
+        width: auto;
+    }
+
+    .card {
+        flex: 1 1 30%;
+        max-width: 30%;
+        width: auto;
+    }
 }
