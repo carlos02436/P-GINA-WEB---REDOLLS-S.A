@@ -1498,7 +1498,7 @@ footer {
 }
 
 /* 2. Tablets */
-@media screen and (min-width: 428px) and (max-width: 1023px) {
+@media screen and (min-width: 412px) and (max-width: 1023px) {
 
     .contenedor-logo-texto,
     .contenedor-logo,
@@ -1556,7 +1556,7 @@ footer {
 
     .card {
         flex: 1 1 30%;
-        max-width: 30%;
+        max-width: 100%;
         width: auto;
     }
 }
