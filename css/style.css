@@ -45,9 +45,8 @@ body {
     justify-content: center;
 }
 
-
 .container {
-    width: 90%;
+    width: 100%;
     max-width: 1200px;
     padding: 0 15px;
 }
@@ -77,7 +76,7 @@ header .container {
     color: var(--primary-color);
 }
 
-.logo-container:hover .logo-container:hover {
+.logo-container:hover {
     transform: scale(1.03);
     opacity: 0.85;
 }
