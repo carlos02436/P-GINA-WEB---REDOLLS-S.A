@@ -43,14 +43,12 @@ body {
     /* Centra la imagen */
     align-items: center;
     justify-content: center;
-    margin-top: 0 auto;
 }
 
 
 .container {
     width: 90%;
     max-width: 1200px;
-    margin: 0 auto;
     padding: 0 15px;
 }
 
@@ -1251,17 +1249,18 @@ footer {
 
 /* 1. MÓVILES PEQUEÑOS (Hasta 312px) */
 @media screen and (max-width: 480px) {
+
     .contenedor-logo-texto,
     .nav-links,
     .contenedor-logo,
     .contenedor-menu,
     .contenedor-menu .menu-links,
     .texto,
-    body,
     .cards-container {
         flex-direction: column;
         align-items: center;
-        width: 100%;
+        width: 100%;        
+        margin-top: 0 auto;
     }
 
     .card {
@@ -1281,7 +1280,7 @@ footer {
     }
 
     .search-input {
-        width: 150px;
+        width: 130px;
     }
 
     #logo-img {
@@ -1386,11 +1385,31 @@ footer {
     .main-nav.nav-open .hamburger::after {
         transform: rotate(-45deg) translate(5px, -5px);
     }
+
+    .cards-container {
+        display: flex;    /* ✅ Asegura que sea flex */
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;    /* ✅ Centra vertical si aplica */
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .card {
+        flex: 1 1 auto;
+        max-width: 90%;
+        width: 100%;
+        padding: 20px;
+        margin: 10px 0;
+        /* ✅ Agrega espacio entre tarjetas */
+        box-sizing: border-box;
+    }
 }
 
 /* 2. TABLETS (entre 481px y 1023px) */
 @media screen and (min-width: 481px) and (max-width: 1023px) {
-    .contenedor-logo-texto,
+
+    .contenedor-logo-texto, body,
     .contenedor-logo,
     .contenedor-menu,
     .contenedor-menu .menu-links,
@@ -1399,6 +1418,7 @@ footer {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        justify-content: center;
         width: 100%;
     }
 
@@ -1474,6 +1494,7 @@ footer {
 
 /* 3. ESCRITORIO Y PORTÁTILES (desde 1024px) */
 @media screen and (min-width: 1024px) {
+
     .contenedor-logo-texto,
     .contenedor-logo,
     .contenedor-menu,
