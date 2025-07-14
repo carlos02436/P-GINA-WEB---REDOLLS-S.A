@@ -41,6 +41,9 @@ body {
     /* Hace que la imagen quede fija al hacer scroll */
     background-position: center;
     /* Centra la imagen */
+    align-items: center;
+    justify-content: center;
+    margin-top: 0 auto;
 }
 
 
@@ -741,199 +744,7 @@ footer {
     margin-bottom: 5px;
 }
 
-/* Diseño Responsivo */
-@media (max-width: 992px) {
-    #hero h1 {
-        font-size: 2.8rem;
-    }
 
-    #hero p {
-        font-size: 1.1rem;
-    }
-
-    .content-section h2 {
-        font-size: 2.2rem;
-    }
-
-    .footer-info,
-    .footer-links,
-    .footer-social {
-        min-width: calc(50% - 20px);
-        /* Two columns, accounting for gap */
-    }
-}
-
-@media (max-width: 768px) {
-    .main-nav .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        position: absolute;
-        top: 100%;
-        /* Position below header */
-        left: 0;
-        background-color: var(--text-color-light);
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        padding-bottom: 1rem;
-    }
-
-    .main-nav.nav-open .nav-links {
-        display: flex;
-    }
-
-    .main-nav .nav-links li {
-        margin: 0;
-        text-align: center;
-    }
-
-    .main-nav .nav-links a {
-        display: block;
-        padding: 1rem;
-        border-bottom: 1px solid var(--light-gray);
-    }
-
-    .main-nav .nav-links li:last-child a {
-        border-bottom: none;
-    }
-
-    .nav-toggle {
-        display: block;
-        /* Show hamburger */
-    }
-
-    .main-nav.nav-open .hamburger {
-        background-color: transparent;
-        /* Hide middle line */
-    }
-
-    .main-nav.nav-open .hamburger::before {
-        transform: rotate(45deg) translate(6px, 6px);
-    }
-
-    .main-nav.nav-open .hamburger::after {
-        transform: rotate(-45deg) translate(5px, -5px);
-    }
-
-    #hero {
-        padding: 80px 0;
-        min-height: 60vh;
-    }
-
-    #hero h1 {
-        font-size: 2.2rem;
-    }
-
-    #hero p {
-        font-size: 1rem;
-    }
-
-    .hero-buttons {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .hero-buttons .btn {
-        width: 80%;
-        max-width: 300px;
-        margin: 0.5rem 0;
-    }
-
-    .content-section {
-        padding: 60px 0;
-    }
-
-    .content-section h2 {
-        font-size: 2rem;
-        margin-bottom: 40px;
-    }
-
-    .card-grid {
-        grid-template-columns: 1fr;
-        /* Stack cards */
-    }
-
-    .btn-nav-action {
-        margin: 0.5rem auto;
-        /* Center button in mobile nav */
-        display: inline-block;
-    }
-
-    footer {
-        padding: 40px 0 20px;
-    }
-
-    .footer-content {
-        flex-direction: column;
-        gap: 30px;
-        align-items: center;
-        text-align: center;
-    }
-
-    .footer-info,
-    .footer-links,
-    .footer-social {
-        min-width: 100%;
-        text-align: center;
-    }
-
-    .footer-links h4::after,
-    .footer-social h4::after {
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    .social-icons {
-        justify-content: center;
-    }
-
-    .footer-logo-link {
-        /* Center the logo link container */
-        display: block;
-        /* Make it block to center its content if it was inline-block */
-    }
-
-    .footer-logo {
-        /* Ensure logo within centered link is also centered if it has own margins */
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
-@media (max-width: 480px) {
-    #logo-img {
-        height: 30px;
-    }
-
-    .logo-text {
-        font-size: 1.5rem;
-    }
-
-    #hero h1 {
-        font-size: 1.8rem;
-    }
-
-    #hero p {
-        font-size: 0.9rem;
-    }
-
-    .btn {
-        padding: 10px 20px;
-        font-size: 0.9rem;
-    }
-
-    .content-section h2 {
-        font-size: 1.8rem;
-    }
-
-    .card {
-        padding: 20px;
-    }
-
-    .card h3 {
-        font-size: 1.3rem;
-    }
-}
 
 .btn-nav-menu-action {
     display: block;
@@ -1112,7 +923,7 @@ footer {
 
 /* Input de búsqueda */
 .search-input {
-    width: 250px;
+    width: 200px;
     height: 40px;
     padding: 0 10px;
     font-size: 14px;
@@ -1142,33 +953,6 @@ footer {
     border: none;
     background: transparent;
     cursor: pointer;
-}
-
-/* --- RESPONSIVE para móviles --- */
-@media (max-width: 768px) {
-    .search-input {
-        width: 200px;
-        height: 32px;
-        font-size: 12px;
-        padding: 4px 6px;
-    }
-
-    .search-form button {
-        height: 32px;
-        padding: 0 10px;
-        font-size: 12px;
-    }
-
-    .hamburger-menu {
-        height: 32px;
-        width: 32px;
-        font-size: 18px;
-    }
-
-    .search-form,
-    .search-hamburger-container {
-        gap: 4px;
-    }
 }
 
 /* contenedor de categorías */
@@ -1465,25 +1249,15 @@ footer {
     background-color: #f0f0f0;
 }
 
-/* 1. Móviles */
-@media screen and (max-width: 320px) {
-
+/* 1. MÓVILES PEQUEÑOS (Hasta 312px) */
+@media screen and (max-width: 480px) {
     .contenedor-logo-texto,
+    .nav-links,
     .contenedor-logo,
     .contenedor-menu,
-    .contenedor-menu .menu-links {
-        flex-direction: column;
-        text-align: center;
-        width: 100%;
-        align-items: center;
-    }
-
-    .texto {
-        align-items: center;
-        text-align: center;
-        width: 100%;
-    }
-
+    .contenedor-menu .menu-links,
+    .texto,
+    body,
     .cards-container {
         flex-direction: column;
         align-items: center;
@@ -1494,31 +1268,137 @@ footer {
         flex: 1 1 90%;
         max-width: 90%;
         width: 100%;
+        padding: 20px;
+    }
+
+    .card h3 {
+        font-size: 1.3rem;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .search-input {
+        width: 150px;
+    }
+
+    #logo-img {
+        height: 30px;
+    }
+
+    .logo-text {
+        font-size: 1.5rem;
+    }
+
+    #hero {
+        padding: 80px 0;
+        min-height: 60vh;
+    }
+
+    #hero h1 {
+        font-size: 1.8rem;
+    }
+
+    #hero p {
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-buttons .btn {
+        width: 80%;
+        max-width: 300px;
+        margin: 0.5rem 0;
+    }
+
+    .content-section {
+        padding: 60px 0;
+    }
+
+    .content-section h2 {
+        font-size: 1.8rem;
+        margin-bottom: 40px;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .btn-nav-action {
+        margin: 0.5rem auto;
+        display: inline-block;
+    }
+
+    .main-nav .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: var(--text-color-light);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding-bottom: 1rem;
+    }
+
+    .main-nav.nav-open .nav-links {
+        display: flex;
+    }
+
+    .main-nav .nav-links li {
+        margin: 0;
+        text-align: center;
+    }
+
+    .main-nav .nav-links a {
+        display: block;
+        padding: 1rem;
+        border-bottom: 1px solid var(--light-gray);
+    }
+
+    .main-nav .nav-links li:last-child a {
+        border-bottom: none;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .main-nav.nav-open .hamburger {
+        background-color: transparent;
+    }
+
+    .main-nav.nav-open .hamburger::before {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+
+    .main-nav.nav-open .hamburger::after {
+        transform: rotate(-45deg) translate(5px, -5px);
     }
 }
 
-/* 2. Tablets */
-@media screen and (min-width: 412px) and (max-width: 1023px) {
-
+/* 2. TABLETS (entre 481px y 1023px) */
+@media screen and (min-width: 481px) and (max-width: 1023px) {
     .contenedor-logo-texto,
     .contenedor-logo,
     .contenedor-menu,
-    .contenedor-menu .menu-links {
-        flex-direction: column;
-        text-align: center;
-        width: 100%;
-        align-items: center;
-    }
-
-    .texto {
-        align-items: center;
-        text-align: center;
-        width: 100%;
-    }
-
+    .contenedor-menu .menu-links,
+    .texto,
     .cards-container {
         flex-direction: column;
         align-items: center;
+        text-align: center;
         width: 100%;
     }
 
@@ -1527,19 +1407,83 @@ footer {
         max-width: 90%;
         width: 100%;
     }
+
+    .main-nav .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: var(--text-color-light);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding-bottom: 1rem;
+    }
+
+    .main-nav.nav-open .nav-links {
+        display: flex;
+    }
+
+    .main-nav .nav-links li {
+        margin: 0;
+        text-align: center;
+    }
+
+    .main-nav .nav-links a {
+        display: block;
+        padding: 1rem;
+        border-bottom: 1px solid var(--light-gray);
+    }
+
+    .main-nav .nav-links li:last-child a {
+        border-bottom: none;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .main-nav.nav-open .hamburger {
+        background-color: transparent;
+    }
+
+    .main-nav.nav-open .hamburger::before {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+
+    .main-nav.nav-open .hamburger::after {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-buttons .btn {
+        width: 80%;
+        max-width: 300px;
+        margin: 0.5rem 0;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
-/* 3. Escritorio / Portátil */
+/* 3. ESCRITORIO Y PORTÁTILES (desde 1024px) */
 @media screen and (min-width: 1024px) {
-
     .contenedor-logo-texto,
     .contenedor-logo,
     .contenedor-menu,
     .contenedor-menu .menu-links {
         flex-direction: row;
-        text-align: left;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
         width: auto;
-        align-items: flex-start;
     }
 
     .texto {
@@ -1556,7 +1500,38 @@ footer {
 
     .card {
         flex: 1 1 30%;
-        max-width: 100%;
         width: auto;
+    }
+
+    .nav-toggle {
+        display: none;
+    }
+
+    .main-nav .nav-links {
+        display: flex !important;
+        position: static;
+        box-shadow: none;
+        background-color: transparent;
+        flex-direction: row;
+        width: auto;
+    }
+
+    .main-nav .nav-links a {
+        padding: 0.5rem 1rem;
+        border-bottom: none;
+    }
+
+    .hero-buttons {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .hero-buttons .btn {
+        margin: 0 1rem;
+        width: auto;
+    }
+
+    .card-grid {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
