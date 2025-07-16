@@ -1045,7 +1045,8 @@ footer {
     max-width: 350px;
     height: auto;
     border-radius: 100%;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* sombra suave y elegante */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    /* sombra suave y elegante */
 }
 
 /* Texto al lado del logo */
@@ -1195,8 +1196,7 @@ footer {
     display: none;
     position: absolute;
     top: 100%;
-    right: 0;
-    /* 🔽 Aparece alineado hacia la izquierda */
+    right: 0; /* 🔽 Aparece alineado hacia la izquierda */
     background: #fff;
     list-style: none;
     padding: 0;
@@ -1219,4 +1219,222 @@ footer {
     background-color: #f0f0f0;
 }
 
-/* Pendiente realizar código responsive para el header */
+/* ---------------------------- */
+/*     MEDIA QUERIES GLOBAL    */
+/* ---------------------------- */
+
+/* Celulares pequeños (hasta 480px) */
+@media screen and (max-width: 480px) {
+    header .container,
+    .contenedor-logo-texto,
+    .cards-container,
+    .join-card,
+    .footer-content {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center;
+    }
+
+    .main-nav .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        background-color: white;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 100%;
+        padding: 20px;
+        z-index: 1000;
+    }
+
+    .main-nav.open .nav-links {
+        display: flex;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .search-hamburger-container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .search-input {
+        width: 100%;
+    }
+
+    .search-form button,
+    .hamburger-menu {
+        width: 100%;
+    }
+
+    .video-content1 h1 {
+        font-size: 2rem;
+    }
+
+    .video-content1 p {
+        font-size: 1rem;
+    }
+
+    .card-hover {
+        max-width: 90%;
+    }
+
+    .join-card .join-img {
+        height: 150px;
+    }
+
+    .slide img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .comentario {
+        font-size: 1rem;
+    }
+
+    .nombre {
+        font-size: 0.9rem;
+    }
+
+    .contact-form {
+        padding: 20px;
+    }
+
+    .footer-logo {
+        height: 80px;
+        width: 80px;
+    }
+
+    #hero h1 {
+        font-size: 2rem;
+    }
+
+    #hero p {
+        font-size: 1rem;
+    }
+}
+
+/* Responsive en cualquier tamaño de pantalla */
+/* Celulares grandes y tablets verticales (481px a 768px) */
+@media screen and (max-width: 320px) {
+    .logo-text {
+        font-size: 1.5rem;
+    }
+
+    .main-nav .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 15px;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 100%;
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .main-nav.open .nav-links {
+        display: flex;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .contenedor-logo-texto {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .texto {
+        text-align: center;
+    }
+
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-hover {
+        max-width: 95%;
+    }
+
+    .join-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-social .social-icons {
+        justify-content: center;
+    }
+
+    .contenedor-buscador {
+        transform: translateY(0);
+        padding: 20px;
+    }
+
+    .video-content1 h1 {
+        font-size: 2.5rem;
+    }
+
+    .video-content1 p {
+        font-size: 1.1rem;
+    }
+
+    .map-container {
+        width: 100%;
+    }
+}
+
+/* Tablets horizontales y laptops pequeños (769px a 1024px) */
+@media screen and (max-width: 748px) {
+    .card-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .join-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .contenedor-logo-texto {
+        gap: 20px;
+    }
+
+    .texto {
+        font-size: 1rem;
+    }
+
+    .footer-content {
+        gap: 20px;
+    }
+
+    .video-content1 h1 {
+        font-size: 3rem;
+    }
+
+    .search-input {
+        width: 100%;
+    }
+}
+
+/* Monitores medianos y laptops grandes (1025px a 1366px) */
+@media screen and (max-width: 1366px) {
+    .contenedor-buscador {
+        max-width: 90%;
+    }
+
+    .video-content1 h1 {
+        font-size: 3.5rem;
+    }
+}
