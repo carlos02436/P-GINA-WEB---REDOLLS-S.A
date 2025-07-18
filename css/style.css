@@ -349,19 +349,8 @@ header .container {
 
 /* Contenedor principal de contacto */
 #contact {
-    background-image: url(../image/fondo_marmol.jpg);
-    /* Cambia la ruta a tu imagen */
-    background-size: cover;
-    /* Cubre toda la sección */
-    background-position: center;
-    /* Centra la imagen */
-    background-repeat: no-repeat;
-    /* Evita que se repita */
-    background-attachment: fixed;
-    /* Opcional: efecto parallax */
+    background: transparent;
     color: white;
-    /* Mejora contraste si fondo es oscuro */
-    position: relative;
 }
 
 #contact h2 {
@@ -1224,108 +1213,7 @@ footer {
     background-color: #f0f0f0;
 }
 
-/* ---------------------------- */
-/*     MEDIA QUERIES GLOBAL    */
-/* ---------------------------- */
-
-/* Celulares pequeños (hasta 480px) */
-@media screen and (max-width: 480px) {
-    header .container,
-    .contenedor-logo-texto,
-    .cards-container,
-    .join-card,
-    .footer-content {
-        flex-direction: column !important;
-        align-items: center !important;
-        text-align: center;
-    }
-
-    .main-nav .nav-links {
-        display: none;
-        flex-direction: column;
-        gap: 10px;
-        background-color: white;
-        position: absolute;
-        top: 80px;
-        right: 0;
-        width: 100%;
-        padding: 20px;
-        z-index: 1000;
-    }
-
-    .main-nav.open .nav-links {
-        display: flex;
-    }
-
-    .nav-toggle {
-        display: block;
-    }
-
-    .search-hamburger-container {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 10px;
-        width: 100%;
-    }
-
-    .search-input {
-        width: 100%;
-    }
-
-    .search-form button,
-    .hamburger-menu {
-        width: 100%;
-    }
-
-    .video-content1 h1 {
-        font-size: 2rem;
-    }
-
-    .video-content1 p {
-        font-size: 1rem;
-    }
-
-    .card-hover {
-        max-width: 90%;
-    }
-
-    .join-card .join-img {
-        height: 150px;
-    }
-
-    .slide img {
-        width: 70px;
-        height: 70px;
-    }
-
-    .comentario {
-        font-size: 1rem;
-    }
-
-    .nombre {
-        font-size: 0.9rem;
-    }
-
-    .contact-form {
-        padding: 20px;
-    }
-
-    .footer-logo {
-        height: 80px;
-        width: 80px;
-    }
-
-    #hero h1 {
-        font-size: 2rem;
-    }
-
-    #hero p {
-        font-size: 1rem;
-    }
-}
-
 /* Responsive en cualquier tamaño de pantalla */
-/* Celulares grandes y tablets verticales (481px a 768px) */
 @media screen and (max-width: 320px) {
     .logo-text {
         font-size: 1.5rem;
