@@ -51,6 +51,16 @@ body {
     padding: 0 1rem;
 }
 
+/* Efecto Hover para tarjetas */
+.efecto {
+    transition: transform 0.3s ease-in-out;
+}
+
+.efecto:hover {
+    transform: scale(1.05);
+}
+
+
 /* Header */
 header {
     background-color: var(--text-color-light);
@@ -74,11 +84,6 @@ header .container {
     align-items: center;
     text-decoration: none;
     color: var(--primary-color);
-}
-
-.logo-container:hover {
-    transform: scale(1.03);
-    opacity: 0.85;
 }
 
 #logo-img {
