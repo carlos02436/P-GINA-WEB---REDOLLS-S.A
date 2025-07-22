@@ -17,54 +17,65 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <!-- Bootstrap Icons (para que <i class="bi bi-arrow-up"> funcione) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <link rel="icon" href="image/logo2.png" type="image">
+    <link rel="icon" href="image/logo1.png" type="image">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+
+    <!--Encabezado-->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
+            <a class="navbar-brand">
+                <img src="image/logo1.png" alt="Logo REDOLLS S.A." class="img-fluid" style="height: 50px;">
+                <strong>REDOLLS S.A.</strong>
+            </a>
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link active" href="servicios.html">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="vacantes.html">Vacantes</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
-                            Dropdown
+                            Más
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <li><a class="dropdown-item" href="#">Sobre Nosotros</a></li>
+                            <li><a class="dropdown-item" href="#">Testimonios</a></li>
+                            <li><a class="dropdown-item" href="#">Contacto</a></li>
                         </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
                     </li>
                 </ul>
                 <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                    <button class="btn btn-outline-success" type="submit">Search</button>
+                    <input class="form-control me-2" type="search" placeholder="Palabra clave" aria-label="Search" />
+                    <button class="boton-buscar" aria-label="Buscar">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                            viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001l3.85 3.85a1 1 0 0 0 
+                        1.415-1.414l-3.85-3.85zm-5.242 1.156a5 5 0 1 
+                        1 0-10 5 5 0 0 1 0 10z" />
+                        </svg>
+                    </button>
                 </form>
             </div>
         </div>
     </nav>
 
     <!-- Botón Scroll hacia abajo y devuelve al inicio -->
-    <button id="scrollToTopBtn" class="btn btn-primary"
+    <button id="scrollToTopBtn" class="btn"
         style="position:fixed; bottom:40px; right:30px; z-index:9999; width: 50px; height:40px; display:none; align-items:center; justify-content:center;">
         <i class="fa-solid fa-chevron-up fa-lg"></i>
     </button>
@@ -87,8 +98,8 @@
         });
     </script>
 
-    <main class="container py-5">
-        <div class="text-center mb-4">
+    <main class="container py-5 mt-5">
+        <div id="servicios" class="text-center mb-4" style="position:relative; z-index:1000;">
             <h1 class="h3 fw-bold">¡Encuentra tu servicio ideal en REDOLLS S.A!</h1>
         </div>
 
@@ -99,7 +110,8 @@
                 <div class="row g-4">
                     <!-- Tarjeta 1 -->
                     <div class="col-sm-6 col-lg-4">
-                        <div class="card border-start border-4 border-primary border-top-0 border-end-0 border-bottom-0 shadow">
+                        <div
+                            class="card border-start border-4 border-primary border-top-0 border-end-0 border-bottom-0 shadow">
                             <div class="card-body">
                                 <div class="d-flex align-items-start mb-3">
                                     <img src="https://logo.clearbit.com/google.com" alt="Limpieza" class="rounded me-3"
@@ -125,7 +137,8 @@
 
                     <!-- Tarjeta 2 -->
                     <div class="col-sm-6 col-lg-4">
-                        <div class="card h-100 border-start border-success border-4 border-primary border-top-0 border-end-0 border-bottom-0 shadow">
+                        <div
+                            class="card h-100 border-start border-success border-4 border-primary border-top-0 border-end-0 border-bottom-0 shadow">
                             <div class="card-body">
                                 <div class="d-flex align-items-start mb-3">
                                     <img src="https://logo.clearbit.com/uber.com" alt="Transporte" class="rounded me-3"
@@ -153,192 +166,198 @@
                     <!-- Tarjeta 3 -->
                     <div class="col-sm-6 col-lg-4">
                         <div class="card h-100 border-start border-danger border-4 shadow border-primary border-top-0 border-end-0 border-bottom-0 shadow"">
-                            <div class="card-body">
-                                <div class="d-flex align-items-start mb-3">
-                                    <img src="https://logo.clearbit.com/fiverr.com" alt="Diseño" class="rounded me-3"
-                                        width="48" height="48">
-                                    <div>
-                                        <h5 class="card-title fw-bold mb-0">Diseño Gráfico Freelance</h5>
-                                        <p class="text-muted small">Ofrecido por: Camila Ríos</p>
-                                    </div>
+                            <div class=" card-body">
+                            <div class="d-flex align-items-start mb-3">
+                                <img src="https://logo.clearbit.com/fiverr.com" alt="Diseño" class="rounded me-3"
+                                    width="48" height="48">
+                                <div>
+                                    <h5 class="card-title fw-bold mb-0">Diseño Gráfico Freelance</h5>
+                                    <p class="text-muted small">Ofrecido por: Camila Ríos</p>
                                 </div>
-                                <p class="small text-muted">Logos, flyers, redes sociales, identidad visual y más.</p>
-                                <div class="mb-3">
-                                    <span class="badge bg-danger-subtle text-danger">Creativo</span>
-                                    <span class="badge bg-danger-subtle text-danger">Rápido</span>
-                                    <span class="badge bg-danger-subtle text-danger">Profesional</span>
-                                </div>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <small class="text-muted">Publicado hace 1 semana</small>
-                                    <button class="btn btn-sm btn-danger">Contactar</button>
-                                </div>
+                            </div>
+                            <p class="small text-muted">Logos, flyers, redes sociales, identidad visual y más.</p>
+                            <div class="mb-3">
+                                <span class="badge bg-danger-subtle text-danger">Creativo</span>
+                                <span class="badge bg-danger-subtle text-danger">Rápido</span>
+                                <span class="badge bg-danger-subtle text-danger">Profesional</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">Publicado hace 1 semana</small>
+                                <button class="btn btn-sm btn-danger">Contactar</button>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Tarjeta 4 -->
-                    <div class="col-sm-6 col-lg-4">
-                        <div class="card h-100 border-start border-warning border-4 border-primary border-top-0 border-end-0 border-bottom-0 shadow">
-                            <div class="card-body">
-                                <div class="d-flex align-items-start mb-3">
-                                    <img src="https://logo.clearbit.com/wix.com" alt="Web" class="rounded me-3"
-                                        width="48" height="48">
-                                    <div>
-                                        <h5 class="card-title fw-bold mb-0">Desarrollo Web</h5>
-                                        <p class="text-muted small">Ofrecido por: Andrés Gómez</p>
-                                    </div>
-                                </div>
-                                <p class="small text-muted">Creación de páginas web modernas, optimizadas y responsivas.
-                                </p>
-                                <div class="mb-3">
-                                    <span class="badge bg-warning-subtle text-warning">Actual</span>
-                                    <span class="badge bg-warning-subtle text-warning">Responsivo</span>
-                                    <span class="badge bg-warning-subtle text-warning">SEO</span>
-                                </div>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <small class="text-muted">Publicado hace 3 días</small>
-                                    <button class="btn btn-sm btn-warning">Contactar</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Tarjeta 5 -->
-                    <div class="col-sm-6 col-lg-4">
-                        <div class="card h-100 border-start border-info border-4 border-primary border-top-0 border-end-0 border-bottom-0 shadow">
-                            <div class="card-body">
-                                <div class="d-flex align-items-start mb-3">
-                                    <img src="https://logo.clearbit.com/spotify.com" alt="Música" class="rounded me-3"
-                                        width="48" height="48">
-                                    <div>
-                                        <h5 class="card-title fw-bold mb-0">Clases de Guitarra</h5>
-                                        <p class="text-muted small">Ofrecido por: Julián Herrera</p>
-                                    </div>
-                                </div>
-                                <p class="small text-muted">Aprende desde cero con clases prácticas a domicilio u
-                                    online.</p>
-                                <div class="mb-3">
-                                    <span class="badge bg-info-subtle text-info">Didáctico</span>
-                                    <span class="badge bg-info-subtle text-info">Paciencia</span>
-                                    <span class="badge bg-info-subtle text-info">Flexible</span>
-                                </div>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <small class="text-muted">Publicado ayer</small>
-                                    <button class="btn btn-sm btn-info">Contactar</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Tarjeta 6 -->
-                    <div class="col-sm-6 col-lg-4">
-                        <div class="card h-100 border-start border-secondary border-4 border-primary border-top-0 border-end-0 border-bottom-0 shadow">
-                            <div class="card-body">
-                                <div class="d-flex align-items-start mb-3">
-                                    <img src="https://logo.clearbit.com/coursera.org" alt="Tutorías"
-                                        class="rounded me-3" width="48" height="48">
-                                    <div>
-                                        <h5 class="card-title fw-bold mb-0">Tutorías Académicas</h5>
-                                        <p class="text-muted small">Ofrecido por: Laura Vélez</p>
-                                    </div>
-                                </div>
-                                <p class="small text-muted">Asesoría en matemáticas, física e inglés para estudiantes.
-                                </p>
-                                <div class="mb-3">
-                                    <span class="badge bg-secondary-subtle text-secondary">Paciencia</span>
-                                    <span class="badge bg-secondary-subtle text-secondary">Virtual</span>
-                                    <span class="badge bg-secondary-subtle text-secondary">Resultados</span>
-                                </div>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <small class="text-muted">Publicado hace 5 días</small>
-                                    <button class="btn btn-sm btn-secondary">Contactar</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Tarjeta 7 -->
-                    <div class="col-sm-6 col-lg-4">
-                        <div class="card h-100 border-start border-dark border-4 border-primary border-top-0 border-end-0 border-bottom-0 shadow">
-                            <div class="card-body">
-                                <div class="d-flex align-items-start mb-3">
-                                    <img src="https://logo.clearbit.com/etsy.com" alt="Artesanía" class="rounded me-3"
-                                        width="48" height="48">
-                                    <div>
-                                        <h5 class="card-title fw-bold mb-0">Productos Artesanales</h5>
-                                        <p class="text-muted small">Ofrecido por: Diana Vargas</p>
-                                    </div>
-                                </div>
-                                <p class="small text-muted">Venta de productos hechos a mano: velas, jabones,
-                                    decoración.</p>
-                                <div class="mb-3">
-                                    <span class="badge bg-dark-subtle text-dark">Creativo</span>
-                                    <span class="badge bg-dark-subtle text-dark">Natural</span>
-                                    <span class="badge bg-dark-subtle text-dark">Único</span>
-                                </div>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <small class="text-muted">Publicado hace 4 días</small>
-                                    <button class="btn btn-sm btn-dark">Contactar</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Tarjeta 8 -->
-                    <div class="col-sm-6 col-lg-4">
-                        <div class="card h-100 border-start border-primary border-4 border-primary border-top-0 border-end-0 border-bottom-0 shadow">
-                            <div class="card-body">
-                                <div class="d-flex align-items-start mb-3">
-                                    <img src="https://logo.clearbit.com/zoho.com" alt="Contabilidad"
-                                        class="rounded me-3" width="48" height="48">
-                                    <div>
-                                        <h5 class="card-title fw-bold mb-0">Asesoría Contable</h5>
-                                        <p class="text-muted small">Ofrecido por: Pedro Martínez</p>
-                                    </div>
-                                </div>
-                                <p class="small text-muted">Declaración de renta, libros contables, facturación
-                                    electrónica.</p>
-                                <div class="mb-3">
-                                    <span class="badge bg-primary-subtle text-primary">Confiable</span>
-                                    <span class="badge bg-primary-subtle text-primary">Formal</span>
-                                    <span class="badge bg-primary-subtle text-primary">Legal</span>
-                                </div>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <small class="text-muted">Publicado hace 6 días</small>
-                                    <button class="btn btn-sm btn-primary">Contactar</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Tarjeta 9 -->
-                    <div class="col-sm-6 col-lg-4">
-                        <div class="card h-100 border-start border-success border-4 border-primary border-top-0 border-end-0 border-bottom-0 shadow">
-                            <div class="card-body">
-                                <div class="d-flex align-items-start mb-3">
-                                    <img src="https://logo.clearbit.com/dribbble.com" alt="Fotografía"
-                                        class="rounded me-3" width="48" height="48">
-                                    <div>
-                                        <h5 class="card-title fw-bold mb-0">Fotografía Profesional</h5>
-                                        <p class="text-muted small">Ofrecido por: Valentina Cruz</p>
-                                    </div>
-                                </div>
-                                <p class="small text-muted">Sesiones de fotos para eventos, retratos y productos.</p>
-                                <div class="mb-3">
-                                    <span class="badge bg-success-subtle text-success">Alta calidad</span>
-                                    <span class="badge bg-success-subtle text-success">Edición incluida</span>
-                                    <span class="badge bg-success-subtle text-success">Creativa</span>
-                                </div>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <small class="text-muted">Publicado hace 1 día</small>
-                                    <button class="btn btn-sm btn-success">Contactar</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
+
+                <!-- Tarjeta 4 -->
+                <div class="col-sm-6 col-lg-4">
+                    <div
+                        class="card h-100 border-start border-warning border-4 border-primary border-top-0 border-end-0 border-bottom-0 shadow">
+                        <div class="card-body">
+                            <div class="d-flex align-items-start mb-3">
+                                <img src="https://logo.clearbit.com/wix.com" alt="Web" class="rounded me-3" width="48"
+                                    height="48">
+                                <div>
+                                    <h5 class="card-title fw-bold mb-0">Desarrollo Web</h5>
+                                    <p class="text-muted small">Ofrecido por: Andrés Gómez</p>
+                                </div>
+                            </div>
+                            <p class="small text-muted">Creación de páginas web modernas, optimizadas y responsivas.
+                            </p>
+                            <div class="mb-3">
+                                <span class="badge bg-warning-subtle text-warning">Actual</span>
+                                <span class="badge bg-warning-subtle text-warning">Responsivo</span>
+                                <span class="badge bg-warning-subtle text-warning">SEO</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">Publicado hace 3 días</small>
+                                <button class="btn btn-sm btn-warning">Contactar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 5 -->
+                <div class="col-sm-6 col-lg-4">
+                    <div
+                        class="card h-100 border-start border-info border-4 border-primary border-top-0 border-end-0 border-bottom-0 shadow">
+                        <div class="card-body">
+                            <div class="d-flex align-items-start mb-3">
+                                <img src="https://logo.clearbit.com/spotify.com" alt="Música" class="rounded me-3"
+                                    width="48" height="48">
+                                <div>
+                                    <h5 class="card-title fw-bold mb-0">Clases de Guitarra</h5>
+                                    <p class="text-muted small">Ofrecido por: Julián Herrera</p>
+                                </div>
+                            </div>
+                            <p class="small text-muted">Aprende desde cero con clases prácticas a domicilio u
+                                online.</p>
+                            <div class="mb-3">
+                                <span class="badge bg-info-subtle text-info">Didáctico</span>
+                                <span class="badge bg-info-subtle text-info">Paciencia</span>
+                                <span class="badge bg-info-subtle text-info">Flexible</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">Publicado ayer</small>
+                                <button class="btn btn-sm btn-info">Contactar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 6 -->
+                <div class="col-sm-6 col-lg-4">
+                    <div
+                        class="card h-100 border-start border-secondary border-4 border-primary border-top-0 border-end-0 border-bottom-0 shadow">
+                        <div class="card-body">
+                            <div class="d-flex align-items-start mb-3">
+                                <img src="https://logo.clearbit.com/coursera.org" alt="Tutorías" class="rounded me-3"
+                                    width="48" height="48">
+                                <div>
+                                    <h5 class="card-title fw-bold mb-0">Tutorías Académicas</h5>
+                                    <p class="text-muted small">Ofrecido por: Laura Vélez</p>
+                                </div>
+                            </div>
+                            <p class="small text-muted">Asesoría en matemáticas, física e inglés para estudiantes.
+                            </p>
+                            <div class="mb-3">
+                                <span class="badge bg-secondary-subtle text-secondary">Paciencia</span>
+                                <span class="badge bg-secondary-subtle text-secondary">Virtual</span>
+                                <span class="badge bg-secondary-subtle text-secondary">Resultados</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">Publicado hace 5 días</small>
+                                <button class="btn btn-sm btn-secondary">Contactar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 7 -->
+                <div class="col-sm-6 col-lg-4">
+                    <div
+                        class="card h-100 border-start border-dark border-4 border-primary border-top-0 border-end-0 border-bottom-0 shadow">
+                        <div class="card-body">
+                            <div class="d-flex align-items-start mb-3">
+                                <img src="https://logo.clearbit.com/etsy.com" alt="Artesanía" class="rounded me-3"
+                                    width="48" height="48">
+                                <div>
+                                    <h5 class="card-title fw-bold mb-0">Productos Artesanales</h5>
+                                    <p class="text-muted small">Ofrecido por: Diana Vargas</p>
+                                </div>
+                            </div>
+                            <p class="small text-muted">Venta de productos hechos a mano: velas, jabones,
+                                decoración.</p>
+                            <div class="mb-3">
+                                <span class="badge bg-dark-subtle text-dark">Creativo</span>
+                                <span class="badge bg-dark-subtle text-dark">Natural</span>
+                                <span class="badge bg-dark-subtle text-dark">Único</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">Publicado hace 4 días</small>
+                                <button class="btn btn-sm btn-dark">Contactar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 8 -->
+                <div class="col-sm-6 col-lg-4">
+                    <div
+                        class="card h-100 border-start border-primary border-4 border-primary border-top-0 border-end-0 border-bottom-0 shadow">
+                        <div class="card-body">
+                            <div class="d-flex align-items-start mb-3">
+                                <img src="https://logo.clearbit.com/zoho.com" alt="Contabilidad" class="rounded me-3"
+                                    width="48" height="48">
+                                <div>
+                                    <h5 class="card-title fw-bold mb-0">Asesoría Contable</h5>
+                                    <p class="text-muted small">Ofrecido por: Pedro Martínez</p>
+                                </div>
+                            </div>
+                            <p class="small text-muted">Declaración de renta, libros contables, facturación
+                                electrónica.</p>
+                            <div class="mb-3">
+                                <span class="badge bg-primary-subtle text-primary">Confiable</span>
+                                <span class="badge bg-primary-subtle text-primary">Formal</span>
+                                <span class="badge bg-primary-subtle text-primary">Legal</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">Publicado hace 6 días</small>
+                                <button class="btn btn-sm btn-primary">Contactar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 9 -->
+                <div class="col-sm-6 col-lg-4">
+                    <div
+                        class="card h-100 border-start border-success border-4 border-primary border-top-0 border-end-0 border-bottom-0 shadow">
+                        <div class="card-body">
+                            <div class="d-flex align-items-start mb-3">
+                                <img src="https://logo.clearbit.com/dribbble.com" alt="Fotografía" class="rounded me-3"
+                                    width="48" height="48">
+                                <div>
+                                    <h5 class="card-title fw-bold mb-0">Fotografía Profesional</h5>
+                                    <p class="text-muted small">Ofrecido por: Valentina Cruz</p>
+                                </div>
+                            </div>
+                            <p class="small text-muted">Sesiones de fotos para eventos, retratos y productos.</p>
+                            <div class="mb-3">
+                                <span class="badge bg-success-subtle text-success">Alta calidad</span>
+                                <span class="badge bg-success-subtle text-success">Edición incluida</span>
+                                <span class="badge bg-success-subtle text-success">Creativa</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">Publicado hace 1 día</small>
+                                <button class="btn btn-sm btn-success">Contactar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
+        </div>
 
 
     </main>
@@ -432,7 +451,8 @@
 
             <!-- Pie inferior -->
             <div class="footer-bottom">
-                <h4>&copy; <span id="currentYear"></span> REDOLLS S.A. Todos los derechos reservados | Plataforma
+                <h4 style="font-size: 16px;">&copy; <span id="currentYear"></span> REDOLLS S.A. Todos los derechos
+                    reservados | Plataforma
                     desarrollada con pasión y compromiso.<h4>
             </div>
         </div>

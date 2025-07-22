@@ -39,13 +39,13 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                        <a class="nav-link active" aria-current="page" href="#hero">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Servicios</a>
+                        <a class="nav-link active" href="#servicios">Servicios</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Vacantes</a>
+                        <a class="nav-link active" href="#vacantes">Vacantes</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -53,9 +53,10 @@
                             Más
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Sobre Nosotros</a></li>
-                            <li><a class="dropdown-item" href="#">Testimonios</a></li>
-                            <li><a class="dropdown-item" href="#">Contacto</a></li>
+                            <li><a class="dropdown-item" href="#join">Únete</a></li>
+                            <li><a class="dropdown-item" href="#nosotros">Sobre Nosotros</a></li>
+                            <li><a class="dropdown-item" href="#testimonios">Testimonios</a></li>
+                            <li><a class="dropdown-item" href="#contacto">Contacto</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -75,10 +76,10 @@
     </nav>
 
     <!-- Botón Scroll hacia abajo y devuelve al inicio -->
-<button id="scrollToTopBtn" class="btn"
-    style="position:fixed; bottom:40px; right:30px; z-index:9999; width: 50px; height:40px; display:none; align-items:center; justify-content:center;">
-    <i class="fa-solid fa-chevron-up fa-lg"></i>
-</button>
+    <button id="scrollToTopBtn" class="btn"
+        style="position:fixed; bottom:40px; right:30px; z-index:9999; width: 50px; height:40px; display:none; align-items:center; justify-content:center;">
+        <i class="fa-solid fa-chevron-up fa-lg"></i>
+    </button>
 
     <!-- Código JS para el Botón Scroll hacia abajo y devuelve al inicio -->
     <script>
@@ -105,8 +106,23 @@
                 <p>REDOLLS es el entorno donde profesionales, empresas y talento se encuentran. Publica tus
                     servicios, encuentra vacantes o descubre el talento que necesitas.</p>
                 <div class="hero-buttons">
-                    <a href="#join" class="btn btn-primary">Publica tu Anuncio</a>
-                    <a href="#services" class="btn btn-secondary">Explorar Servicios</a>
+                    <!-- Botón "Publica tu Anuncio" -->
+                    <a href="#join" class="btn"
+                        style="background-color: #011153; border: 2px solid #011153; color: #fff; transition: all 0.3s ease;"
+                        onmouseover="this.style.backgroundColor='#322cf2'; this.style.border='2px solid #322cf2';"
+                        onmouseout="this.style.backgroundColor='#011153'; this.style.border='2px solid #011153';">
+                        Publica tu Anuncio
+                    </a>
+
+
+                    <!-- Botón "Explora Servicios" -->
+                    <a href="#servicios" class="btn btn-secondary"
+                        style="background-color: transparent; border: 2px solid #fff; color: #fff;"
+                        onmouseover="this.style.backgroundColor='#fff'; this.style.color='#000';"
+                        onmouseout="this.style.backgroundColor='transparent'; this.style.color='#fff';">
+                        Explorar Servicios
+                    </a>
+
                 </div>
             </div>
         </section>
@@ -162,7 +178,7 @@
         </div>
 
         <!-- Servicios -->
-        <section id="services" class="content-section" style="scroll-margin-top: 80px;">
+        <section id="servicios" class="content-section" style="scroll-margin-top: 30px;">
             <div class="container">
                 <h2>Servicios de Nuestra Comunidad</h2>
                 <p class="section-description">Explora una variedad de servicios ofrecidos por profesionales y empresas
@@ -171,35 +187,43 @@
                     <div class="card">
                         <h3>Desarrollo de Software</h3>
                         <p>Soluciones de software a medida para potenciar tu negocio y optimizar procesos.</p>
-                        <button class="btn-card" data-modal-target="modal1">Ver más</button>
+                        <button class="btn-card" data-modal-target="modal1"
+                            style="width: 100px; display: block; margin: 20px auto;">Ver más</button>
                     </div>
                     <div class="card">
                         <h3>Consultoría Tecnológica</h3>
                         <p>Asesoramiento estratégico para alinear la tecnología con tus objetivos empresariales.</p>
-                        <button class="btn-card" data-modal-target="modal2">Ver más</button>
+                        <button class="btn-card" data-modal-target="modal1"
+                            style="width: 100px; display: block; margin: 20px auto;">Ver más</button>
                     </div>
                     <div class="card">
                         <h3>Marketing Digital y SEO</h3>
                         <p>Incrementa tu visibilidad online y alcanza a tu público objetivo eficazmente.</p>
-                        <button class="btn-card" data-modal-target="modal3">Ver más</button>
+                        <button class="btn-card" data-modal-target="modal1"
+                            style="width: 100px; display: block; margin: 20px auto;">Ver más</button>
                     </div>
                     <div class="card">
                         <h3>Diseño UX/UI Innovador</h3>
                         <p>Creamos experiencias de usuario intuitivas y atractivas para tus plataformas digitales.</p>
-                        <button class="btn-card" data-modal-target="modal4">Ver más</button>
+                        <button class="btn-card" data-modal-target="modal1"
+                            style="width: 100px; display: block; margin: 20px auto;">Ver más</button>
                     </div>
                     <div class="card">
                         <h3>VBA / Excel</h3>
                         <p>Aprende con nosotros a automatizar tus tareas en Excel, fácil y Rápido.</p>
-                        <button class="btn-card" data-modal-target="modal5">Ver más</button>
+                        <button class="btn-card" data-modal-target="modal1"
+                            style="width: 100px; display: block; margin: 20px auto;">Ver más</button>
                     </div>
                     <div class="card">
                         <h3>Programación Web</h3>
                         <p>Aprende programción de software a medida para potenciar y resaltar tus diseños web.</p>
-                        <button class="btn-card" data-modal-target="modal6">Ver más</button>
+                        <button class="btn-card" data-modal-target="modal1"
+                            style="width: 100px; display: block; margin: 20px auto;">Ver más</button>
                     </div>
                 </div>
-                <a href="servicios.html" class="btn btn-primary contact-btn">Más servicios</a>
+                <a href="servicios.html" class="btn-card" data-modal-target="modal1"
+                    style="width: 150px; display: block; margin: 50px auto; text-align: center; text-decoration: none;">Más
+                    servicios</a>
             </div>
         </section>
 
@@ -278,7 +302,7 @@
         </div>
 
         <!-- Vacantes -->
-        <section id="vacancies" class="content-section" style="scroll-margin-top: 80px;">
+        <section id="vacantes" class="content-section" style="scroll-margin-top: 30px;">
             <div class="container">
                 <h2>Vacantes de Empresas Destacadas</h2>
                 <p class="section-description">
@@ -292,7 +316,8 @@
                         <p><strong>Empresa:</strong> Tech Global Inc.</p>
                         <p><strong>Modalidad:</strong> Remoto</p>
                         <p><strong>Ubicación:</strong> La Jagua de Ibirico</p>
-                        <button class="btn-card" data-modal="modal7">Ver más</button>
+                        <button class="btn-card" data-modal-target="modal1"
+                            style="width: 100px; display: block; margin: 20px auto;">Ver más</button>
                     </div>
 
                     <div class="card">
@@ -300,7 +325,8 @@
                         <p><strong>Empresa:</strong> Startup Creativa Co.</p>
                         <p><strong>Modalidad:</strong> Híbrido</p>
                         <p><strong>Ubicación:</strong> La Jagua de Ibirico</p>
-                        <button class="btn-card" data-modal="modal8">Ver más</button>
+                        <button class="btn-card" data-modal-target="modal1"
+                            style="width: 100px; display: block; margin: 20px auto;">Ver más</button>
                     </div>
 
                     <div class="card">
@@ -308,7 +334,8 @@
                         <p><strong>Empresa:</strong> Finanzas Corp.</p>
                         <p><strong>Modalidad:</strong> Presencial</p>
                         <p><strong>Ubicación:</strong> La Jagua de Ibirico</p>
-                        <button class="btn-card" data-modal="modal9">Ver más</button>
+                        <button class="btn-card" data-modal-target="modal1"
+                            style="width: 100px; display: block; margin: 20px auto;">Ver más</button>
                     </div>
 
                     <div class="card">
@@ -316,7 +343,8 @@
                         <p><strong>Empresa:</strong> Publicidad Visual</p>
                         <p><strong>Modalidad:</strong> Remoto</p>
                         <p><strong>Ubicación:</strong> La Jagua de Ibirico</p>
-                        <button class="btn-card" data-modal="modal10">Ver más</button>
+                        <button class="btn-card" data-modal-target="modal1"
+                            style="width: 100px; display: block; margin: 20px auto;">Ver más</button>
                     </div>
 
                     <div class="card">
@@ -324,7 +352,8 @@
                         <p><strong>Empresa:</strong> Carpintería la Estrella</p>
                         <p><strong>Modalidad:</strong> Presencial</p>
                         <p><strong>Ubicación:</strong> La Jagua de Ibirico</p>
-                        <button class="btn-card" data-modal="modal11">Ver más</button>
+                        <button class="btn-card" data-modal-target="modal1"
+                            style="width: 100px; display: block; margin: 20px auto;">Ver más</button>
                     </div>
 
                     <div class="card">
@@ -332,11 +361,14 @@
                         <p><strong>Empresa:</strong> Tech Global Inc.</p>
                         <p><strong>Modalidad:</strong> Presencial</p>
                         <p><strong>Ubicación:</strong> La Jagua de Ibirico</p>
-                        <button class="btn-card" data-modal="modal12">Ver más</button>
+                        <button class="btn-card" data-modal-target="modal1"
+                            style="width: 100px; display: block; margin: 20px auto;">Ver más</button>
                     </div>
                 </div>
             </div>
-            <a href="vacantes.html" class="btn btn-primary contact-btn">Más vacantes</a>
+            <a href="servicios.html" class="btn-card" data-modal-target="modal1"
+                style="width: 150px; display: block; margin: 50px auto; text-align: center; text-decoration: none;">Más
+                vacantes</a>
         </section>
 
         <!-- MODALES -->
@@ -418,13 +450,14 @@
         </div>
 
         <!-- Sección Sobre Nosotros -->
-        <section id="nosotros" class="container my-5" style="scroll-margin-top: 100px;">
+        <section id="nosotros" class="container my-5" style="scroll-margin-top: 30px;">
             <div class="row align-items-center contenedor-logo-texto">
-                <img src="image/logo2.png" alt="Logo REDOLLS" class="img-fluid shadow logo1">
+                <img src="image/logo2.png" alt="Logo REDOLLS S.A." class="img-fluid logo1"
+                    style="height: 400px;width: 400px;">
                 <div class="col-md-6 text-start texto" style="text-align: justify;">
                     <h2 class="mb-3 fw-bold">Sobre REDOLLS S.A</h2>
                     <div style="margin-top: 1.5rem;">
-                        <p>
+                        <p class="card-text" style="text-align: justify; flex-grow: 1;">
                             En <strong>REDOLLS S.A</strong>, creamos un puente digital que conecta a individuos y
                             empresas
                             en toda Colombia.
@@ -450,9 +483,10 @@
                 <!-- Tarjeta Misión -->
                 <div class="card-hover glass-card shadow border-0 flex-fill" style="min-width: 300px;font-size: 15px;">
                     <div class="card-body d-flex flex-column">
-                        <h4 class="card-title fw-bold text-primary mb-3" style="font-size: 23px;">
+                        <h4 class="card-title fw-bold mb-3" style="font-size: 23px; color: #011c87;">
                             <i class="bi bi-bullseye"></i> Misión
                         </h4>
+
                         <p class="card-text" style="text-align: justify; flex-grow: 1;">
                             En REDOLLS S.A, trabajamos con el firme propósito de facilitar el acceso a oportunidades
                             laborales y la promoción de servicios profesionales en todo el país.
@@ -466,7 +500,7 @@
                 <!-- Tarjeta Visión -->
                 <div class="card-hover glass-card shadow border-0 flex-fill" style="min-width: 300px;">
                     <div class="card-body d-flex flex-column">
-                        <h4 class="card-title fw-bold text-primary mb-3" style="font-size: 23px;">
+                        <h4 class="card-title fw-bold mb-3" style="font-size: 23px; color: #011c87;">
                             <i class="bi bi-eye"></i> Visión
                         </h4>
                         <p class="card-text" style="text-align: justify; flex-grow: 1;font-size: 15px;">
@@ -497,7 +531,7 @@
         </section>
 
         <!-- Únete a la Comunidad REDOLLS -->
-        <section id="join" class="content-section alt-bg" style="scroll-margin-top: 80px;background: transparent;">
+        <section id="join" class="content-section alt-bg" style="scroll-margin-top: 30px;background: transparent;">
             <div class="container">
                 <h2>Únete a la Comunidad REDOLLS</h2>
                 <div class="join-grid">
@@ -528,7 +562,7 @@
         </section>
 
         <!-- Testimonios -->
-        <section id="testimonios" style="scroll-margin-top: 80px;">
+        <section id="testimonios" style="scroll-margin-top: 30px;">
             <div class="testimonios">
                 <div class="slide active">
                     <img src="image/testimonial-avatar-1.png" alt="Persona 1">
@@ -562,8 +596,8 @@
         </section>
 
         <!-- Contacto -->
-        <section id="contact"
-            style="scroll-margin-top:80px;padding:40px 20px;background:#f5f5f5;background: transparent;">
+        <section id="contacto"
+            style="scroll-margin-top:60px;padding:40px 20px;background:#f5f5f5;background: transparent;">
             <div style="max-width:1100px;margin:0 auto;">
                 <h2 style="text-align:center;margin-bottom:8px;">Contáctanos</h2>
                 <p style="text-align:center;margin:0;">¿Interesado en obtener más información sobre nosotros? Anímate,
@@ -593,7 +627,7 @@
                         <div>
                             <label for="message" style="display:block;margin-bottom:4px;">Mensaje:</label>
                             <textarea id="message" name="message" rows="5" required
-                                style="width:100%;padding:10px;border:1px solid #ccc;border-radius:8px;resize:vertical;"></textarea>
+                                style="width:100%;height:61px;padding:10px;border:1px solid #ccc;border-radius:8px;resize:vertical;"></textarea>
                         </div>
                         <button type="submit"
                             style="padding:12px; color:#fff;font-size:18px;background-color:#808080; border:none; border-radius:8px; cursor:pointer; font-weight:bold; transition:background-color 0.3s;"
@@ -674,7 +708,8 @@
 
                 <!-- Pie inferior -->
                 <div class="footer-bottom">
-                    <h4>&copy; <span id="currentYear"></span> REDOLLS S.A. Todos los derechos reservados | Plataforma
+                    <h4 style="font-size: 16px;">&copy; <span id="currentYear"></span> REDOLLS S.A. Todos los derechos
+                        reservados | Plataforma
                         desarrollada con pasión y compromiso.<h4>
                 </div>
             </div>
