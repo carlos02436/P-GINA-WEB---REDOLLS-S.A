@@ -22,6 +22,17 @@
     box-sizing: border-box;
 }
 
+/* Efecto hover del boton de scroll */
+    #scrollToTopBtn {
+        background-color: #011c87;
+        color: white;
+    }
+
+    #scrollToTopBtn:hover {
+        background-color: #322cf2;
+        color: white;
+    }
+
 html {
     scroll-behavior: smooth;
 }
@@ -993,7 +1004,6 @@ footer {
 
 .boton-buscar:hover {
     background-color: #1d4ed8;
-    transform: scale(1.05);
 }
 
 .busquedas-populares {
@@ -1190,7 +1200,8 @@ footer {
     display: none;
     position: absolute;
     top: 100%;
-    right: 0; /* 🔽 Aparece alineado hacia la izquierda */
+    right: 0;
+    /* 🔽 Aparece alineado hacia la izquierda */
     background: #fff;
     list-style: none;
     padding: 0;
@@ -1329,5 +1340,37 @@ footer {
 
     .video-content1 h1 {
         font-size: 3.5rem;
+    }
+}
+
+/* responsive en cualquier dispositivo */
+@media (max-width: 768px) {
+    .search-form {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .search-input,
+    .search-form button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .main-nav {
+        display: none;
+    }
+
+    .main-nav.active {
+        display: block;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* Mostrar el botón hamburguesa */
+    .nav-toggle {
+        display: block;
     }
 }

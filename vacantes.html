@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
@@ -6,64 +7,65 @@
     <title>REDOLLS S.A.</title>
     <!-- Tu hoja de estilos personalizada -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <!-- Fuentes y otros recursos -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Bootstrap Icons (para que <i class="bi bi-arrow-up"> funcione) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="icon" href="image/logo2.png" type="image">
 </head>
 
 <body>
-    <header>
-        <div class="container d-flex align-items-center justify-content-between flex-wrap gap-2">
-            <!-- Logo -->
-            <a class="logo-container">
-                <img src="image/logo1.png" alt="REDOLLS S.A." id="logo-img"><strong>REDOLLS S.A.</strong>
-            </a>
-
-            <!-- Formulario de búsqueda + botón hamburguesa -->
-            <div class="d-flex align-items-center gap-2">
-                <div class="search-hamburger-container d-flex align-items-center">
-                    <form class="search-form d-flex align-items-center" role="search">
-                        <input class="search-input" type="search" placeholder="Buscar" aria-label="Search" />
-                        <button class="btn btn-primary" type="submit">Buscar</button>
-                    </form>
-
-                    <!-- Botón menú hamburguesa (único y correcto) -->
-                    <button class="nav-toggle" aria-label="Abrir menú de navegación">
-                        <span class="hamburger"><!-- No colocar el icono de hamburguesa aquí,
-                            ya que se encuentra en el archivo CSS --></span>
-                    </button>
-                </div>
-            </div>
-
-            <!-- Menú de navegación -->
-            <nav class="main-nav">
-                <ul class="nav-links">
-                    <li><a href="index.html#hero">Inicio</a></li>
-                    <li><a href="index.html#services">Servicios</a></li>
-                    <li><a href="index.html#vacancies">Vacantes</a></li>
-                    <li><a href="index.html#nosotros">Nosotros</a></li>
-
-                    <!-- Dropdown "Más" -->
-                    <li class="dropdown">
-                        <a href="#">Más <span class="arrow-down">&#9662;</span></a>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Dropdown
+                        </a>
                         <ul class="dropdown-menu">
-                            <li><a href="index.html#join">Únete</a></li>
-                            <li><a href="index.html#testimonios">Testimonios</a></li>
-                            <li><a href="index.html#contact">Contacto</a></li>
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
                         </ul>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                    </li>
                 </ul>
-            </nav>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
         </div>
-    </header>
+    </nav>
 
     <!-- Botón Scroll hacia abajo y devuelve al inicio -->
     <button id="scrollToTopBtn" class="btn btn-primary"
-        style="position:fixed; bottom:40px; right:30px; z-index:9999; width: 40px; height:40px; display:none; align-items:center; justify-content:center;">
+        style="position:fixed; bottom:40px; right:30px; z-index:9999; width: 50px; height:40px; display:none; align-items:center; justify-content:center;">
         <i class="fa-solid fa-chevron-up fa-lg"></i>
     </button>
 
@@ -85,378 +87,292 @@
         });
     </script>
 
-    <!-- Contenido de Vacantes -->
-    <main class="container mx-auto px-4 py-8" style="max-width: 1200px;margin: 0 auto;">
-        <div>
-            <h1 class="text-3xl font-bold mb-6 text-center">¡Busca tu mejor oportunidad en REDOLLS S.A.!</h1>
-            <div class="flex flex-col sm:flex-row justify-center items-center mb-6 space-y-2 sm:space-y-0 sm:space-x-2">
+    <main class="container py-5">
+        <div class="text-center mb-4">
+            <h1 class="h3 fw-bold">¡Encuentra tu servicio ideal en REDOLLS S.A!</h1>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+
+            <!-- Sección de tarjetas de servicios -->
+            <div class="container py-4">
+                <div class="row g-4">
+                    <!-- Tarjeta 1 -->
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="card border-start border-4 border-primary border-top-0 border-end-0 border-bottom-0 shadow">
+                            <div class="card-body">
+                                <div class="d-flex align-items-start mb-3">
+                                    <img src="https://logo.clearbit.com/google.com" alt="Limpieza" class="rounded me-3"
+                                        width="48" height="48">
+                                    <div>
+                                        <h5 class="card-title fw-bold mb-0">Servicio de Limpieza a Domicilio</h5>
+                                        <p class="text-muted small">Ofrecido por: María Torres</p>
+                                    </div>
+                                </div>
+                                <p class="small text-muted">Limpieza profunda de casas y oficinas. Citas flexibles.</p>
+                                <div class="mb-3">
+                                    <span class="badge bg-primary-subtle text-primary">A domicilio</span>
+                                    <span class="badge bg-primary-subtle text-primary">Responsable</span>
+                                    <span class="badge bg-primary-subtle text-primary">Económico</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <small class="text-muted">Publicado hace 2 días</small>
+                                    <button class="btn btn-sm btn-primary">Contactar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 2 -->
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="card h-100 border-start border-success border-4 border-primary border-top-0 border-end-0 border-bottom-0 shadow">
+                            <div class="card-body">
+                                <div class="d-flex align-items-start mb-3">
+                                    <img src="https://logo.clearbit.com/uber.com" alt="Transporte" class="rounded me-3"
+                                        width="48" height="48">
+                                    <div>
+                                        <h5 class="card-title fw-bold mb-0">Transporte Privado</h5>
+                                        <p class="text-muted small">Ofrecido por: Luis Pérez</p>
+                                    </div>
+                                </div>
+                                <p class="small text-muted">Servicio de transporte seguro en la ciudad y alrededores.
+                                </p>
+                                <div class="mb-3">
+                                    <span class="badge bg-success-subtle text-success">Seguro</span>
+                                    <span class="badge bg-success-subtle text-success">Puntual</span>
+                                    <span class="badge bg-success-subtle text-success">Agradable</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <small class="text-muted">Publicado hoy</small>
+                                    <button class="btn btn-sm btn-success">Contactar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 3 -->
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="card h-100 border-start border-danger border-4 shadow border-primary border-top-0 border-end-0 border-bottom-0 shadow"">
+                            <div class="card-body">
+                                <div class="d-flex align-items-start mb-3">
+                                    <img src="https://logo.clearbit.com/fiverr.com" alt="Diseño" class="rounded me-3"
+                                        width="48" height="48">
+                                    <div>
+                                        <h5 class="card-title fw-bold mb-0">Diseño Gráfico Freelance</h5>
+                                        <p class="text-muted small">Ofrecido por: Camila Ríos</p>
+                                    </div>
+                                </div>
+                                <p class="small text-muted">Logos, flyers, redes sociales, identidad visual y más.</p>
+                                <div class="mb-3">
+                                    <span class="badge bg-danger-subtle text-danger">Creativo</span>
+                                    <span class="badge bg-danger-subtle text-danger">Rápido</span>
+                                    <span class="badge bg-danger-subtle text-danger">Profesional</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <small class="text-muted">Publicado hace 1 semana</small>
+                                    <button class="btn btn-sm btn-danger">Contactar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 4 -->
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="card h-100 border-start border-warning border-4 border-primary border-top-0 border-end-0 border-bottom-0 shadow">
+                            <div class="card-body">
+                                <div class="d-flex align-items-start mb-3">
+                                    <img src="https://logo.clearbit.com/wix.com" alt="Web" class="rounded me-3"
+                                        width="48" height="48">
+                                    <div>
+                                        <h5 class="card-title fw-bold mb-0">Desarrollo Web</h5>
+                                        <p class="text-muted small">Ofrecido por: Andrés Gómez</p>
+                                    </div>
+                                </div>
+                                <p class="small text-muted">Creación de páginas web modernas, optimizadas y responsivas.
+                                </p>
+                                <div class="mb-3">
+                                    <span class="badge bg-warning-subtle text-warning">Actual</span>
+                                    <span class="badge bg-warning-subtle text-warning">Responsivo</span>
+                                    <span class="badge bg-warning-subtle text-warning">SEO</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <small class="text-muted">Publicado hace 3 días</small>
+                                    <button class="btn btn-sm btn-warning">Contactar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 5 -->
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="card h-100 border-start border-info border-4 border-primary border-top-0 border-end-0 border-bottom-0 shadow">
+                            <div class="card-body">
+                                <div class="d-flex align-items-start mb-3">
+                                    <img src="https://logo.clearbit.com/spotify.com" alt="Música" class="rounded me-3"
+                                        width="48" height="48">
+                                    <div>
+                                        <h5 class="card-title fw-bold mb-0">Clases de Guitarra</h5>
+                                        <p class="text-muted small">Ofrecido por: Julián Herrera</p>
+                                    </div>
+                                </div>
+                                <p class="small text-muted">Aprende desde cero con clases prácticas a domicilio u
+                                    online.</p>
+                                <div class="mb-3">
+                                    <span class="badge bg-info-subtle text-info">Didáctico</span>
+                                    <span class="badge bg-info-subtle text-info">Paciencia</span>
+                                    <span class="badge bg-info-subtle text-info">Flexible</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <small class="text-muted">Publicado ayer</small>
+                                    <button class="btn btn-sm btn-info">Contactar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 6 -->
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="card h-100 border-start border-secondary border-4 border-primary border-top-0 border-end-0 border-bottom-0 shadow">
+                            <div class="card-body">
+                                <div class="d-flex align-items-start mb-3">
+                                    <img src="https://logo.clearbit.com/coursera.org" alt="Tutorías"
+                                        class="rounded me-3" width="48" height="48">
+                                    <div>
+                                        <h5 class="card-title fw-bold mb-0">Tutorías Académicas</h5>
+                                        <p class="text-muted small">Ofrecido por: Laura Vélez</p>
+                                    </div>
+                                </div>
+                                <p class="small text-muted">Asesoría en matemáticas, física e inglés para estudiantes.
+                                </p>
+                                <div class="mb-3">
+                                    <span class="badge bg-secondary-subtle text-secondary">Paciencia</span>
+                                    <span class="badge bg-secondary-subtle text-secondary">Virtual</span>
+                                    <span class="badge bg-secondary-subtle text-secondary">Resultados</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <small class="text-muted">Publicado hace 5 días</small>
+                                    <button class="btn btn-sm btn-secondary">Contactar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 7 -->
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="card h-100 border-start border-dark border-4 border-primary border-top-0 border-end-0 border-bottom-0 shadow">
+                            <div class="card-body">
+                                <div class="d-flex align-items-start mb-3">
+                                    <img src="https://logo.clearbit.com/etsy.com" alt="Artesanía" class="rounded me-3"
+                                        width="48" height="48">
+                                    <div>
+                                        <h5 class="card-title fw-bold mb-0">Productos Artesanales</h5>
+                                        <p class="text-muted small">Ofrecido por: Diana Vargas</p>
+                                    </div>
+                                </div>
+                                <p class="small text-muted">Venta de productos hechos a mano: velas, jabones,
+                                    decoración.</p>
+                                <div class="mb-3">
+                                    <span class="badge bg-dark-subtle text-dark">Creativo</span>
+                                    <span class="badge bg-dark-subtle text-dark">Natural</span>
+                                    <span class="badge bg-dark-subtle text-dark">Único</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <small class="text-muted">Publicado hace 4 días</small>
+                                    <button class="btn btn-sm btn-dark">Contactar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 8 -->
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="card h-100 border-start border-primary border-4 border-primary border-top-0 border-end-0 border-bottom-0 shadow">
+                            <div class="card-body">
+                                <div class="d-flex align-items-start mb-3">
+                                    <img src="https://logo.clearbit.com/zoho.com" alt="Contabilidad"
+                                        class="rounded me-3" width="48" height="48">
+                                    <div>
+                                        <h5 class="card-title fw-bold mb-0">Asesoría Contable</h5>
+                                        <p class="text-muted small">Ofrecido por: Pedro Martínez</p>
+                                    </div>
+                                </div>
+                                <p class="small text-muted">Declaración de renta, libros contables, facturación
+                                    electrónica.</p>
+                                <div class="mb-3">
+                                    <span class="badge bg-primary-subtle text-primary">Confiable</span>
+                                    <span class="badge bg-primary-subtle text-primary">Formal</span>
+                                    <span class="badge bg-primary-subtle text-primary">Legal</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <small class="text-muted">Publicado hace 6 días</small>
+                                    <button class="btn btn-sm btn-primary">Contactar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 9 -->
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="card h-100 border-start border-success border-4 border-primary border-top-0 border-end-0 border-bottom-0 shadow">
+                            <div class="card-body">
+                                <div class="d-flex align-items-start mb-3">
+                                    <img src="https://logo.clearbit.com/dribbble.com" alt="Fotografía"
+                                        class="rounded me-3" width="48" height="48">
+                                    <div>
+                                        <h5 class="card-title fw-bold mb-0">Fotografía Profesional</h5>
+                                        <p class="text-muted small">Ofrecido por: Valentina Cruz</p>
+                                    </div>
+                                </div>
+                                <p class="small text-muted">Sesiones de fotos para eventos, retratos y productos.</p>
+                                <div class="mb-3">
+                                    <span class="badge bg-success-subtle text-success">Alta calidad</span>
+                                    <span class="badge bg-success-subtle text-success">Edición incluida</span>
+                                    <span class="badge bg-success-subtle text-success">Creativa</span>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <small class="text-muted">Publicado hace 1 día</small>
+                                    <button class="btn btn-sm btn-success">Contactar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
 
-            <!-- Tarjetas de Vacantes -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
 
-                <!-- Tarjeta 1 -->
-                <div
-                    class="job-card w-[380px] bg-white rounded-lg shadow-md p-4 relative border-l-4 border-blue-500 transition-all duration-300">
-                    <div class="flex items-start mb-3">
-                        <img src="https://logo.clearbit.com/google.com" alt="Google" class="w-12 h-12 rounded-md mr-4">
-                        <div>
-                            <h3 class="font-bold text-lg">Vacante: Auxiliar de Limpieza</h3>
-                            <p class="text-gray-600">Empresa: LimpioYa S.A.S</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-700 mb-3 text-sm">Se requiere personal responsable para labores de limpieza en
-                        oficinas y locales comerciales. Jornada flexible y pago semanal. No se requiere experiencia
-                        previa.
-                    </p>
-                    <div class="flex flex-wrap gap-2 mb-3">
-                        <span class="tag bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">Independiente</span>
-                        <span class="tag bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">Flexible</span>
-                        <span class="tag bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">Sin
-                            experiencia</span>
-                    </div>
-                    <div class="flex justify-between items-center">
-                        <span class="text-sm text-gray-500">Publicado hace 2 días</span>
-                        <button
-                            class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-1.5 rounded-md text-sm font-medium transition-colors"><a
-                                href="loginAS.html">Aplicar</a></button>
-                    </div>
-                </div>
-
-                <!-- Tarjeta 2 -->
-                <div
-                    class="job-card w-[380px] bg-white rounded-lg shadow-md p-4 relative border-l-4 border-blue-500 transition-all duration-300">
-                    <div class="flex items-start mb-3">
-                        <img src="https://logo.clearbit.com/microsoft.com" alt="Microsoft"
-                            class="w-12 h-12 rounded-md mr-4">
-                        <div>
-                            <h3 class="font-bold text-lg">Vacante: Asesor Comercial</h3>
-                            <p class="text-gray-600">Empresa: VentasGlobal</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-700 mb-3 text-sm">Buscamos persona proactiva para venta de productos
-                        tecnológicos.
-                        Buenas comisiones y oportunidad de crecimiento profesional.</p>
-                    <div class="flex flex-wrap gap-2 mb-3">
-                        <span class="tag bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs">Tiempo
-                            completo</span>
-                        <span class="tag bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs">Experiencia
-                            mínima</span>
-                    </div>
-                    <div class="flex justify-between items-center">
-                        <span class="text-sm text-gray-500">Publicado ayer</span>
-                        <button
-                            class="bg-green-600 hover:bg-green-700 text-white px-4 py-1.5 rounded-md text-sm font-medium transition-colors"><a
-                                href="loginAS.html">Aplicar</a></button>
-                    </div>
-                </div>
-
-                <!-- Tarjeta 3 -->
-                <div
-                    class="job-card w-[380px] bg-white rounded-lg shadow-md p-4 relative border-l-4 border-blue-500 transition-all duration-300">
-                    <div class="flex items-start mb-3">
-                        <img src="https://logo.clearbit.com/facebook.com" alt="Facebook"
-                            class="w-12 h-12 rounded-md mr-4">
-                        <div>
-                            <h3 class="font-bold text-lg">Vacante: Community Manager</h3>
-                            <p class="text-gray-600">Empresa: RedNet</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-700 mb-3 text-sm">Gestión de redes sociales, elaboración de contenido y atención
-                        a
-                        clientes. Trabajo remoto con horario flexible.</p>
-                    <div class="flex flex-wrap gap-2 mb-3">
-                        <span class="tag bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-xs">Remoto</span>
-                        <span class="tag bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-xs">Part time</span>
-                    </div>
-                    <div class="flex justify-between items-center">
-                        <span class="text-sm text-gray-500">Publicado hace 3 días</span>
-                        <button
-                            class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-1.5 rounded-md text-sm font-medium transition-colors"><a
-                                href="loginAS.html">Aplicar</a></button>
-                    </div>
-                </div>
-
-                <!-- Tarjeta 4 -->
-                <div
-                    class="job-card w-[380px] bg-white rounded-lg shadow-md p-4 relative border-l-4 border-blue-500 transition-all duration-300">
-                    <div class="flex items-start mb-3">
-                        <img src="https://logo.clearbit.com/amazon.com" alt="Amazon" class="w-12 h-12 rounded-md mr-4">
-                        <div>
-                            <h3 class="font-bold text-lg">Vacante: Operario de Bodega</h3>
-                            <p class="text-gray-600">Empresa: Distribuciones XYZ</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-700 mb-3 text-sm">Carga y descarga de mercancía, inventarios y despacho.
-                        Horarios
-                        rotativos, incluye bono de alimentación.</p>
-                    <div class="flex flex-wrap gap-2 mb-3">
-                        <span class="tag bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs">Turnos
-                            rotativos</span>
-                        <span class="tag bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs">Contrato
-                            fijo</span>
-                    </div>
-                    <div class="flex justify-between items-center">
-                        <span class="text-sm text-gray-500">Publicado hoy</span>
-                        <button
-                            class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-1.5 rounded-md text-sm font-medium transition-colors"><a
-                                href="loginAS.html">Aplicar</a></button>
-                    </div>
-                </div>
-
-                <!-- Tarjeta 5 -->
-                <div
-                    class="job-card w-[380px] bg-white rounded-lg shadow-md p-4 relative border-l-4 border-blue-500 transition-all duration-300">
-                    <div class="flex items-start mb-3">
-                        <img src="https://logo.clearbit.com/apple.com" alt="Apple" class="w-12 h-12 rounded-md mr-4">
-                        <div>
-                            <h3 class="font-bold text-lg">Vacante: Técnico en Computadores</h3>
-                            <p class="text-gray-600">Empresa: SoluTech</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-700 mb-3 text-sm">Reparación y mantenimiento de equipos de cómputo. Experiencia
-                        mínima de 1 año. Se proporciona transporte.</p>
-                    <div class="flex flex-wrap gap-2 mb-3">
-                        <span class="tag bg-red-100 text-red-800 px-3 py-1 rounded-full text-xs">Técnico</span>
-                        <span class="tag bg-red-100 text-red-800 px-3 py-1 rounded-full text-xs">Con experiencia</span>
-                    </div>
-                    <div class="flex justify-between items-center">
-                        <span class="text-sm text-gray-500">Publicado hace 4 días</span>
-                        <button
-                            class="bg-red-500 hover:bg-red-600 text-white px-4 py-1.5 rounded-md text-sm font-medium transition-colors"><a
-                                href="loginAS.html">Aplicar</a></button>
-                    </div>
-                </div>
-
-                <!-- Tarjeta 6 -->
-                <div
-                   class="job-card w-[380px] bg-white rounded-lg shadow-md p-4 relative border-l-4 border-blue-500 transition-all duration-300">
-                    <div class="flex items-start mb-3">
-                        <img src="https://logo.clearbit.com/netflix.com" alt="Netflix"
-                            class="w-12 h-12 rounded-md mr-4">
-                        <div>
-                            <h3 class="font-bold text-lg">Vacante: Diseñador Gráfico</h3>
-                            <p class="text-gray-600">Empresa: Creativa Estudio</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-700 mb-3 text-sm">Diseño de piezas gráficas para campañas digitales. Creatividad
-                        y
-                        dominio de herramientas como Photoshop e Illustrator.</p>
-                    <div class="flex flex-wrap gap-2 mb-3">
-                        <span class="tag bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-xs">Diseño</span>
-                        <span class="tag bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-xs">Freelance</span>
-                    </div>
-                    <div class="flex justify-between items-center">
-                        <span class="text-sm text-gray-500">Publicado hoy</span>
-                        <button
-                            class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-1.5 rounded-md text-sm font-medium transition-colors"><a
-                                href="loginAS.html">Aplicar</a></button>
-                    </div>
-                </div>
-
-                <!-- Tarjeta 7 -->
-                <div
-                    class="job-card w-[380px] bg-white rounded-lg shadow-md p-4 relative border-l-4 border-blue-500 transition-all duration-300">
-                    <div class="flex items-start mb-3">
-                        <img src="https://logo.clearbit.com/spotify.com" alt="Spotify"
-                            class="w-12 h-12 rounded-md mr-4">
-                        <div>
-                            <h3 class="font-bold text-lg">Vacante: Redactor de Contenido</h3>
-                            <p class="text-gray-600">Empresa: Contenidos Pro</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-700 mb-3 text-sm">Redacción de artículos SEO para blogs y páginas web. Excelente
-                        ortografía y gramática.</p>
-                    <div class="flex flex-wrap gap-2 mb-3">
-                        <span class="tag bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-xs">Remoto</span>
-                        <span class="tag bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-xs">Por proyecto</span>
-                    </div>
-                    <div class="flex justify-between items-center">
-                        <span class="text-sm text-gray-500">Publicado hace 1 semana</span>
-                        <button
-                            class="bg-pink-500 hover:bg-pink-600 text-white px-4 py-1.5 rounded-md text-sm font-medium transition-colors"><a
-                                href="loginAS.html">Aplicar</a></button>
-                    </div>
-                </div>
-
-                <!-- Tarjeta 8 -->
-                <div
-                    class="job-card w-[380px] bg-white rounded-lg shadow-md p-4 relative border-l-4 border-blue-500 transition-all duration-300">
-                    <div class="flex items-start mb-3">
-                        <img src="https://logo.clearbit.com/twitter.com" alt="Twitter"
-                            class="w-12 h-12 rounded-md mr-4">
-                        <div>
-                            <h3 class="font-bold text-lg">Vacante: Atención al Cliente</h3>
-                            <p class="text-gray-600">Empresa: CallCenter Plus</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-700 mb-3 text-sm">Atención telefónica a clientes. Jornada de medio tiempo con
-                        opción
-                        de trabajo desde casa.</p>
-                    <div class="flex flex-wrap gap-2 mb-3">
-                        <span class="tag bg-cyan-100 text-cyan-800 px-3 py-1 rounded-full text-xs">Medio tiempo</span>
-                        <span class="tag bg-cyan-100 text-cyan-800 px-3 py-1 rounded-full text-xs">Remoto</span>
-                    </div>
-                    <div class="flex justify-between items-center">
-                        <span class="text-sm text-gray-500">Publicado hace 5 días</span>
-                        <button
-                            class="bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-1.5 rounded-md text-sm font-medium transition-colors"><a
-                                href="loginAS.html">Aplicar</a></button>
-                    </div>
-                </div>
-
-                <!-- Tarjeta 9 -->
-                <div
-                    class="job-card w-[380px] bg-white rounded-lg shadow-md p-4 relative border-l-4 border-blue-500 transition-all duration-300">
-                    <div class="flex items-start mb-3">
-                        <img src="https://logo.clearbit.com/airbnb.com" alt="Airbnb" class="w-12 h-12 rounded-md mr-4">
-                        <div>
-                            <h3 class="font-bold text-lg">Vacante: Recepcionista Hotel</h3>
-                            <p class="text-gray-600">Empresa: Hotel Bahía</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-700 mb-3 text-sm">Recepción y atención a huéspedes. Turno nocturno. Requiere
-                        inglés
-                        intermedio y buena presentación personal.</p>
-                    <div class="flex flex-wrap gap-2 mb-3">
-                        <span class="tag bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-xs">Nocturno</span>
-                        <span class="tag bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-xs">Inglés
-                            intermedio</span>
-                    </div>
-                    <div class="flex justify-between items-center">
-                        <span class="text-sm text-gray-500">Publicado hace 2 días</span>
-                        <button
-                            class="bg-orange-500 hover:bg-orange-600 text-white px-4 py-1.5 rounded-md text-sm font-medium transition-colors"><a
-                                href="loginAS.html">Aplicar</a></button>
-                    </div>
-                </div>
-            </div>
     </main>
 
     <!-- Paginación -->
-    <div class="flex justify-center gap-2 my-4">
-        <button
-            class="pagination-btn px-4 py-2 border border-gray-300 rounded-md text-sm font-medium bg-white text-black">
-            <i class="fas fa-chevron-left"></i>
-        </button>
-        <button
-            class="pagination-btn px-4 py-2 border border-gray-300 rounded-md text-sm font-medium bg-white text-black">
-            1
-        </button>
-        <button
-            class="pagination-btn px-4 py-2 border border-gray-300 rounded-md text-sm font-medium bg-white text-black">
-            2
-        </button>
-        <button
-            class="pagination-btn px-4 py-2 border border-gray-300 rounded-md text-sm font-medium bg-white text-black">
-            3
-        </button>
-        <button
-            class="pagination-btn px-4 py-2 border border-gray-300 rounded-md text-sm font-medium bg-white text-black">
-            ...
-        </button>
-        <button
-            class="pagination-btn px-4 py-2 border border-gray-300 rounded-md text-sm font-medium bg-white text-black">
-            10
-        </button>
-        <button
-            class="pagination-btn px-4 py-2 border border-gray-300 rounded-md text-sm font-medium bg-white text-black">
-            <i class="fas fa-chevron-right"></i>
-        </button>
+    <div class="d-flex justify-content-center gap-2 my-4">
+        <button class="btn btn-outline-secondary btn-sm"><i class="fas fa-chevron-left"></i></button>
+        <button class="btn btn-outline-secondary btn-sm">1</button>
+        <button class="btn btn-outline-secondary btn-sm">2</button>
+        <button class="btn btn-outline-secondary btn-sm">3</button>
+        <button class="btn btn-outline-secondary btn-sm">...</button>
+        <button class="btn btn-outline-secondary btn-sm">10</button>
+        <button class="btn btn-outline-secondary btn-sm"><i class="fas fa-chevron-right"></i></button>
     </div>
 
-    <script>
-        const botones = document.querySelectorAll(".pagination-btn");
-
-        botones.forEach(btn => {
-            btn.addEventListener("click", () => {
-                // Ignora botones con íconos (como flechas)
-                if (btn.innerText.trim() === " " || btn.querySelector("i")) return;
-
-                botones.forEach(b => {
-                    b.classList.remove("bg-[#011c87]", "text-white");
-                    b.classList.add("bg-white", "text-black");
-                });
-
-                btn.classList.remove("bg-white", "text-black");
-                btn.classList.add("bg-[#011c87]", "text-white");
-            });
-        });
-    </script>
-
     <!-- Sección de suscripción al boletín -->
-    <section class="bg-blue-50 py-12" style="background: transparent;">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-2xl font-bold text-blue-800 mb-4">¿Quieres recibir las mejores ofertas?</h2>
-            <p class="text-gray-600 mb-6 max-w-2xl mx-auto">Suscríbete a nuestro boletín y recibe las últimas ofertas de
-                trabajo directamente en tu correo.</p>
-            <div class="flex flex-col sm:flex-row gap-2 justify-center max-w-md mx-auto">
-                <input type="email" placeholder="Tu correo electrónico"
-                    class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
-                <button class="btn-primary text-white px-6 py-3 rounded-lg font-medium transition-colors"
-                    style="transition: all 0.3s ease-in-out;">
-                    Suscribirse
-                </button>
+    <section class="py-5" style="background: transparent;">
+        <div class="container text-center">
+            <h2 class="h4 fw-bold text-primary mb-3">¿Quieres recibir las mejores ofertas?</h2>
+            <p class="text-muted mb-4 mx-auto" style="max-width: 600px;">
+                Suscríbete a nuestro boletín y recibe las últimas ofertas de trabajo directamente en tu correo.
+            </p>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <form class="d-flex flex-column flex-sm-row gap-2">
+                        <input type="email" class="form-control" placeholder="Tu correo electrónico">
+                        <button type="submit" class="btn btn-primary px-4">
+                            Suscribirse
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
-
-    <script>
-        // Filter functionality
-        document.querySelectorAll('.filter-option').forEach(button => {
-            button.addEventListener('click', function () {
-                document.querySelectorAll('.filter-option').forEach(btn => btn.classList.remove('active'));
-                this.classList.add('active');
-                // Here you would typically filter the job listings
-            });
-        });
-
-        // Pagination functionality
-        document.querySelectorAll('.pagination-btn').forEach(button => {
-            button.addEventListener('click', function () {
-                if (!this.querySelector('i')) { // Don't change active state for arrow buttons
-                    document.querySelectorAll('.pagination-btn').forEach(btn => btn.classList.remove('active'));
-                    this.classList.add('active');
-                }
-                // Here you would typically load the corresponding page of job listings
-            });
-        });
-
-        // Job card hover effect
-        document.querySelectorAll('.job-card').forEach(card => {
-            card.addEventListener('mouseenter', function () {
-                this.style.transform = 'translateY(-5px)';
-                this.style.boxShadow = '0 10px 25px rgba(0, 0, 0, 0.1)';
-            });
-            card.addEventListener('mouseleave', function () {
-                this.style.transform = '';
-                this.style.boxShadow = '';
-            });
-        });
-
-        // Tag hover effect (improved for robustness)
-        document.querySelectorAll('.tag').forEach(tag => {
-            const originalBgClass = Array.from(tag.classList).find(cls => cls.startsWith('bg-') && cls.includes('-100'));
-            const originalTextColorClass = Array.from(tag.classList).find(cls => cls.startsWith('text-') && cls.includes('-800'));
-
-            tag.addEventListener('mouseenter', function () {
-                if (originalBgClass && originalTextColorClass) {
-                    const color = originalBgClass.split('-')[1]; // e.g., 'blue'
-                    this.classList.remove(originalBgClass, originalTextColorClass);
-                    this.classList.add(`bg-${color}-600`, 'text-white');
-                }
-            });
-
-            tag.addEventListener('mouseleave', function () {
-                if (originalBgClass && originalTextColorClass) {
-                    const color = originalBgClass.split('-')[1];
-                    this.classList.remove(`bg-${color}-600`, 'text-white');
-                    this.classList.add(originalBgClass, originalTextColorClass);
-                }
-            });
-        });
-
-    </script>
 
     <!-- Footer -->
     <footer class="footer">
@@ -531,7 +447,36 @@
 
     <!-- js Personalizado -->
     <script src="js/script.js"></script>
+    <!-- Bootstrap JS (para navbar y modales) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
     <script type="importmap"></script>
+    <script>
+        let index = 0;
+        const slides = document.querySelectorAll(".slide");
+
+        function mostrarSlide(i) {
+            slides.forEach(slide => slide.classList.remove("active"));
+            slides[i].classList.add("active");
+        }
+
+        function mover(n) {
+            index = (index + n + slides.length) % slides.length;
+            mostrarSlide(index);
+            reiniciarTemporizador();
+        }
+
+        function avanzarAutomaticamente() {
+            mover(1);
+        }
+
+        let temporizador = setInterval(avanzarAutomaticamente, 5000);
+
+        function reiniciarTemporizador() {
+            clearInterval(temporizador);
+            temporizador = setInterval(avanzarAutomaticamente, 5000);
+        }
+    </script>
 </body>
 
 </html>
