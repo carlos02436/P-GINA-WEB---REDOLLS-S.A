@@ -252,3 +252,17 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+/* Cierre automático del menú hamburguesa */
+  document.addEventListener("DOMContentLoaded", function () {
+    const navbarCollapse = document.querySelector(".navbar-collapse");
+    const navLinks = document.querySelectorAll(".nav-link, .dropdown-item");
+
+    navLinks.forEach(function (link) {
+      link.addEventListener("click", function () {
+        if (window.innerWidth < 992) {
+          new bootstrap.Collapse(navbarCollapse).hide();
+        }
+      });
+    });
+  });

@@ -45,7 +45,7 @@
                         <a class="nav-link active" href="index.html#servicios">Servicios</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#vacantes">Vacantes</a>
+                        <a class="nav-link active" href="index.html#vacantes">Vacantes</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -53,8 +53,9 @@
                             Más
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="index.html#join">Únete</a></li>
+                            <li><a class="dropdown-item" href="index.html#patrocinadores">Patrocinadores</a></li>
                             <li><a class="dropdown-item" href="index.html#nosotros">Sobre Nosotros</a></li>
+                            <li><a class="dropdown-item" href="index.html#join">Únete</a></li>
                             <li><a class="dropdown-item" href="index.html#testimonios">Testimonios</a></li>
                             <li><a class="dropdown-item" href="index.html#contacto">Contacto</a></li>
                         </ul>
@@ -121,150 +122,142 @@
 
             <!-- Contenido de pestañas -->
             <div class="tab-content p-4" id="authTabsContent">
+
                 <!-- LOGIN -->
                 <div class="tab-pane fade show active" id="login-content" role="tabpanel" aria-labelledby="login-tab">
                     <h2 class="h4 text-center text-dark mb-4">Bienvenid@ de vuelta</h2>
-                    <form id="login-empresa-form" class="p-3" style="height: 0.1rem;">
+                    <form id="login-empresa-form">
                         <div class="mb-3">
                             <div class="input-group">
                                 <span class="input-group-text"><i class="bi bi-envelope-fill"></i></span>
-                                <input type="email" class="form-control form-control-sm"
+                                <input style="font-size: 12px;" type="email" class="form-control"
                                     placeholder="Correo electrónico" name="correo" required />
                             </div>
                         </div>
                         <div class="mb-3">
                             <div class="input-group">
                                 <span class="input-group-text"><i class="bi bi-lock-fill"></i></span>
-                                <input type="password" class="form-control form-control-sm" placeholder="Contraseña"
-                                    name="contrasena" required />
+                                <input style="font-size: 12px;" type="password" class="form-control"
+                                    placeholder="Contraseña" name="contrasena" required />
                             </div>
                         </div>
 
-
-                        <!-- Recuérdame y Olvidaste tu contraseña -->
                         <div class="d-flex justify-content-between align-items-center mb-3">
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" id="rememberMe">
-                                <label class="form-check-label" for="rememberMe">
-                                    Recuérdame
-                                </label>
+                                <label class="form-check-label" for="rememberMe">Recuérdame</label>
                             </div>
                             <a href="#" class="text-primary text-decoration-none">¿Olvidaste tu contraseña?</a>
-
                         </div>
 
-                        <!-- Botón "Iniciar Sesión" -->
-                        <a href="#" class="btn mb-3"
-                            style="width: 100%; background-color: #011153; border: 2px solid #011153; color: #fff; transition: all 0.3s ease;"
+                        <button type="submit" class="btn w-100 mb-3"
+                            style="width: 100%; background-color: #011c87; border: 2px solid #011c87; color: #fff; transition: all 0.3s ease;"
                             onmouseover="this.style.backgroundColor='#322cf2'; this.style.border='2px solid #322cf2';"
-                            onmouseout="this.style.backgroundColor='#011153'; this.style.border='2px solid #011153';">
+                            onmouseout="this.style.backgroundColor='#011c87'; this.style.border='2px solid #011c87';">
                             Iniciar sesión
-                        </a>
+                        </button>
 
                         <div class="text-center text-muted my-3">o accede con</div>
 
-                        <div class="d-flex flex-wrap justify-content-center gap-2">
-                            <button type="button" class="btn btn-outline-secondary p-2" style="width: 50px;">
+                        <div class="d-flex justify-content-center gap-2">
+                            <button type="button" class="btn btn-outline-secondary" style="width: 45px;">
                                 <i class="fab fa-google text-danger"></i>
                             </button>
-                            <button type="button" class="btn btn-primary p-2" style="width: 50px;">
+                            <button type="button" class="btn btn-primary" style="width: 45px;">
                                 <i class="fab fa-facebook-f"></i>
                             </button>
-                            <button type="button" class="btn btn-success p-2" style="width: 50px;">
+                            <button type="button" class="btn btn-success" style="width: 45px;">
                                 <i class="fab fa-whatsapp"></i>
                             </button>
-                            <button type="button" class="btn text-white p-2"
-                                style="background: linear-gradient(to right, #f472b6, #f43f5e, #facc15); width: 50px;">
+                            <button type="button" class="btn text-white"
+                                style="background: linear-gradient(to right, #f472b6, #f43f5e, #facc15); width: 45px;">
                                 <i class="fab fa-instagram"></i>
                             </button>
                         </div>
+                    </form>
+                </div>
 
+                <!-- REGISTRO -->
+                <div class="tab-pane fade" id="register-content" role="tabpanel" aria-labelledby="register-tab">
+                    <h2 class="h4 text-center text-dark mb-4">Crea tu cuenta</h2>
+                    <form id="register-natural-form">
+                        <div class="row mb-3">
+                            <div class="col">
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
+                                    <input style="font-size: 12px;" type="text" class="form-control"
+                                        placeholder="Nombres" required />
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="bi bi-person-lines-fill"></i></span>
+                                    <input style="font-size: 12px;" type="text" class="form-control"
+                                        placeholder="Apellidos" required />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="bi bi-card-text"></i></span>
+                                <input style="font-size: 12px;" type="text" class="form-control" placeholder="Documento"
+                                    required />
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="bi bi-envelope-fill"></i></span>
+                                <input style="font-size: 12px;" type="email" class="form-control"
+                                    placeholder="Correo electrónico" required />
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col">
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="bi bi-lock-fill"></i></span>
+                                    <input style="font-size: 12px;" type="password" class="form-control"
+                                        placeholder="Contraseña" required />
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="bi bi-lock-fill"></i></span>
+                                    <input style="font-size: 12px;" type="password" class="form-control"
+                                        placeholder="Confirmar contraseña" required />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="cv" class="form-label mb-1" style="font-size: 0.85rem;"><strong>Subir
+                                    CV</strong></label>
+                            <input type="file" class="form-control" id="cv" />
+                        </div>
+
+                        <div class="form-check d-flex justify-content-center align-items-center gap-2 mb-3 text-center"
+                            style="font-size: 0.85rem;">
+                            <input class="form-check-input" type="checkbox" id="terms" required />
+                            <label class="form-check-label mb-0" for="terms">
+                                Acepto los <a href="terminos.html" class="text-primary">Términos y Condiciones</a>
+                            </label>
+                        </div>
+
+
+                        <button type="submit" class="btn btn-sm"
+                            style="width: 100%; background-color: #011c87; border: 2px solid #011c87; color: #fff; transition: all 0.3s ease;"
+                            onmouseover="this.style.backgroundColor='#322cf2'; this.style.border='2px solid #322cf2';"
+                            onmouseout="this.style.backgroundColor='#011c87'; this.style.border='2px solid #011c87';">
+                            Registrarse
+                        </button>
                     </form>
                 </div>
             </div>
-
-
-            <!-- REGISTRO -->
-            <div class="tab-pane fade" id="register-content" role="tabpanel" aria-labelledby="register-tab">
-                <h2 class="h4 text-center text-dark mb-4">Crea tu cuenta</h2>
-                <form id="register-natural-form">
-                    <div class="row mb-3">
-                        <div class="col">
-                            <div class="input-group">
-                                <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
-                                <input type="text" class="form-control form-control-sm" placeholder="Nombres"
-                                    required />
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="input-group">
-                                <span class="input-group-text"><i class="bi bi-person-lines-fill"></i></span>
-                                <input type="text" class="form-control form-control-sm" placeholder="Apellidos"
-                                    required />
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mb-3">
-                        <div class="input-group">
-                            <span class="input-group-text"><i class="bi bi-card-text"></i></span>
-                            <input type="text" class="form-control form-control-sm" placeholder="Documento" required />
-                        </div>
-                    </div>
-
-                    <div class="mb-3">
-                        <div class="input-group">
-                            <span class="input-group-text"><i class="bi bi-envelope-fill"></i></span>
-                            <input type="email" class="form-control form-control-sm" placeholder="Correo electrónico"
-                                required />
-                        </div>
-                    </div>
-
-                    <div class="row mb-3">
-                        <div class="col">
-                            <div class="input-group">
-                                <span class="input-group-text"><i class="bi bi-lock-fill"></i></span>
-                                <input type="password" class="form-control form-control-sm" placeholder="Contraseña"
-                                    required />
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="input-group">
-                                <span class="input-group-text"><i class="bi bi-lock-fill"></i></span>
-                                <input type="password" class="form-control form-control-sm"
-                                    placeholder="Confirmar contraseña" required />
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="cv" class="form-label mb-1" style="font-size: 0.85rem;"><strong>Subir
-                                CV</strong></label>
-                        <input type="file" class="form-control form-control-sm" id="cv" />
-                    </div>
-
-                    <div class="form-check d-flex align-items-center gap-2 mb-3" style="font-size: 0.85rem;">
-                        <input class="form-check-input" type="checkbox" id="terms" required />
-                        <label class="form-check-label mb-0" for="terms">
-                            Acepto los <a href="terminos.html" class="text-primary">Términos y Condiciones</a>
-                        </label>
-                    </div>
-
-
-                    <!-- Botón "Registrarse" -->
-                    <a href="#" class="btn btn-sm"
-                        style="width: 100%; background-color: #011153; border: 2px solid #011153; color: #fff; transition: all 0.3s ease;"
-                        onmouseover="this.style.backgroundColor='#322cf2'; this.style.border='2px solid #322cf2';"
-                        onmouseout="this.style.backgroundColor='#011153'; this.style.border='2px solid #011153';">
-                        Registrarse
-                    </a>
-                </form>
-            </div>
-
-
         </div>
     </div>
-    </div>
+
 
     <!-- Footer -->
     <footer class="footer">
@@ -285,13 +278,13 @@
                 <div class="footer-links">
                     <h4>Navegación</h4>
                     <ul class="footer-contact-info">
-                        <li><a href="index.html#hero">Inicio</a></li>
-                        <li><a href="index.html#nosotros">Nosotros</a></li>
-                        <li><a href="index.html#services">Servicios</a></li>
-                        <li><a href="index.html#vacancies">Vacantes</a></li>
-                        <li><a href="index.html#join">Únete</a></li>
-                        <li><a href="index.html#testimonios">Testimonios</a></li>
-                        <li><a href="index.html#contact">Contacto</a></li>
+                        <li><a href="#hero">Inicio</a></li>
+                        <li><a href="#nosotros">Nosotros</a></li>
+                        <li><a href="#services">Servicios</a></li>
+                        <li><a href="#vacancies">Vacantes</a></li>
+                        <li><a href="#join">Únete</a></li>
+                        <li><a href="#testimonios">Testimonios</a></li>
+                        <li><a href="#contact">Contacto</a></li>
                     </ul>
                 </div>
 
@@ -299,10 +292,10 @@
                 <div class="footer-links">
                     <h4>Más Opciones</h4>
                     <ul class="footer-contact-info">
-                        <li><a href="index.html#join">Publicar Servicio</a></li>
-                        <li><a href="index.html#join">Registrar Empresa</a></li>
-                        <li><a href="index.html#join">Registro Aspirantes</a></li>
-                        <li><a href="#">Preguntas Frecuentes</a></li>
+                        <li><a href="#join">Publicar Servicio</a></li>
+                        <li><a href="#join">Registrar Empresa</a></li>
+                        <li><a href="#join">Registro Aspirantes</a></li>
+                        <li><a href="preguntasF.html">Preguntas Frecuentes</a></li>
                         <li><a href="terminos.html">Términos y Condiciones</a></li>
                         <li><a href="politicas.html">Política de Privacidad</a></li>
                     </ul>
@@ -330,6 +323,7 @@
             </div>
         </div>
     </footer>
+
 
     <!-- Script para el año actual -->
     <script>
