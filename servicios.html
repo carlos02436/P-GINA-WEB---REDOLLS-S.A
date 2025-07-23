@@ -23,7 +23,7 @@
 <body>
 
     <!--Encabezado-->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top glass-card" style="margin: 15px;">
         <div class="container-fluid">
             <a class="navbar-brand">
                 <img src="image/logo1.png" alt="Logo REDOLLS S.A." class="img-fluid" style="height: 50px;">
@@ -42,10 +42,10 @@
                         <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="servicios.html">Servicios</a>
+                        <a class="nav-link active" href="#servicios">Servicios</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="vacantes.html">Vacantes</a>
+                        <a class="nav-link active" href="index.html#vacantes">Vacantes</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -53,9 +53,10 @@
                             Más
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Sobre Nosotros</a></li>
-                            <li><a class="dropdown-item" href="#">Testimonios</a></li>
-                            <li><a class="dropdown-item" href="#">Contacto</a></li>
+                            <li><a class="dropdown-item" href="index.html#join">Únete</a></li>
+                            <li><a class="dropdown-item" href="index.html#nosotros">Sobre Nosotros</a></li>
+                            <li><a class="dropdown-item" href="index.html#testimonios">Testimonios</a></li>
+                            <li><a class="dropdown-item" href="index.html#contacto">Contacto</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -98,9 +99,9 @@
         });
     </script>
 
-    <main class="container py-5 mt-5">
-        <div id="servicios" class="text-center mb-4" style="position:relative; z-index:1000;">
-            <h1 class="h3 fw-bold">¡Encuentra tu servicio ideal en REDOLLS S.A!</h1>
+    <main class="container py-5" style="margin-top: 6rem;">
+        <div id="servicios" class="text-center mb-5" style="position:relative; z-index:1000;scroll-margin-top: 9rem;">
+            <h1 class="h3 fw-bold" style="font-size: 45px;">¡Encuentra tu servicio ideal en REDOLLS S.A!</h1>
         </div>
 
         <div class="row g-4 justify-content-center">
@@ -376,17 +377,21 @@
     <!-- Sección de suscripción al boletín -->
     <section class="py-5" style="background: transparent;">
         <div class="container text-center">
-            <h2 class="h4 fw-bold text-primary mb-3">¿Quieres recibir las mejores ofertas?</h2>
-            <p class="text-muted mb-4 mx-auto" style="max-width: 600px;">
+            <h2 class="h4 fw-bold text-dark mb-3">¿Quieres recibir las mejores ofertas?</h2>
+            <p class="text-gray-500 mb-4 mx-auto" style="max-width: 600px;">
                 Suscríbete a nuestro boletín y recibe las últimas ofertas de trabajo directamente en tu correo.
             </p>
             <div class="row justify-content-center">
                 <div class="col-md-6">
                     <form class="d-flex flex-column flex-sm-row gap-2">
-                        <input type="email" class="form-control" placeholder="Tu correo electrónico">
-                        <button type="submit" class="btn btn-primary px-4">
-                            Suscribirse
-                        </button>
+                        <input type="email" class="form-control" placeholder="Tu correo electrónico" style="height: 55px;">
+                    <!-- Botón "Suscribirse" -->
+                    <a href="#" class="btn"
+                        style="background-color: #011153; border: 2px solid #011153; color: #fff; transition: all 0.3s ease;"
+                        onmouseover="this.style.backgroundColor='#322cf2'; this.style.border='2px solid #322cf2';"
+                        onmouseout="this.style.backgroundColor='#011153'; this.style.border='2px solid #011153';">
+                        Suscribirse
+                    </a>
                     </form>
                 </div>
             </div>
