@@ -243,7 +243,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Cerrar al hacer clic fuera del contenido
+    // Cerrar el modal al hacer clic fuera del contenido
     window.addEventListener('click', (e) => {
         document.querySelectorAll('.modal').forEach(modal => {
             if (e.target === modal) {
@@ -253,16 +253,43 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-/* Cierre automático del menú hamburguesa */
-  document.addEventListener("DOMContentLoaded", function () {
-    const navbarCollapse = document.querySelector(".navbar-collapse");
-    const navLinks = document.querySelectorAll(".nav-link, .dropdown-item");
+// Cierra el dropdown "Más" al seleccionar una opción dentro del dropdown
+document.querySelectorAll('.dropdown-menu .dropdown-item').forEach(item => {
+    item.addEventListener('click', () => {
+        // Cierra solo el dropdown
+        const dropdownMenu = item.closest('.dropdown-menu');
+        const dropdownToggle = dropdownMenu?.previousElementSibling;
 
-    navLinks.forEach(function (link) {
-      link.addEventListener("click", function () {
-        if (window.innerWidth < 992) {
-          new bootstrap.Collapse(navbarCollapse).hide();
+        if (dropdownToggle && dropdownToggle.classList.contains('dropdown-toggle')) {
+            const dropdownInstance = bootstrap.Dropdown.getInstance(dropdownToggle);
+            if (dropdownInstance) {
+                dropdownInstance.hide();
+            }
         }
-      });
+
+        // También cierra el menú hamburguesa si está abierto
+        const navbarCollapse = document.querySelector('.navbar-collapse');
+        if (navbarCollapse.classList.contains('show')) {
+            const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+            if (bsCollapse) {
+                bsCollapse.hide();
+            }
+        }
     });
-  });
+});
+
+// Cierra el menú hamburguesa al dar clic en un link del navbar (excepto "Más")
+document.querySelectorAll('.navbar-collapse .nav-link').forEach(link => {
+    link.addEventListener('click', (e) => {
+        // Si NO es el botón "Más", cierra el menú hamburguesa
+        if (!link.classList.contains('dropdown-toggle')) {
+            const navbarCollapse = document.querySelector('.navbar-collapse');
+            if (navbarCollapse.classList.contains('show')) {
+                const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+                if (bsCollapse) {
+                    bsCollapse.hide();
+                }
+            }
+        }
+    });
+});
