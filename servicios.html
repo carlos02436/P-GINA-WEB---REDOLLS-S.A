@@ -42,7 +42,7 @@
                         <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#servicios">Servicios</a>
+                        <a class="nav-link active" href="index.html#servicios">Servicios</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="index.html#vacantes">Vacantes</a>
@@ -103,6 +103,56 @@
     <main class="container py-5" style="margin-top: 6rem;">
         <div id="servicios" class="text-center mb-5" style="position:relative; z-index:1000;scroll-margin-top: 9rem;">
             <h1 class="h3 fw-bold" style="font-size: 45px;">¡Encuentra tu servicio ideal en REDOLLS S.A!</h1>
+        </div>
+
+        <!-- Sección Categorías -->
+        <div class="contenedor-buscador" style="margin-top: 6rem;">
+            <h2 class="titulo">¿Qué servicio y/o trabajo estás buscando?</h2>
+
+            <div class="buscador">
+                <input type="text" placeholder="Puesto, palabras clave" class="campo">
+
+                <!-- Input con datalist para ciudades -->
+                <input list="ciudades" placeholder="Ubicación" class="campo">
+                <datalist id="ciudades">
+                    <option value="La Jagua de Ibirico">
+                    <option value="Becerril">
+                    <option value="Codazzi">
+                    <option value="Valledupar">
+                    <option value="San Diego">
+                    <option value="La Paz">
+                    <option value="Casacará">
+                    <option value="Las Palmitas">
+                </datalist>
+
+                <!-- Select para categorías -->
+                <input list="categorias" placeholder="Categoría" class="campo">
+                <datalist id="categorias">
+                    <option value="Servicios">
+                    <option value="Vacantes">
+                    <option value="Marketing">
+                    <option value="Ventas">
+                    <option value="Administración">
+                    <option value="Trabajo Remoto">
+                </datalist>
+
+                <button class="boton-buscar" aria-label="Buscar">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001l3.85 3.85a1 1 0 0 0 
+                            1.415-1.414l-3.85-3.85zm-5.242 1.156a5 5 0 1 
+                            1 0-10 5 5 0 0 1 0 10z" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="busquedas-populares">
+                <span>Búsquedas populares:</span>
+                <a href="#">Desarrollador</a> •
+                <a href="#">Diseñador</a> •
+                <a href="#">Marketing</a> •
+                <a href="#">Remoto</a>
+            </div>
         </div>
 
         <div class="row g-4 justify-content-center">
