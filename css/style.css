@@ -1177,7 +1177,7 @@ footer {
     position: absolute;
     top: 100%;
     right: 0;
-    /* 🔽 Aparece alineado hacia la izquierda */
+    /* Aparece alineado hacia la izquierda */
     background: #fff;
     list-style: none;
     padding: 0;
