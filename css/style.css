@@ -56,6 +56,10 @@ body {
     justify-content: center;
 }
 
+.smaller {
+  font-size: smaller;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -1253,6 +1257,7 @@ footer {
     .footer-content {
         flex-direction: column;
         align-items: center;
+        width: 100%;
     }
 
     .footer-social .social-icons {

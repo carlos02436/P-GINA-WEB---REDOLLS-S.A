@@ -23,7 +23,8 @@
 <body>
 
     <!--Encabezado-->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top glass-card" style="margin: 15px;border-inline: 2px solid #011c87;">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top glass-card"
+        style="margin: 15px;border-inline: 2px solid #011c87;">
         <div class="container-fluid">
             <a class="navbar-brand">
                 <img src="image/logo1.png" alt="Logo REDOLLS S.A." class="img-fluid" style="height: 50px;">
@@ -155,263 +156,355 @@
             </div>
         </div>
 
-        <div class="row g-4 justify-content-center">
+        <!-- Sección de tarjetas de servicios -->
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-5 g-4 align-items-stretch">
 
-            <!-- Sección de tarjetas de servicios -->
-            <div class="container py-4">
-                <div class="row g-4">
-                    <!-- Tarjeta 1 -->
-                    <div class="col-sm-6 col-lg-4">
-                        <div
-                            class="card border-start border-4 border-primary border-top-0 border-end-0 border-bottom-0 shadow">
-                            <div class="card-body">
-                                <div class="d-flex align-items-start mb-3">
-                                    <img src="https://logo.clearbit.com/google.com" alt="Limpieza" class="rounded me-3"
-                                        width="48" height="48">
-                                    <div>
-                                        <h5 class="card-title fw-bold mb-0">Servicio de Limpieza a Domicilio</h5>
-                                        <p class="text-muted small">Ofrecido por: María Torres</p>
-                                    </div>
-                                </div>
-                                <p class="small text-muted">Limpieza profunda de casas y oficinas. Citas flexibles.</p>
-                                <div class="mb-3">
-                                    <span class="badge bg-primary-subtle text-primary">A domicilio</span>
-                                    <span class="badge bg-primary-subtle text-primary">Responsable</span>
-                                    <span class="badge bg-primary-subtle text-primary">Económico</span>
-                                </div>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <small class="text-muted">Publicado hace 2 días</small>
-                                    <button class="btn btn-sm btn-primary">Contactar</button>
-                                </div>
+            <!-- Tarjeta 1 -->
+            <div class="col-sm-6 col-lg-4">
+                <div class="card h-100 border-start border-4 border-primary border-top-0 border-end-0 border-bottom-0 shadow">
+                    <div class="card-body">
+                        <div class="d-flex align-items-start mb-3">
+                            <img src="https://logo.clearbit.com/google.com" alt="Limpieza" class="rounded me-3"
+                                width="48" height="48">
+                            <div>
+                                <h5 class="card-title fw-bold mb-0">Limpieza a Domicilio</h5>
+                                <p class="text-muted smaller">Ofrecido por: María Torres</p>
                             </div>
                         </div>
-                    </div>
-
-                    <!-- Tarjeta 2 -->
-                    <div class="col-sm-6 col-lg-4">
-                        <div
-                            class="card h-100 border-start border-success border-4 border-primary border-top-0 border-end-0 border-bottom-0 shadow">
-                            <div class="card-body">
-                                <div class="d-flex align-items-start mb-3">
-                                    <img src="https://logo.clearbit.com/uber.com" alt="Transporte" class="rounded me-3"
-                                        width="48" height="48">
-                                    <div>
-                                        <h5 class="card-title fw-bold mb-0">Transporte Privado</h5>
-                                        <p class="text-muted small">Ofrecido por: Luis Pérez</p>
-                                    </div>
-                                </div>
-                                <p class="small text-muted">Servicio de transporte seguro en la ciudad y alrededores.
-                                </p>
-                                <div class="mb-3">
-                                    <span class="badge bg-success-subtle text-success">Seguro</span>
-                                    <span class="badge bg-success-subtle text-success">Puntual</span>
-                                    <span class="badge bg-success-subtle text-success">Agradable</span>
-                                </div>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <small class="text-muted">Publicado hoy</small>
-                                    <button class="btn btn-sm btn-success">Contactar</button>
-                                </div>
-                            </div>
+                        <p class="small text-muted">Limpieza profunda de casas y oficinas. Citas flexibles.</p>
+                        <div class="mb-3">
+                            <span class="badge bg-primary-subtle text-primary">A domicilio</span>
+                            <span class="badge bg-primary-subtle text-primary">Responsable</span>
+                            <span class="badge bg-primary-subtle text-primary">Económico</span>
                         </div>
-                    </div>
-
-                    <!-- Tarjeta 3 -->
-                    <div class="col-sm-6 col-lg-4">
-                        <div class="card h-100 border-start border-danger border-4 shadow border-primary border-top-0 border-end-0 border-bottom-0 shadow"">
-                            <div class=" card-body">
-                            <div class="d-flex align-items-start mb-3">
-                                <img src="https://logo.clearbit.com/fiverr.com" alt="Diseño" class="rounded me-3"
-                                    width="48" height="48">
-                                <div>
-                                    <h5 class="card-title fw-bold mb-0">Diseño Gráfico Freelance</h5>
-                                    <p class="text-muted small">Ofrecido por: Camila Ríos</p>
-                                </div>
-                            </div>
-                            <p class="small text-muted">Logos, flyers, redes sociales, identidad visual y más.</p>
-                            <div class="mb-3">
-                                <span class="badge bg-danger-subtle text-danger">Creativo</span>
-                                <span class="badge bg-danger-subtle text-danger">Rápido</span>
-                                <span class="badge bg-danger-subtle text-danger">Profesional</span>
-                            </div>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <small class="text-muted">Publicado hace 1 semana</small>
-                                <button class="btn btn-sm btn-danger">Contactar</button>
-                            </div>
+                        <p class="mb-2 small text-muted fw-bold"><i class="bi bi-geo-alt"></i>Ubicación: <span
+                                class="text-dark badge">La Jagua de Ibirico, Cesar</span></p>
+                        <p class="fw-bold mb-1">Costo: <span class="text-success">$50.000,00</span></p>
+                        <p class="mb-1 small text-muted fw-bold">📱 WhatsApp: <a
+                                class="text-decoration-none badge text-black" href="https://wa.me/573001234567"
+                                target="_blank">+57 300 123 4567</a></p>
+                        <p class="mb-2 small text-muted fw-bold">📧 Correo: <a
+                                class="text-decoration-none badge text-black"
+                                href="mailto:maria.limpieza@email.com">maria.limpieza@email.com</a></p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <small class="text-muted">Publicado hace 2 días</small>
+                            <button class="btn btn-sm btn-primary btn-contactar">Contactar</button>
                         </div>
                     </div>
                 </div>
-
-                <!-- Tarjeta 4 -->
-                <div class="col-sm-6 col-lg-4">
-                    <div
-                        class="card h-100 border-start border-warning border-4 border-primary border-top-0 border-end-0 border-bottom-0 shadow">
-                        <div class="card-body">
-                            <div class="d-flex align-items-start mb-3">
-                                <img src="https://logo.clearbit.com/wix.com" alt="Web" class="rounded me-3" width="48"
-                                    height="48">
-                                <div>
-                                    <h5 class="card-title fw-bold mb-0">Desarrollo Web</h5>
-                                    <p class="text-muted small">Ofrecido por: Andrés Gómez</p>
-                                </div>
-                            </div>
-                            <p class="small text-muted">Creación de páginas web modernas, optimizadas y responsivas.
-                            </p>
-                            <div class="mb-3">
-                                <span class="badge bg-warning-subtle text-warning">Actual</span>
-                                <span class="badge bg-warning-subtle text-warning">Responsivo</span>
-                                <span class="badge bg-warning-subtle text-warning">SEO</span>
-                            </div>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <small class="text-muted">Publicado hace 3 días</small>
-                                <button class="btn btn-sm btn-warning">Contactar</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Tarjeta 5 -->
-                <div class="col-sm-6 col-lg-4">
-                    <div
-                        class="card h-100 border-start border-info border-4 border-primary border-top-0 border-end-0 border-bottom-0 shadow">
-                        <div class="card-body">
-                            <div class="d-flex align-items-start mb-3">
-                                <img src="https://logo.clearbit.com/spotify.com" alt="Música" class="rounded me-3"
-                                    width="48" height="48">
-                                <div>
-                                    <h5 class="card-title fw-bold mb-0">Clases de Guitarra</h5>
-                                    <p class="text-muted small">Ofrecido por: Julián Herrera</p>
-                                </div>
-                            </div>
-                            <p class="small text-muted">Aprende desde cero con clases prácticas a domicilio u
-                                online.</p>
-                            <div class="mb-3">
-                                <span class="badge bg-info-subtle text-info">Didáctico</span>
-                                <span class="badge bg-info-subtle text-info">Paciencia</span>
-                                <span class="badge bg-info-subtle text-info">Flexible</span>
-                            </div>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <small class="text-muted">Publicado ayer</small>
-                                <button class="btn btn-sm btn-info">Contactar</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Tarjeta 6 -->
-                <div class="col-sm-6 col-lg-4">
-                    <div
-                        class="card h-100 border-start border-secondary border-4 border-primary border-top-0 border-end-0 border-bottom-0 shadow">
-                        <div class="card-body">
-                            <div class="d-flex align-items-start mb-3">
-                                <img src="https://logo.clearbit.com/coursera.org" alt="Tutorías" class="rounded me-3"
-                                    width="48" height="48">
-                                <div>
-                                    <h5 class="card-title fw-bold mb-0">Tutorías Académicas</h5>
-                                    <p class="text-muted small">Ofrecido por: Laura Vélez</p>
-                                </div>
-                            </div>
-                            <p class="small text-muted">Asesoría en matemáticas, física e inglés para estudiantes.
-                            </p>
-                            <div class="mb-3">
-                                <span class="badge bg-secondary-subtle text-secondary">Paciencia</span>
-                                <span class="badge bg-secondary-subtle text-secondary">Virtual</span>
-                                <span class="badge bg-secondary-subtle text-secondary">Resultados</span>
-                            </div>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <small class="text-muted">Publicado hace 5 días</small>
-                                <button class="btn btn-sm btn-secondary">Contactar</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Tarjeta 7 -->
-                <div class="col-sm-6 col-lg-4">
-                    <div
-                        class="card h-100 border-start border-dark border-4 border-primary border-top-0 border-end-0 border-bottom-0 shadow">
-                        <div class="card-body">
-                            <div class="d-flex align-items-start mb-3">
-                                <img src="https://logo.clearbit.com/etsy.com" alt="Artesanía" class="rounded me-3"
-                                    width="48" height="48">
-                                <div>
-                                    <h5 class="card-title fw-bold mb-0">Productos Artesanales</h5>
-                                    <p class="text-muted small">Ofrecido por: Diana Vargas</p>
-                                </div>
-                            </div>
-                            <p class="small text-muted">Venta de productos hechos a mano: velas, jabones,
-                                decoración.</p>
-                            <div class="mb-3">
-                                <span class="badge bg-dark-subtle text-dark">Creativo</span>
-                                <span class="badge bg-dark-subtle text-dark">Natural</span>
-                                <span class="badge bg-dark-subtle text-dark">Único</span>
-                            </div>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <small class="text-muted">Publicado hace 4 días</small>
-                                <button class="btn btn-sm btn-dark">Contactar</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Tarjeta 8 -->
-                <div class="col-sm-6 col-lg-4">
-                    <div
-                        class="card h-100 border-start border-primary border-4 border-primary border-top-0 border-end-0 border-bottom-0 shadow">
-                        <div class="card-body">
-                            <div class="d-flex align-items-start mb-3">
-                                <img src="https://logo.clearbit.com/zoho.com" alt="Contabilidad" class="rounded me-3"
-                                    width="48" height="48">
-                                <div>
-                                    <h5 class="card-title fw-bold mb-0">Asesoría Contable</h5>
-                                    <p class="text-muted small">Ofrecido por: Pedro Martínez</p>
-                                </div>
-                            </div>
-                            <p class="small text-muted">Declaración de renta, libros contables, facturación
-                                electrónica.</p>
-                            <div class="mb-3">
-                                <span class="badge bg-primary-subtle text-primary">Confiable</span>
-                                <span class="badge bg-primary-subtle text-primary">Formal</span>
-                                <span class="badge bg-primary-subtle text-primary">Legal</span>
-                            </div>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <small class="text-muted">Publicado hace 6 días</small>
-                                <button class="btn btn-sm btn-primary">Contactar</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Tarjeta 9 -->
-                <div class="col-sm-6 col-lg-4">
-                    <div
-                        class="card h-100 border-start border-success border-4 border-primary border-top-0 border-end-0 border-bottom-0 shadow">
-                        <div class="card-body">
-                            <div class="d-flex align-items-start mb-3">
-                                <img src="https://logo.clearbit.com/dribbble.com" alt="Fotografía" class="rounded me-3"
-                                    width="48" height="48">
-                                <div>
-                                    <h5 class="card-title fw-bold mb-0">Fotografía Profesional</h5>
-                                    <p class="text-muted small">Ofrecido por: Valentina Cruz</p>
-                                </div>
-                            </div>
-                            <p class="small text-muted">Sesiones de fotos para eventos, retratos y productos.</p>
-                            <div class="mb-3">
-                                <span class="badge bg-success-subtle text-success">Alta calidad</span>
-                                <span class="badge bg-success-subtle text-success">Edición incluida</span>
-                                <span class="badge bg-success-subtle text-success">Creativa</span>
-                            </div>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <small class="text-muted">Publicado hace 1 día</small>
-                                <button class="btn btn-sm btn-success">Contactar</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
             </div>
-        </div>
 
+            <!-- Tarjeta 2 -->
+            <div class="col-sm-6 col-lg-4">
+                <div class="card h-100 border-start border-4 border-success border-top-0 border-end-0 border-bottom-0 shadow">
+                    <div class="card-body">
+                        <div class="d-flex align-items-start mb-3">
+                            <img src="https://logo.clearbit.com/uber.com" alt="Transporte" class="rounded me-3"
+                                width="48" height="48">
+                            <div>
+                                <h5 class="card-title fw-bold mb-0">Transporte Privado</h5>
+                                <p class="text-muted smaller">Ofrecido por: Carlos Muñoz</p>
+                            </div>
+                        </div>
+                        <p class="small text-muted">Servicio de transporte seguro y puntual para ejecutivos y
+                            turistas.</p>
+                        <div class="mb-3">
+                            <span class="badge bg-success-subtle text-success">Confiable</span>
+                            <span class="badge bg-success-subtle text-success">Rápido</span>
+                            <span class="badge bg-success-subtle text-success">VIP</span>
+                        </div>
+                        <p class="mb-2 small text-muted fw-bold"><i class="bi bi-geo-alt"></i>Ubicación: <span
+                                class="text-dark badge">La Jagua de Ibirico, Cesar</span></p>
+                        <p class="fw-bold mb-1">Costo: <span class="text-success">$80.000,00</span></p>
+                        <p class="mb-1 small text-muted fw-bold">📱 WhatsApp: <a
+                                class="text-decoration-none badge text-black" href="https://wa.me/573012345678"
+                                target="_blank">+57 301 234 5678</a></p>
+                        <p class="mb-2 small text-muted fw-bold">📧 Correo: <a
+                                class="text-decoration-none badge text-black"
+                                href="mailto:carlos.transporte@email.com">carlos.transporte@email.com</a></p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <small class="text-muted">Publicado hace 3 días</small>
+                            <button class="btn btn-sm btn-success btn-contactar">Contactar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+            <!-- Tarjeta 3 -->
+            <div class="col-sm-6 col-lg-4">
+                <div class="card h-100 border-start border-4 border-danger border-top-0 border-end-0 border-bottom-0 shadow">
+                    <div class="card-body">
+                        <div class="d-flex align-items-start mb-3">
+                            <img src="https://logo.clearbit.com/doghero.com" alt="Paseo de perros" class="rounded me-3"
+                                width="48" height="48">
+                            <div>
+                                <h5 class="card-title fw-bold mb-0">Paseo de Perros</h5>
+                                <p class="text-muted smaller">Ofrecido por: Luisa Ramírez</p>
+                            </div>
+                        </div>
+                        <p class="small text-muted">Paseo seguro y con cariño para tu mascota.</p>
+                        <div class="mb-3">
+                            <span class="badge bg-danger-subtle text-danger">Mascotas</span>
+                            <span class="badge bg-danger-subtle text-danger">Cuidado</span>
+                        </div>
+                        <p class="mb-2 small text-muted fw-bold"><i class="bi bi-geo-alt"></i>Ubicación: <span
+                                class="text-dark badge">La Jagua de Ibirico, Cesar</span></p>
+                        <p class="fw-bold mb-1">Costo: <span class="text-success">$20.000,00</span></p>
+                        <p class="mb-1 small text-muted fw-bold">📱 WhatsApp: <a
+                                class="text-decoration-none badge text-black" href="https://wa.me/573045678901"
+                                target="_blank">+57 304 567 8901</a></p>
+                        <p class="mb-2 small text-muted fw-bold">📧 Correo: <a
+                                class="text-decoration-none badge text-black"
+                                href="mailto:luisa.paseos@email.com">luisa.paseos@email.com</a></p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <small class="text-muted">Publicado hace 1 día</small>
+                            <button class="btn btn-sm btn-danger btn-contactar">Contactar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 4 -->
+            <div class="col-sm-6 col-lg-4">
+                <div class="card h-100 border-start border-4 border-warning border-top-0 border-end-0 border-bottom-0 shadow">
+                    <div class="card-body">
+                        <div class="d-flex align-items-start mb-3">
+                            <img src="https://logo.clearbit.com/computing.com" alt="Estética" class="rounded me-3"
+                                width="48" height="48">
+                            <div>
+                                <h5 class="card-title fw-bold mb-0">Maquillaje Profesional</h5>
+                                <p class="text-muted smaller">Ofrecido por: Ana Beltrán</p>
+                            </div>
+                        </div>
+                        <p class="small text-muted">Maquillaje para eventos, bodas, sesiones y más.</p>
+                        <div class="mb-3">
+                            <span class="badge bg-warning-subtle text-warning">Belleza</span>
+                            <span class="badge bg-warning-subtle text-warning">Profesional</span>
+                        </div>
+                        <p class="mb-2 small text-muted fw-bold"><i class="bi bi-geo-alt"></i>Ubicación: <span
+                                class="text-dark badge">La Jagua de Ibirico, Cesar</span></p>
+                        <p class="fw-bold mb-1">Costo: <span class="text-success">$60.000,00</span></p>
+                        <p class="mb-1 small text-muted fw-bold">📱 WhatsApp: <a
+                                class="text-decoration-none badge text-black" href="https://wa.me/573055566677"
+                                target="_blank">+57 305 556 6677</a></p>
+                        <p class="mb-2 small text-muted fw-bold">📧 Correo: <a
+                                class="text-decoration-none badge text-black"
+                                href="mailto:ana.makeup@email.com">ana.makeup@email.com</a></p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <small class="text-muted">Publicado ayer</small>
+                            <button class="btn btn-sm btn-warning btn-contactar">Contactar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 5 -->
+            <div class="col-sm-6 col-lg-4">
+                <div class="card h-100 border-start border-4 border-info border-top-0 border-end-0 border-bottom-0 shadow">
+                    <div class="card-body">
+                        <div class="d-flex align-items-start mb-3">
+                            <img src="https://logo.clearbit.com/computing.com" alt="Reparación PC" class="rounded me-3"
+                                width="48" height="48">
+                            <div>
+                                <h5 class="card-title fw-bold mb-0">Reparación Computadores</h5>
+                                <p class="text-muted smaller">Ofrecido por: Jorge Díaz</p>
+                            </div>
+                        </div>
+                        <p class="small text-muted">Solución de fallos, limpieza y mantenimiento técnico.</p>
+                        <div class="mb-3">
+                            <span class="badge bg-info-subtle text-info">Tecnología</span>
+                            <span class="badge bg-info-subtle text-info">Garantía</span>
+                        </div>
+                        <p class="mb-2 small text-muted fw-bold"><i class="bi bi-geo-alt"></i>Ubicación: <span
+                                class="text-dark badge">La Jagua de Ibirico, Cesar</span></p>
+                        <p class="fw-bold mb-1">Costo: <span class="text-success">$90.000,00</span></p>
+                        <p class="mb-1 small text-muted fw-bold">📱 WhatsApp: <a
+                                class="text-decoration-none badge text-black" href="https://wa.me/573066778899"
+                                target="_blank">+57 306 677 8899</a></p>
+                        <p class="mb-2 small text-muted fw-bold">📧 Correo: <a
+                                class="text-decoration-none badge text-black"
+                                href="mailto:jorge.pc@email.com">jorge.pc@email.com</a></p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <small class="text-muted">Publicado hace 5 días</small>
+                            <button class="btn btn-sm btn-info btn-contactar">Contactar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 6 -->
+            <div class="col-sm-6 col-lg-4">
+                <div class="card h-100 border-start border-4 border-warning border-top-0 border-end-0 border-bottom-0 shadow">
+                    <div class="card-body">
+                        <div class="d-flex align-items-start mb-3">
+                            <img src="https://logo.clearbit.com/siemens.com" alt="Electricista" class="rounded me-3"
+                                width="48" height="48">
+                            <div>
+                                <h5 class="card-title fw-bold mb-0">Servicios de Electricidad</h5>
+                                <p class="text-muted smaller">Ofrecido por: Carlos Gómez</p>
+                            </div>
+                        </div>
+                        <p class="small text-muted">Instalaciones eléctricas, reparaciones y mantenimientos.</p>
+                        <div class="mb-3">
+                            <span class="badge bg-warning-subtle text-warning">Técnico certificado</span>
+                            <span class="badge bg-warning-subtle text-warning">Emergencias 24h</span>
+                        </div>
+                        <p class="mb-2 small text-muted fw-bold"><i class="bi bi-geo-alt"></i>Ubicación: <span
+                                class="text-dark badge">La Jagua de Ibirico, Cesar</span></p>
+                        <p class="fw-bold mb-1">Costo: <span class="text-success">$80.000,00</span></p>
+                        <p class="mb-1 small text-muted fw-bold">📱 WhatsApp: <a
+                                class="text-decoration-none badge text-black" href="https://wa.me/573014567890"
+                                target="_blank">+57 301 456 7890</a></p>
+                        <p class="mb-2 small text-muted fw-bold">📧 Correo: <a
+                                class="text-decoration-none badge text-black"
+                                href="mailto:carlos.electricista@email.com">carlos.electricista@email.com</a>
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <small class="text-muted">Publicado hace 1 semana</small>
+                            <button class="btn btn-sm btn-warning btn-contactar">Contactar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 7 -->
+            <div class="col-sm-6 col-lg-4">
+                <div class="card h-100 border-start border-4 border-success border-top-0 border-end-0 border-bottom-0 shadow">
+                    <div class="card-body">
+                        <div class="d-flex align-items-start mb-3">
+                            <img src="https://logo.clearbit.com/khanacademy.org" alt="Clases" class="rounded me-3"
+                                width="48" height="48">
+                            <div>
+                                <h5 class="card-title fw-bold mb-0">Clases Online</h5>
+                                <p class="text-muted smaller">Ofrecido por: Diana Rodríguez</p>
+                            </div>
+                        </div>
+                        <p class="small text-muted">Refuerzos escolares y preparación para exámenes virtuales.
+                        </p>
+                        <div class="mb-3">
+                            <span class="badge bg-success-subtle text-success">Online</span>
+                            <span class="badge bg-success-subtle text-success">Paciencia garantizada</span>
+                        </div>
+                        <p class="mb-2 small text-muted fw-bold"><i class="bi bi-geo-alt"></i>Ubicación: <span
+                                class="text-dark badge">La Jagua de Ibirico, Cesar</span></p>
+                        <p class="fw-bold mb-1">Costo: <span class="text-success">$30.000,00</span></p>
+                        <p class="mb-1 small text-muted fw-bold">📱 WhatsApp: <a
+                                class="text-decoration-none badge text-black" href="https://wa.me/573052345678"
+                                target="_blank">+57 305 234 5678</a></p>
+                        <p class="mb-2 small text-muted fw-bold">📧 Correo: <a
+                                class="text-decoration-none badge text-black"
+                                href="mailto:diana.clases@email.com">diana.clases@email.com</a></p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <small class="text-muted">Publicado hace 3 días</small>
+                            <button class="btn btn-sm btn-success btn-contactar">Contactar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 8 -->
+            <div class="col-sm-6 col-lg-4">
+                <div class="card h-100 border-start border-4 border-danger border-top-0 border-end-0 border-bottom-0 shadow">
+                    <div class="card-body">
+                        <div class="d-flex align-items-start mb-3">
+                            <img src="https://logo.clearbit.com/acer.com" alt="Computadores" class="rounded me-3"
+                                width="48" height="48">
+                            <div>
+                                <h5 class="card-title fw-bold mb-0">Mantenimiento PC</h5>
+                                <p class="text-muted smaller">Ofrecido por: Andrés Ríos</p>
+                            </div>
+                        </div>
+                        <p class="small text-muted">Limpieza, formateo, instalación de software y antivirus.</p>
+                        <div class="mb-3">
+                            <span class="badge bg-danger-subtle text-danger">A domicilio</span>
+                            <span class="badge bg-danger-subtle text-danger">Soporte técnico</span>
+                        </div>
+                        <p class="mb-2 small text-muted fw-bold"><i class="bi bi-geo-alt"></i>Ubicación: <span
+                                class="text-dark badge">La Jagua de Ibirico, Cesar</span></p>
+                        <p class="fw-bold mb-1">Costo: <span class="text-success">$60.000,00</span></p>
+                        <p class="mb-1 small text-muted fw-bold">📱 WhatsApp: <a
+                                class="text-decoration-none badge text-black" href="https://wa.me/573043216789"
+                                target="_blank">+57 304 321 6789</a></p>
+                        <p class="mb-2 small text-muted fw-bold">📧 Correo: <a
+                                class="text-decoration-none badge text-black"
+                                href="mailto:andres.pc@email.com">andres.pc@email.com</a></p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <small class="text-muted">Publicado ayer</small>
+                            <button class="btn btn-sm btn-danger btn-contactar">Contactar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 9 -->
+            <div class="col-sm-6 col-lg-4">
+                <div class="card h-100 border-start border-4 border-secondary border-top-0 border-end-0 border-bottom-0 shadow">
+                    <div class="card-body">
+                        <div class="d-flex align-items-start mb-3">
+                            <img src="https://logo.clearbit.com/pedigree.com" alt="Paseador" class="rounded me-3"
+                                width="48" height="48">
+                            <div>
+                                <h5 class="card-title fw-bold mb-0">Paseo de Mascotas</h5>
+                                <p class="text-muted smaller">Ofrecido por: Kevin Mendoza</p>
+                            </div>
+                        </div>
+                        <p class="small text-muted">Paseos seguros para perros y gatos, con cuidado
+                            personalizado.</p>
+                        <div class="mb-3">
+                            <span class="badge bg-secondary-subtle text-secondary">Mascotas felices</span>
+                            <span class="badge bg-secondary-subtle text-secondary">Cuidado amoroso</span>
+                        </div>
+                        <p class="mb-2 small text-muted fw-bold"><i class="bi bi-geo-alt"></i>Ubicación: <span
+                                class="text-dark badge">La Jagua de Ibirico, Cesar</span></p>
+                        <p class="fw-bold mb-1">Costo: <span class="text-success">$25.000,00</span></p>
+                        <p class="mb-1 small text-muted fw-bold">📱 WhatsApp: <a
+                                class="text-decoration-none badge text-black" href="https://wa.me/573007654321"
+                                target="_blank">+57 300 765 4321</a></p>
+                        <p class="mb-2 small text-muted fw-bold">📧 Correo: <a
+                                class="text-decoration-none badge text-black"
+                                href="mailto:kevin.paseos@email.com">kevin.paseos@email.com</a></p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <small class="text-muted">Publicado hoy</small>
+                            <button class="btn btn-sm btn-secondary btn-contactar">Contactar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal para mostrar información del servicio -->
+            <div class="modal fade" id="modalServicio" tabindex="-1" aria-labelledby="modalServicioLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header text-white" style="background-color: #011c87;">
+                            <h5 class="modal-title" id="modalServicioLabel">INFORMACIÓN DEL SERVICIO</h5>
+                            <button type="button" class="btn-close bg-white" data-bs-dismiss="modal"
+                                aria-label="Cerrar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <img id="modalImagen" src="" alt="Servicio" width="60" class="me-3 rounded" />
+                                <div>
+                                    <h5 id="modalTitulo" class="mb-0 fw-bold"></h5>
+                                    <small class="text-muted" id="modalProveedor"></small>
+                                </div>
+                            </div>
+                            <p id="modalDescripcion"></p>
+                            <p><strong>Ubicación:</strong> <span id="modalUbicacion"></span></p>
+                            <p><strong>Costo:</strong> <span id="modalCosto"></span></p>
+                            <p><strong>Publicado:</strong> <span id="modalFecha"></span></p>
+                        </div>
+                        <div class="modal-footer">
+                            <a id="modalWhatsapp" class="btn btn-success" target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                            <a id="modalCorreo" class="btn btn-primary" target="_blank">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
     </main>
 
     <!-- Paginación -->
@@ -529,6 +622,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <script type="importmap"></script>
+
+    <!-- Modal para Contactar -->
     <script>
         let index = 0;
         const slides = document.querySelectorAll(".slide");
@@ -555,6 +650,60 @@
             temporizador = setInterval(avanzarAutomaticamente, 5000);
         }
     </script>
+
+
+    <!--  Modales de contacto del servicio -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const botones = document.querySelectorAll(".btn-contactar");
+
+            botones.forEach(boton => {
+                boton.addEventListener("click", function () {
+                    const card = this.closest(".card-body");
+
+                    const imagen = card.querySelector("img").src;
+                    const titulo = card.querySelector(".card-title").textContent;
+                    const proveedor = card.querySelector("p.text-muted.smaller")?.textContent || '';
+                    const descripcion = card.querySelectorAll("p.small.text-muted")[0]?.textContent || '';
+                    const ubicacion = card.querySelector("span.text-dark.badge")?.textContent || '';
+                    const costo = card.querySelector(".text-success")?.textContent || '';
+                    const fecha = card.querySelector("small.text-muted")?.textContent || '';
+
+                    const whatsappHref = card.querySelector("a[href*='wa.me']")?.getAttribute("href") || '#';
+                    const correoHref = card.querySelector("a[href^='mailto:']")?.getAttribute("href") || '';
+
+                    // Obtener número de teléfono limpio para WhatsApp
+                    const numeroWhatsApp = whatsappHref.replace("https://wa.me/", "");
+
+                    // Mensajes personalizados
+                    const mensajeWhatsApp = encodeURIComponent(`Hola, estoy interesado en tu servicio de ${titulo}. ¿Me puedes dar más información?`);
+                    const mensajeCorreo = encodeURIComponent(`Hola, estoy interesado en tu servicio de ${titulo}. ¿Podrías brindarme más información?`);
+
+                    const asuntoCorreo = encodeURIComponent("Consulta por servicio");
+
+                    const correoDestino = correoHref.replace("mailto:", "");
+
+                    // Actualizar contenido del modal
+                    document.getElementById("modalImagen").src = imagen;
+                    document.getElementById("modalTitulo").textContent = titulo;
+                    document.getElementById("modalProveedor").textContent = proveedor;
+                    document.getElementById("modalDescripcion").textContent = descripcion;
+                    document.getElementById("modalUbicacion").textContent = ubicacion;
+                    document.getElementById("modalCosto").textContent = costo;
+                    document.getElementById("modalFecha").textContent = fecha;
+
+                    // Actualizar enlaces con mensajes personalizados
+                    document.getElementById("modalWhatsapp").href = `https://wa.me/${numeroWhatsApp}?text=${mensajeWhatsApp}`;
+                    document.getElementById("modalCorreo").href = `https://mail.google.com/mail/?view=cm&fs=1&to=${correoDestino}&su=${asuntoCorreo}&body=${mensajeCorreo}`;
+
+                    // Mostrar modal
+                    const modal = new bootstrap.Modal(document.getElementById("modalServicio"));
+                    modal.show();
+                });
+            });
+        });
+    </script>
+
 </body>
 
 </html>
