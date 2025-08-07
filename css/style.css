@@ -1206,78 +1206,43 @@ footer {
 
 /* Responsive en cualquier tamaño de pantalla */
 @media screen and (max-width: 320px) {
-    .logo-text {
-        font-size: 1.5rem;
+    h1 {
+        font-size: 2rem !important;
+        line-height: 1.2 !important;
+        word-break: break-word !important;
+        text-align: center !important;
+        margin: 0 auto !important;
+        padding: 0 10px !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
     }
 
-    .main-nav .nav-links {
-        display: none;
-        flex-direction: column;
-        gap: 15px;
-        position: absolute;
-        top: 80px;
-        right: 0;
-        width: 100%;
-        background-color: #fff;
-        padding: 20px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    }
-
-    .main-nav.open .nav-links {
-        display: flex;
-    }
-
-    .nav-toggle {
-        display: block;
-    }
-
-    .contenedor-logo-texto {
-        flex-direction: column;
-        text-align: center;
-        gap: 20px;
-    }
-
-    .texto {
-        text-align: center;
-    }
-
-    .cards-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .card-hover {
-        max-width: 95%;
+    .card-grid h1 {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        font-size: 10px;
     }
 
     .join-grid {
-        grid-template-columns: 1fr !important;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+
+    .contenedor-logo-texto {
+        gap: 10px;
+    }
+
+    .texto {
+        font-size: 0.875rem; /* 14px */
     }
 
     .footer-content {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-    }
-
-    .footer-social .social-icons {
-        justify-content: center;
-    }
-
-    .contenedor-buscador {
-        transform: translateY(0);
-        padding: 20px;
+        gap: 10px;
     }
 
     .video-content1 h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
-    .video-content1 p {
-        font-size: 1.1rem;
-    }
-
-    .map-container {
+    .search-input {
         width: 100%;
     }
 }
