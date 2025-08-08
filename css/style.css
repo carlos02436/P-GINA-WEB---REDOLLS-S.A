@@ -174,7 +174,7 @@ header .container {
 #hero {
     color: var(--text-color-light);
     text-align: center;
-    padding: 100px 0;
+    padding: 150px 0;
     min-height: 70vh;
     display: flex;
     flex-direction: column;
@@ -1206,6 +1206,17 @@ footer {
 
 /* Responsive en cualquier tamaño de pantalla */
 @media screen and (max-width: 320px) {
+
+    /* Evitar scroll lateral en toda la página */
+    html, body {
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow-x: hidden !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Títulos */
     h1 {
         font-size: 2rem !important;
         line-height: 1.2 !important;
@@ -1213,37 +1224,6 @@ footer {
         text-align: center !important;
         margin: 0 auto !important;
         padding: 0 10px !important;
-        max-width: 100% !important;
-        box-sizing: border-box !important;
-    }
-
-    .card-grid h1 {
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-        font-size: 10px;
-    }
-
-    .join-grid {
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    }
-
-    .contenedor-logo-texto {
-        gap: 10px;
-    }
-
-    .texto {
-        font-size: 0.875rem; /* 14px */
-    }
-
-    .footer-content {
-        gap: 10px;
-    }
-
-    .video-content1 h1 {
-        font-size: 2rem;
-    }
-
-    .search-input {
-        width: 100%;
     }
 }
 
